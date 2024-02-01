@@ -1,0 +1,52 @@
+Function Create-Shortcut {
+    param (
+        [String]$TargetPath,
+        [String]$ShortcutPath,
+        [String]$IconPath
+    )
+
+    $WScriptShell = New-Object -ComObject WScript.Shell
+    $Shortcut = $WScriptShell.CreateShortcut($ShortcutPath)
+    $Shortcut.TargetPath = $TargetPath
+    $Shortcut.IconLocation = $IconPath
+    $Shortcut.Save()
+}
+
+# Define the websites, their names, and corresponding icon URLs
+$websites = @{
+    "https://portal.autoalert.com/" = @{
+        "Name" = "AutoAlert"
+        "IconUrl" = "https://raw.githubusercontent.com/ToyotaOfHackensack/Files/main/autoalert.ico"
+    }
+    "https://dealerdaily.toyota.com" = @{
+        "Name" = "DealerDaily"
+        "IconUrl" = "https://raw.githubusercontent.com/ToyotaOfHackensack/Files/main/dealerdaily.ico"
+    }
+    "https://vinsolutions.app.coxautoinc.com/vinconnect/" = @{
+        "Name" = "VinSolutions"
+        "IconUrl" = "https://raw.githubusercontent.com/ToyotaOfHackensack/Files/main/vinsolutions.ico"
+    }
+}
+
+$publicFolderPath = [System.Environment]::GetFolderPath("CommonDesktopDirectory")
+
+foreach ($url in $websites.Keys) {
+    $websiteInfo = $websites[$url]
+    $shortcutName = $websiteInfo["Name"] + ".lnk"
+    $shortcutPath = Join-Path $publicFolderPath $shortcutName
+    $iconPath = Join-Path $env:TEMP ($websiteInfo["Name"] + ".ico")
+
+    # Download the icon
+    try {
+        Invoke-WebRequest -Uri $websiteInfo["IconUrl"] -OutFile $iconPath
+    } catch {
+        Write-Host "Failed to download icon for $($websiteInfo["Name"]): $_"
+        continue
+    }
+
+    # Create the shortcut
+    Write-Host "Creating shortcut for $($websiteInfo["Name"]) at $shortcutPath"
+    Create-Shortcut -TargetPath $url -ShortcutPath $shortcutPath -IconPath $iconPath
+}
+
+Write-Host "Shortcuts creation process completed."

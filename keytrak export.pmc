@@ -1,0 +1,170 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|[Pause]||1|300|Sleep|||||1|
+2|tohbot@toyotaofhackensack.com|Started keytrak export=0:Started keytrak export|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||2|
+3|If Window Not Exist|(Home Page) - ERA-IGNITE|1|0|If_Statement|||||5|
+4|Run|C:\Users\ReynoldsPurge\Documents\live\reylogin.exe|1|0|Run|||||7|
+5|[Pause]||1|1000|Sleep|||||8|
+6|Continue, Continue, FoundX, FoundY, 0|7, 84, 141, 129, C:\Users\ReynoldsPurge\Documents\Images\Rey Home Page.png|1|1000|ImageSearch|UntilFound|Window|||9|
+7|[End If]|EndIf|1|0|If_Statement|||||16|
+8|[Pause]||1|1000|Sleep|||||17|
+9|WinActivate||1|333|WinActivate||(Home Page) - ERA-IGNITE|||18|
+10|[Pause]||1|300|Sleep|||||20|
+11|Control|{Control Down}|1|300|Send|||||21|
+12|8|{8}|1|300|Send|||||23|
+13|Control|{Control Up}|1|300|Send|||||25|
+14|[Pause]||1|1000|Sleep|||||27|
+15|Continue, Continue, FoundX, FoundY, 0|236, 83, 505, 130, C:\Users\ReynoldsPurge\Documents\Images\Report Export Loaded.png|1|1000|ImageSearch|UntilFound|Window|||28|
+16|[Pause]||1|1000|Sleep|||||35|
+17|Left Move & Click|791, 186 Left, 1|1|200|Click|||||36|
+18|[Pause]||1|2000|Sleep|||||38|
+19|[Text]|1152|1|300|SendRaw|||||39|
+20|[Pause]||1|1000|Sleep|||||41|
+21|F5|{F5}|1|300|Send|||||42|
+22|[Pause]||1|1000|Sleep|||||44|
+23|F11|{F11}|1|500|Send|||||45|
+24|[Pause]||1|1500|Sleep|||||47|
+25|Down|{Down}|1|300|Send|||||48|
+26|[Pause]||1|300|Sleep|||||50|
+27|Space|{Space}|1|300|Send|||||51|
+28|[Pause]||1|300|Sleep|||||53|
+29|Enter|{Enter}|1|300|Send|||||54|
+30|[Pause]||1|300|Sleep|||||56|
+31|Enter|{Enter}|1|300|Send|||||57|
+32|[Pause]||1|2000|Sleep|||||59|
+33|Continue, Continue, FoundX, FoundY, 0|400, 86, 1385, 453, C:\Users\ReynoldsPurge\Documents\Images\No records found.png|1|300|ImageSearch||Window|||60|
+34|If Image/Pixel Found||1|0|If_Statement|||||63|
+35|Alt|{Alt Down}|1|300|Send|||||65|
+36|F4|{F4}|1|300|Send|||||67|
+37|Alt|{Alt Up}|1|300|Send|||||69|
+38|[Pause]||1|300|Sleep|||||71|
+39|tohbot@toyotaofhackensack.com|Finished keytrak with no new keys=0:Finished keytrak with no new keys|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||72|
+40|[Pause]||1|300|Sleep|||||75|
+41|FileAppend|done, C:\engine\donekeytrak.txt|1|0|FileAppend|||||76|
+42|[Pause]||1|300|Sleep|||||77|
+43|ExitApp||1|0|ExitApp|||||78|
+44|[End If]|EndIf|1|0|If_Statement|||||79|
+45|[Pause]||1|1000|Sleep|||||80|
+46|Run|C:\Users\ReynoldsPurge\Documents\live\captcha.exe|1|0|Run|||||81|
+47|[Pause]||1|2000|Sleep|||||82|
+48|[LoopStart]|LoopStart|0|0|Loop|||||83|
+49|If File Exist|C:\engine\captcha.txt|1|0|If_Statement|||||85|
+50|[Pause]||1|300|Sleep|||||87|
+51|FileDelete|C:\engine\captcha.txt|1|0|FileDelete|||||88|
+52|[Pause]||1|300|Sleep|||||89|
+53|Break||1|0|Break|||||90|
+54|[End If]|EndIf|1|0|If_Statement|||||91|
+55|[LoopEnd]|LoopEnd|1|0|Loop|||||92|
+56|[Pause]||1|1000|Sleep|||||93|
+57|WinActivate||1|333|WinActivate||(Home Page) - ERA-IGNITE|||94|
+58|[Pause]||1|300|Sleep|||||96|
+59|Control|{Control Down}|1|300|Send|||||97|
+60|8|{8}|1|300|Send|||||99|
+61|Control|{Control Up}|1|300|Send|||||101|
+62|[Pause]||1|1000|Sleep|||||103|
+63|Continue, Continue, FoundX, FoundY, 0|236, 83, 505, 130, C:\Users\ReynoldsPurge\Documents\Images\Report Export Loaded.png|1|1000|ImageSearch|UntilFound|Window|||104|
+64|[Pause]||1|1000|Sleep|||||111|
+65|Left Move & Click|791, 186 Left, 1|1|200|Click|||||112|
+66|[Pause]||1|2000|Sleep|||||114|
+67|[Text]|1153|1|300|SendRaw|||||115|
+68|[Pause]||1|1000|Sleep|||||117|
+69|F5|{F5}|1|300|Send|||||118|
+70|[Pause]||1|1000|Sleep|||||120|
+71|F11|{F11}|1|500|Send|||||121|
+72|[Pause]||1|1500|Sleep|||||123|
+73|[LoopStart]|LoopStart|0|0|Loop|||||124|
+74|If Window Exist|Run Options|1|0|If_Statement|||||126|
+75|WinActivate||1|333|WinActivate||Run Options|||128|
+76|[Pause]||1|1500|Sleep|||||130|
+77|Left Move & Click|25, 77 Left, 1|1|300|Click|||||131|
+78|[Pause]||1|300|Sleep|||||133|
+79|Left Move & Click|148, 125 Left, 1|1|400|Click|||||134|
+80|Break||1|0|Break|||||136|
+81|[End If]|EndIf|1|0|If_Statement|||||137|
+82|[LoopEnd]|LoopEnd|1|0|Loop|||||138|
+83|[Pause]||1|1500|Sleep|||||139|
+84|Continue, Continue, FoundX, FoundY, 0|400, 86, 1385, 453, C:\Users\ReynoldsPurge\Documents\Images\No records found.png|1|300|ImageSearch||Window|||140|
+85|If Image/Pixel Found||1|0|If_Statement|||||143|
+86|Alt|{Alt Down}|1|300|Send|||||145|
+87|F4|{F4}|1|300|Send|||||147|
+88|Alt|{Alt Up}|1|300|Send|||||149|
+89|[Pause]||1|300|Sleep|||||151|
+90|tohbot@toyotaofhackensack.com|Finished keytrak with no new keys=0:Finished keytrak with no new keys|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||152|
+91|[Pause]||1|300|Sleep|||||155|
+92|FileAppend|done, C:\engine\donekeytrak.txt|1|0|FileAppend|||||156|
+93|[Pause]||1|300|Sleep|||||157|
+94|ExitApp||1|0|ExitApp|||||158|
+95|[End If]|EndIf|1|0|If_Statement|||||159|
+96|[Pause]||1|1000|Sleep|||||160|
+97|Run|C:\Users\ReynoldsPurge\Documents\live\captcha.exe|1|0|Run|||||161|
+98|[Pause]||1|2000|Sleep|||||162|
+99|[LoopStart]|LoopStart|0|0|Loop|||||163|
+100|If File Exist|C:\engine\captcha.txt|1|0|If_Statement|||||165|
+101|[Pause]||1|300|Sleep|||||167|
+102|FileDelete|C:\engine\captcha.txt|1|0|FileDelete|||||168|
+103|[Pause]||1|300|Sleep|||||169|
+104|Break||1|0|Break|||||170|
+105|[End If]|EndIf|1|0|If_Statement|||||171|
+106|[LoopEnd]|LoopEnd|1|0|Loop|||||172|
+107|[Pause]||1|3000|Sleep|||||173|
+108|If File Exist|R:\new_keytrak.csv|1|0|If_Statement|||||174|
+109|[Pause]||1|300|Sleep|||||176|
+110|Run|R:\new_keytrak.csv|1|0|Run|||||177|
+111|[Pause]||1|1500|Sleep|||||178|
+112|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||179|
+113|Left Move & Click|388, 396 Left, 1|1|10|Click|||||181|
+114|[Pause]||1|350|Sleep|||||183|
+115|Left Move & Click|309, 108 Left, 1|1|10|Click|||||184|
+116|[Pause]||1|350|Sleep|||||186|
+117|[End If]|EndIf|1|0|If_Statement|||||187|
+118|[Pause]||1|300|Sleep|||||188|
+119|If Window Exist|Text Import - [new_keytrak.csv]|1|0|If_Statement|||||189|
+120|WinActivate||1|333|WinActivate||Text Import - [new_keytrak.csv]|||191|
+121|[Pause]||1|300|Sleep|||||193|
+122|Continue, Continue, FoundX, FoundY, 0|37, 37, 405, 137, C:\Users\ReynoldsPurge\Documents\Images\bad unicode.png|1|500|ImageSearch||Window|||194|
+123|If Image/Pixel Found||1|0|If_Statement|||||197|
+124|u|{u}|1|200|Send|||||199|
+125|[End If]|EndIf|1|0|If_Statement|||||201|
+126|[Pause]||1|300|Sleep|||||202|
+127|Left Move & Click|305, 555 Left, 1|1|300|Click|||||203|
+128|[Pause]||1|300|Sleep|||||205|
+129|[End If]|EndIf|1|0|If_Statement|||||206|
+130|[Pause]||1|500|Sleep|||||207|
+131|[Pause]||1|750|Sleep|||||208|
+132|[Pause]||1|300|Sleep|||||209|
+133|[End If]|EndIf|1|0|If_Statement|||||210|
+134|[Pause]||1|300|Sleep|||||211|
+135|If File Exist|R:\used_keytrak.csv|1|0|If_Statement|||||212|
+136|[Pause]||1|300|Sleep|||||214|
+137|Run|R:\used_keytrak.csv|1|0|Run|||||215|
+138|[Pause]||1|1500|Sleep|||||216|
+139|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||217|
+140|Left Move & Click|388, 396 Left, 1|1|10|Click|||||219|
+141|[Pause]||1|350|Sleep|||||221|
+142|Left Move & Click|309, 108 Left, 1|1|10|Click|||||222|
+143|[Pause]||1|350|Sleep|||||224|
+144|[End If]|EndIf|1|0|If_Statement|||||225|
+145|[Pause]||1|300|Sleep|||||226|
+146|If Window Exist|Text Import - [used_keytrak.csv]|1|0|If_Statement|||||227|
+147|WinActivate||1|333|WinActivate||Text Import - [used_keytrak.csv]|||229|
+148|[Pause]||1|300|Sleep|||||231|
+149|Continue, Continue, FoundX, FoundY, 0|37, 37, 405, 137, C:\Users\ReynoldsPurge\Documents\Images\bad unicode.png|1|500|ImageSearch||Window|||232|
+150|If Image/Pixel Found||1|0|If_Statement|||||235|
+151|u|{u}|1|200|Send|||||237|
+152|[End If]|EndIf|1|0|If_Statement|||||239|
+153|[Pause]||1|300|Sleep|||||240|
+154|Left Move & Click|305, 555 Left, 1|1|300|Click|||||241|
+155|[End If]|EndIf|1|0|If_Statement|||||243|
+156|[Pause]||1|3000|Sleep|||||244|
+157|[Pause]||1|750|Sleep|||||245|
+158|[Pause]||1|300|Sleep|||||246|
+159|[End If]|EndIf|1|0|If_Statement|||||247|
+160|[Pause]||1|300|Sleep|||||248|
+161|tohbot@toyotaofhackensack.com|Finished keytrak export=0:Finished keytrak export|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||249|
+162|[Pause]||1|300|Sleep|||||252|
+163|Run|C:\Users\ReynoldsPurge\Documents\live\keytrak.exe|1|0|Run|||||253|
+164|[Pause]||1|300|Sleep|||||254|
+165|ExitApp||1|0|ExitApp|||||255|
+

@@ -1,0 +1,276 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|[Pause]||1|300|Sleep|||||1|
+2|tohbot@toyotaofhackensack.com|Started Vehicle Comments=0:Started Vehicle Comments|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||2|
+3|[Pause]||1|300|Sleep|||||5|
+4|If Window Not Exist|(Home Page) - ERA-IGNITE|1|0|If_Statement|||||6|
+5|Run|C:\Users\ReynoldsPurge\Documents\live\reylogin.exe|1|0|Run|||||8|
+6|[Pause]||1|1000|Sleep|||||9|
+7|Continue, Continue, FoundX, FoundY, 0|7, 84, 141, 129, C:\Users\ReynoldsPurge\Documents\Images\Rey Home Page.png|1|1000|ImageSearch|UntilFound|Window|||10|
+8|[End If]|EndIf|1|0|If_Statement|||||17|
+9|[Pause]||1|1500|Sleep|||||18|
+10|Run|C:\Users\ReynoldsPurge\Documents\live\dd login.exe|1|0|Run|||||19|
+11|[Pause]||1|2000|Sleep|||||20|
+12|[LoopStart]|LoopStart|0|0|Loop|||||21|
+13|If File Exist|C:\engine\ddlogin.txt|1|0|If_Statement|||||23|
+14|[Pause]||1|300|Sleep|||||25|
+15|FileDelete|C:\engine\ddlogin.txt|1|0|FileDelete|||||26|
+16|[Pause]||1|300|Sleep|||||27|
+17|Break||1|0|Break|||||28|
+18|[End If]|EndIf|1|0|If_Statement|||||29|
+19|[LoopEnd]|LoopEnd|1|0|Loop|||||30|
+20|[Pause]||1|1500|Sleep|||||31|
+21|Left Move & Click|410, 56 Left, 1|1|500|Click|||||32|
+22|[Pause]||1|600|Sleep|||||34|
+23|[Text]|https://dealer.toyota.com/inventory/summary|1|100|SendRaw|||||35|
+24|[Pause]||1|2000|Sleep|||||37|
+25|Enter|{Enter}|1|200|Send|||||38|
+26|[Pause]||1|10000|Sleep|||||40|
+27|[LoopStart]|LoopStart|0|0|Loop|||||41|
+28|Break, Continue, FoundX, FoundY, 0|1482, 124, 1735, 307, *15 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\dd save loaded.png|1|100|ImageSearch||Window|||43|
+29|If Image/Pixel Not Found||1|0|If_Statement|||||48|
+30|[Pause]||1|300|Sleep|||||50|
+31|Left Move & Click|410, 56 Left, 1|1|500|Click|||||51|
+32|[Pause]||1|600|Sleep|||||53|
+33|[Text]|https://dealer.toyota.com/inventory/summary|1|100|SendRaw|||||54|
+34|[Pause]||1|2000|Sleep|||||56|
+35|Enter|{Enter}|1|200|Send|||||57|
+36|[Pause]||1|10000|Sleep|||||59|
+37|[End If]|EndIf|1|0|If_Statement|||||60|
+38|[LoopEnd]|LoopEnd|1|0|Loop|||||61|
+39|[Pause]||1|300|Sleep|||||62|
+40|Left Move & Click|1782, 212 Left, 1|1|100|Click|||||63|
+41|[Pause]||1|300|Sleep|||||65|
+42|Left Move & Click|1688, 331 Left, 1|1|100|Click|||||66|
+43|[Pause]||1|300|Sleep|||||68|
+44|Run|R:\Current date.ods|1|0|Run|||||69|
+45|[Pause]||1|3000|Sleep|||||70|
+46|Control|{Control Down}|1|100|Send|||||71|
+47|Home|{Home}|1|100|Send|||||73|
+48|Control|{Control Up}|1|100|Send|||||75|
+49|[Pause]||1|300|Sleep|||||77|
+50|Control|{Control Down}|1|100|Send|||||78|
+51|c|{c}|1|100|Send|||||80|
+52|Control|{Control Up}|1|100|Send|||||82|
+53|[Pause]||1|300|Sleep|||||84|
+54|Alt|{Alt Down}|1|100|Send|||||85|
+55|F4|{F4}|1|100|Send|||||87|
+56|Alt|{Alt Up}|1|100|Send|||||89|
+57|[Pause]||1|800|Sleep|||||91|
+58|Continue, Continue, last, updated, 1|153, 148, 840, 512, *5 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\last updated.png|1|100|ImageSearch|UntilFound|Screen|||92|
+59|[Pause]||1|300|Sleep|||||100|
+60|Left Move & Click|%last%, %updated% Left, 1|1|100|Click|||||101|
+61|[Pause]||1|300|Sleep|||||103|
+62|Control|{Control Down}|1|100|Send|||||104|
+63|V|{V}|1|100|Send|||||106|
+64|Control|{Control Up}|1|100|Send|||||108|
+65|[Pause]||1|300|Sleep|||||110|
+66|[Pause]||1|300|Sleep|||||111|
+67|Enter|{Enter}|1|200|Send|||||112|
+68|[Pause]||1|300|Sleep|||||114|
+69|Continue, Continue, download, inventory, 1|1459, 104, 1919, 324, *5 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\download inventory.png|1|100|ImageSearch|UntilFound|Screen|||115|
+70|[Pause]||1|300|Sleep|||||123|
+71|Left Move & Click|%download%, %inventory% Left, 1|1|100|Click|||||124|
+72|[Pause]||1|300|Sleep|||||126|
+73|FileDelete|C:\Users\ReynoldsPurge\Downloads\Inventory Summary.xlsx|1|0|FileDelete|||||127|
+74|[Pause]||1|2500|Sleep|||||128|
+75|Continue, Continue, download, excel, 1|661, 397, 1303, 736, C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\download excel.png|1|100|ImageSearch||Window|||129|
+76|If Image/Pixel Found||1|0|If_Statement|||||133|
+77|[Pause]||1|500|Sleep|||||135|
+78|Left Move & Click|%download%, %excel% Left, 1|1|100|Click|||||136|
+79|[Pause]||1|300|Sleep|||||138|
+80|[Else]|Else|1|0|If_Statement|||||139|
+81|[Pause]||1|300|Sleep|||||142|
+82|Alt|{Alt Down}|1|200|Send|||||143|
+83|F4|{F4}|1|200|Send|||||145|
+84|Alt|{Alt Up}|1|200|Send|||||147|
+85|[Pause]||1|500|Sleep|||||149|
+86|tohbot@toyotaofhackensack.com|Finished Vehicle Comments=0:Finished Vehicle Comments|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||150|
+87|[Pause]||1|300|Sleep|||||153|
+88|FileAppend|done, C:\engine\donevehiclecomments.txt|1|0|FileAppend|||||154|
+89|[Pause]||1|300|Sleep|||||155|
+90|ExitApp||1|0|ExitApp|||||156|
+91|[End If]|EndIf|1|0|If_Statement|||||157|
+92|[Pause]||1|300|Sleep|||||158|
+93|Continue, Continue, export, button, 1|700, 409, 1239, 714, C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\export button.png|1|100|ImageSearch|UntilFound|Window|||159|
+94|[Pause]||1|300|Sleep|||||167|
+95|Left Move & Click|%export%, %button% Left, 1|1|100|Click|||||168|
+96|[Pause]||1|7500|Sleep|||||170|
+97|Alt|{Alt Down}|1|100|Send|||||171|
+98|F4|{F4}|1|100|Send|||||173|
+99|Alt|{Alt Up}|1|100|Send|||||175|
+100|[Pause]||1|300|Sleep|||||177|
+101|Run|C:\Users\ReynoldsPurge\Downloads\Inventory Summary.xlsx|1|0|Run|||||178|
+102|[Pause]||1|300|Sleep|||||179|
+103|Continue, Continue, FoundX, FoundY, 0|0, 0, 454, 402, *5 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\excel loaded.png|1|100|ImageSearch|UntilFound|Screen|||180|
+104|[Pause]||1|300|Sleep|||||187|
+105|Shift|{Shift Down}|1|100|Send|||||188|
+106|Space|{Space}|1|100|Send|||||190|
+107|Shift|{Shift Up}|1|100|Send|||||192|
+108|[Pause]||1|300|Sleep|||||194|
+109|Control|{Control Down}|1|100|Send|||||195|
+110|-|{-}|1|100|Send|||||197|
+111|Control|{Control Up}|1|100|Send|||||199|
+112|[Pause]||1|300|Sleep|||||201|
+113|WinActivate||1|333|WinActivate||(Home Page) - ERA-IGNITE|||202|
+114|[Pause]||1|300|Sleep|||||204|
+115|Control|{Control Down}|1|100|Send|||||205|
+116|6|{6}|1|100|Send|||||207|
+117|Control|{Control Up}|1|100|Send|||||209|
+118|[Pause]||1|300|Sleep|||||211|
+119|Continue, Continue, type, button, 1|280, 107, 534, 251, *5 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\type button.png|1|100|ImageSearch|UntilFound|Window|||212|
+120|[Pause]||1|500|Sleep|||||220|
+121|Left Move & Click|%type%, %button% Left, 1|1|100|Click|||||221|
+122|[Pause]||1|500|Sleep|||||223|
+123|s|{s}|1|100|Send|||||224|
+124|[Pause]||1|500|Sleep|||||226|
+125|Enter|{Enter}|1|100|Send|||||227|
+126|[Pause]||1|300|Sleep|||||229|
+127|Left Move & Click|676, 179 Left, 1|1|100|Click|||||230|
+128|[Pause]||1|300|Sleep|||||232|
+129|[LoopStart]|LoopStart|0|0|Loop|||||233|
+130|WinActivate||1|333|WinActivate||Inventory Summary.xlsx - LibreOffice Calc|||235|
+131|[Pause]||1|300|Sleep|||||237|
+132|Continue, Continue, FoundX, FoundY, 0|150, 67, 483, 157, C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\finished.png|1|100|ImageSearch||Window|||238|
+133|If Image/Pixel Found||1|0|If_Statement|||||241|
+134|[Pause]||1|300|Sleep|||||243|
+135|Alt|{Alt Down}|1|100|Send|||||244|
+136|F4|{F4}|1|100|Send|||||246|
+137|Alt|{Alt Up}|1|100|Send|||||248|
+138|[Pause]||1|300|Sleep|||||250|
+139|Continue, Continue, dont, save, 1|16, 8, 418, 153, *5 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\dont save.png|1|100|ImageSearch|UntilFound|Window|||251|
+140|[Pause]||1|300|Sleep|||||259|
+141|Left Move & Click|%dont%, %save% Left, 1|1|100|Click|||||260|
+142|[Pause]||1|300|Sleep|||||262|
+143|WinActivate||1|333|WinActivate||(VMS) - ERA-IGNITE|||263|
+144|[Pause]||1|300|Sleep|||||265|
+145|Alt|{Alt Down}|1|100|Send|||||266|
+146|F4|{F4}|1|100|Send|||||268|
+147|Alt|{Alt Up}|1|100|Send|||||270|
+148|[Pause]||1|300|Sleep|||||272|
+149|Break||1|0|Break|||||273|
+150|[End If]|EndIf|1|0|If_Statement|||||274|
+151|[Pause]||1|300|Sleep|||||275|
+152|Control|{Control Down}|1|100|Send|||||276|
+153|c|{c}|1|100|Send|||||278|
+154|Control|{Control Up}|1|100|Send|||||280|
+155|[Pause]||1|300|Sleep|||||282|
+156|WinActivate||1|333|WinActivate||(VMS) - ERA-IGNITE|||283|
+157|[Pause]||1|500|Sleep|||||285|
+158|Control|{Control Down}|1|100|Send|||||286|
+159|V|{V}|1|100|Send|||||288|
+160|Control|{Control Up}|1|100|Send|||||290|
+161|[Pause]||1|300|Sleep|||||292|
+162|Enter|{Enter}|1|200|Send|||||293|
+163|[Pause]||1|2000|Sleep|||||295|
+164|Continue, Continue, FoundX, FoundY, 0|202, 60, 511, 169, *20 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\vehicle not found.png|1|0|ImageSearch||Window|||296|
+165|If Image/Pixel Found||1|0|If_Statement|||||298|
+166|Left Move & Click|682, 182 Left, 1|2|100|Click|||||300|
+167|[Pause]||1|300|Sleep|||||305|
+168|Backspace|{Backspace}|1|100|Send|||||306|
+169|[Pause]||1|300|Sleep|||||308|
+170|Alt|{Alt Down}|1|100|Send|||||309|
+171|Tab|{Tab}|1|100|Send|||||311|
+172|Alt|{Alt Up}|1|100|Send|||||313|
+173|[Pause]||1|300|Sleep|||||315|
+174|Shift|{Shift Down}|1|100|Send|||||316|
+175|Space|{Space}|1|100|Send|||||318|
+176|Shift|{Shift Up}|1|100|Send|||||320|
+177|[Pause]||1|300|Sleep|||||322|
+178|Control|{Control Down}|1|100|Send|||||323|
+179|-|{-}|1|100|Send|||||325|
+180|Control|{Control Up}|1|100|Send|||||327|
+181|[Pause]||1|300|Sleep|||||329|
+182|Control|{Control Down}|1|100|Send|||||330|
+183|Home|{Home}|1|100|Send|||||332|
+184|Control|{Control Up}|1|100|Send|||||334|
+185|[Pause]||1|300|Sleep|||||336|
+186|Continue||1|0|Continue|||||337|
+187|[End If]|EndIf|1|0|If_Statement|||||338|
+188|[Pause]||1|300|Sleep|||||339|
+189|If Window Active|System Notify|1|0|If_Statement|||||340|
+190|[Pause]||1|300|Sleep|||||342|
+191|Alt|{Alt Down}|1|100|Send|||||343|
+192|F4|{F4}|1|100|Send|||||345|
+193|Alt|{Alt Up}|1|100|Send|||||347|
+194|[Pause]||1|300|Sleep|||||349|
+195|Escape|{Escape}|1|100|Send|||||350|
+196|[Pause]||1|300|Sleep|||||352|
+197|Continue||1|0|Continue|||||353|
+198|[End If]|EndIf|1|0|If_Statement|||||354|
+199|[Pause]||1|300|Sleep|||||355|
+200|If Window Exist|VMSXX005 - 8113|1|0|If_Statement|||||356|
+201|Left Click|Left, 1,  NA|1|100|ControlClick|Button1|VMSXX005 - 8113|||358|
+202|[Pause]||1|300|Sleep|||||360|
+203|[End If]|EndIf|1|0|If_Statement|||||361|
+204|Continue, Continue, FoundX, FoundY, 0|166, 34, 468, 185, C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\vehicle loaded.png|1|100|ImageSearch|UntilFound|Window|||362|
+205|[Pause]||1|300|Sleep|||||369|
+206|Left Move & Click|784, 441 Left, 1|1|100|Click|||||370|
+207|[Pause]||1|300|Sleep|||||372|
+208|Backspace|{Backspace}|1|100|Send|||||373|
+209|[Pause]||1|300|Sleep|||||375|
+210|WinActivate||1|333|WinActivate||Inventory Summary.xlsx - LibreOffice Calc|||376|
+211|[Pause]||1|300|Sleep|||||378|
+212|Right|{Right}|2|100|Send|||||379|
+213|[Pause]||1|300|Sleep|||||381|
+214|Control|{Control Down}|1|100|Send|||||382|
+215|c|{c}|1|100|Send|||||384|
+216|Control|{Control Up}|1|100|Send|||||386|
+217|[Pause]||1|300|Sleep|||||388|
+218|Shift|{Shift Down}|1|100|Send|||||389|
+219|Space|{Space}|1|100|Send|||||391|
+220|Shift|{Shift Up}|1|100|Send|||||393|
+221|[Pause]||1|300|Sleep|||||395|
+222|Control|{Control Down}|1|100|Send|||||396|
+223|-|{-}|1|100|Send|||||398|
+224|Control|{Control Up}|1|100|Send|||||400|
+225|[Pause]||1|300|Sleep|||||402|
+226|Control|{Control Down}|1|100|Send|||||403|
+227|Home|{Home}|1|100|Send|||||405|
+228|Control|{Control Up}|1|100|Send|||||407|
+229|[Pause]||1|300|Sleep|||||409|
+230|Alt|{Alt Down}|1|100|Send|||||410|
+231|Tab|{Tab}|1|100|Send|||||412|
+232|Alt|{Alt Up}|1|100|Send|||||414|
+233|[Pause]||1|300|Sleep|||||416|
+234|Control|{Control Down}|1|100|Send|||||417|
+235|V|{V}|1|100|Send|||||419|
+236|Control|{Control Up}|1|100|Send|||||421|
+237|[Pause]||1|300|Sleep|||||423|
+238|Enter|{Enter}|1|200|Send|||||424|
+239|[Pause]||1|300|Sleep|||||426|
+240|If Window Exist|SUBCHARX - Invalid Character|1|0|If_Statement|||||427|
+241|[Pause]||1|300|Sleep|||||429|
+242|Enter|{Enter}|1|100|Send|||||430|
+243|[Pause]||1|300|Sleep|||||432|
+244|Escape|{Escape}|1|100|Send|||||433|
+245|[Pause]||1|300|Sleep|||||435|
+246|Enter|{Enter}|1|100|Send|||||436|
+247|[Pause]||1|300|Sleep|||||438|
+248|[End If]|EndIf|1|0|If_Statement|||||439|
+249|[Pause]||1|300|Sleep|||||440|
+250|F12|{F12}|1|100|Send|||||441|
+251|[Pause]||1|2500|Sleep|||||443|
+252|If Window Exist|VEHICLE DESCRIPTION SELECTION|1|0|If_Statement|||||444|
+253|[Pause]||1|300|Sleep|||||446|
+254|Escape|{Escape}|1|100|Send|||||447|
+255|[Pause]||1|300|Sleep|||||449|
+256|Enter|{Enter}|1|200|Send|||||450|
+257|[Pause]||1|300|Sleep|||||452|
+258|[End If]|EndIf|1|0|If_Statement|||||453|
+259|[Pause]||1|300|Sleep|||||454|
+260|Escape|{Escape}|1|100|Send|||||455|
+261|[Pause]||1|300|Sleep|||||457|
+262|Continue, Continue, type, button, 0|280, 107, 534, 251, *5 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\type button.png|1|100|ImageSearch|UntilFound|Window|||458|
+263|Backspace|{Backspace}|1|100|Send|||||465|
+264|[Pause]||1|300|Sleep|||||467|
+265|[LoopEnd]|LoopEnd|1|0|Loop|||||468|
+266|[Pause]||1|300|Sleep|||||469|
+267|tohbot@toyotaofhackensack.com|Finished Vehicle Comments=0:Finished Vehicle Comments|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||470|
+268|[Pause]||1|300|Sleep|||||473|
+269|FileAppend|done, C:\engine\donevehiclecomments.txt|1|0|FileAppend|||||474|
+270|[Pause]||1|300|Sleep|||||475|
+271|ExitApp||1|0|ExitApp|||||476|
+

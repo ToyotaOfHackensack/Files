@@ -1,0 +1,67 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|EntireScreen
+Context=None|
+Groups=Start:1
+1|[Pause]||1|300|Sleep|||||1|
+2|tohbot@toyotaofhackensack.com|Started DealerVault=0:Started DealerVault|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||2|
+3|If Window Not Exist|(Home Page) - ERA-IGNITE|1|0|If_Statement|||||5|
+4|Run|C:\Users\ReynoldsPurge\Documents\live\reylogin.exe|1|0|Run|||||7|
+5|[Pause]||1|1000|Sleep|||||8|
+6|Continue, Continue, FoundX, FoundY, 0|7, 84, 141, 129, C:\Users\ReynoldsPurge\Documents\Images\Rey Home Page.png|1|1000|ImageSearch|UntilFound|Window|||9|
+7|[End If]|EndIf|1|0|If_Statement|||||16|
+8|[Pause]||1|1000|Sleep|||||17|
+9|WinActivate||1|333|WinActivate||(Home Page) - ERA-IGNITE|||18|
+10|[Pause]||1|300|Sleep|||||20|
+11|Control|{Control Down}|1|300|Send|||||21|
+12|8|{8}|1|300|Send|||||23|
+13|Control|{Control Up}|1|300|Send|||||25|
+14|[Pause]||1|1000|Sleep|||||27|
+15|Continue, Continue, FoundX, FoundY, 0|236, 83, 505, 130, C:\Users\ReynoldsPurge\Documents\Images\Report Export Loaded.png|1|1000|ImageSearch|UntilFound|Window|||28|
+16|[Pause]||1|1000|Sleep|||||35|
+17|Left Click|Left, 1,  NA|1|500|ControlClick|x433 y139|(RMI) - ERA-IGNITE|||36|
+18|[Pause]||1|500|Sleep|||||38|
+19|F5|{F5}|1|500|Send|||||39|
+20|[Pause]||1|10000|Sleep|||||41|
+21|Shift|{Shift Down}|1|300|Send|||||42|
+22|Down|{Down}|30|300|Send|||||44|
+23|Shift|{Shift Up}|1|300|Send|||||46|
+24|[Pause]||1|300|Sleep|||||48|
+25|F7|{F7}|1|300|Send|||||49|
+26|[Pause]||1|1000|Sleep|||||51|
+27|Run|C:\Users\ReynoldsPurge\Documents\live\captcha.exe|1|0|Run|||||52|
+28|[Pause]||1|2000|Sleep|||||53|
+29|[LoopStart]|LoopStart|0|0|Loop|||||54|
+30|If File Exist|C:\engine\captcha.txt|1|0|If_Statement|||||56|
+31|[Pause]||1|300|Sleep|||||58|
+32|FileDelete|C:\engine\captcha.txt|1|0|FileDelete|||||59|
+33|[Pause]||1|300|Sleep|||||60|
+34|Break||1|0|Break|||||61|
+35|[End If]|EndIf|1|0|If_Statement|||||62|
+36|[LoopEnd]|LoopEnd|1|0|Loop|||||63|
+37|[Pause]||1|6500|Sleep|||||64|
+38|Run|C:\Program Files (x86)\WinSCP\WinSCP.exe|1|0|Run|||||65|
+39|[Pause]||1|6500|Sleep|||||66|
+40|Control|{Control Down}|1|200|Send|||||67|
+41|n|{n}|1|200|Send|||||69|
+42|Control|{Control Up}|1|200|Send|||||71|
+43|[Pause]||1|6500|Sleep|||||73|
+44|Enter|{Enter}|1|200|Send|||||74|
+45|[Pause]||1|6500|Sleep|||||76|
+46|Control|{Control Down}|1|150|Send|||||77|
+47|a|{a}|1|150|Send|||||79|
+48|Control|{Control Up}|1|150|Send|||||81|
+49|[Pause]||1|6500|Sleep|||||83|
+50|F6|{F6}|1|150|Send|||||84|
+51|[Pause]||1|6500|Sleep|||||86|
+52|Continue, Continue, FoundX, FoundY, 0|49, 997, 123, 1033, *30 C:\Users\ReynoldsPurge\Documents\Images\DealerVault Finished.png|1|100|ImageSearch|UntilFound|Screen|||87|
+53|[Pause]||1|700|Sleep|||||94|
+54|Alt|{Alt Down}|1|150|Send|||||95|
+55|F4|{F4}|1|150|Send|||||97|
+56|Alt|{Alt Up}|1|150|Send|||||99|
+57|[Pause]||1|1000|Sleep|||||101|
+58|tohbot@toyotaofhackensack.com|Finished DealerVault=0:Finished DealerVault|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||102|
+59|[Pause]||1|3000|Sleep|||||105|
+60|FileAppend|done, C:\engine\donedealervault.txt|1|0|FileAppend|||||106|
+61|[Pause]||1|300|Sleep|||||107|
+62|ExitApp||1|0|ExitApp|||||108|
+

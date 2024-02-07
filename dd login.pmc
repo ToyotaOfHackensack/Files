@@ -1,0 +1,164 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|[Pause]||1|300|Sleep|||||1|
+2|Process|close, chrome.exe|1|0|Process|||||2|
+3|[Pause]||1|300|Sleep|||||3|
+4|Process|close, chrome.exe|1|0|Process|||||4|
+5|[Pause]||1|300|Sleep|||||5|
+6|Process|close, chrome.exe|1|0|Process|||||6|
+7|[Pause]||1|300|Sleep|||||7|
+8|Process|close, chrome.exe|1|0|Process|||||8|
+9|[Pause]||1|300|Sleep|||||9|
+10|Process|close, chrome.exe|1|0|Process|||||10|
+11|[Pause]||1|300|Sleep|||||11|
+12|Process|close, chrome.exe|1|0|Process|||||12|
+13|[Pause]||1|300|Sleep|||||13|
+14|Process|close, chrome.exe|1|0|Process|||||14|
+15|[Pause]||1|300|Sleep|||||15|
+16|Run|C:\Program Files (x86)\Google\Chrome\Application\chrome.exe --disable-session-crashed-bubble|1|0|Run|||||16|
+17|[Pause]||1|4000|Sleep|||||17|
+18|Left Move & Click|410, 56 Left, 1|1|500|Click|||||18|
+19|[Pause]||1|600|Sleep|||||20|
+20|[Text]|https://dealer.toyota.com|1|100|SendRaw|||||21|
+21|[Pause]||1|600|Sleep|||||23|
+22|Enter|{Enter}|1|200|Send|||||24|
+23|[Pause]||1|10000|Sleep|||||26|
+24|[LoopStart]|LoopStart|0|0|Loop|||||27|
+25|Continue, Continue, dd, loginbox, 1|903, 304, 1105, 462, *50 C:\Users\ReynoldsPurge\Documents\Images\dd loginbox.png|1|100|ImageSearch||Window|||29|
+26|If Image/Pixel Not Found||1|0|If_Statement|||||33|
+27|[Pause]||1|300|Sleep|||||35|
+28|Process|close, chrome.exe|1|0|Process|||||36|
+29|[Pause]||1|750|Sleep|||||37|
+30|Run|C:\Program Files (x86)\Google\Chrome\Application\chrome.exe --disable-session-crashed-bubble|1|0|Run|||||38|
+31|[Pause]||1|4000|Sleep|||||39|
+32|Left Move & Click|410, 56 Left, 1|1|500|Click|||||40|
+33|[Pause]||1|600|Sleep|||||42|
+34|[Text]|https://dealer.toyota.com|1|100|SendRaw|||||43|
+35|[Pause]||1|600|Sleep|||||45|
+36|Enter|{Enter}|1|200|Send|||||46|
+37|[Pause]||1|10000|Sleep|||||48|
+38|[Else]|Else|1|0|If_Statement|||||49|
+39|Break||1|0|Break|||||52|
+40|[End If]|EndIf|1|0|If_Statement|||||53|
+41|[LoopEnd]|LoopEnd|1|0|Loop|||||54|
+42|[Pause]||1|2000|Sleep|||||55|
+43|Run|R:\dd login.ods|1|0|Run|||||56|
+44|[Pause]||1|3000|Sleep|||||57|
+45|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||58|
+46|[Pause]||1|300|Sleep|||||60|
+47|Left Move & Click|388, 396 Left, 1|1|10|Click|||||61|
+48|[Pause]||1|350|Sleep|||||63|
+49|Left Move & Click|309, 108 Left, 1|1|10|Click|||||64|
+50|[Pause]||1|350|Sleep|||||66|
+51|[End If]|EndIf|1|0|If_Statement|||||67|
+52|[Pause]||1|5000|Sleep|||||68|
+53|If Window Not Active|dd login.ods - LibreOffice Calc|1|0|If_Statement|||||69|
+54|[Pause]||1|2000|Sleep|||||71|
+55|Run|R:\dd login.ods|1|0|Run|||||72|
+56|[Pause]||1|3000|Sleep|||||73|
+57|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||74|
+58|[Pause]||1|300|Sleep|||||76|
+59|Left Move & Click|388, 396 Left, 1|1|10|Click|||||77|
+60|[Pause]||1|350|Sleep|||||79|
+61|Left Move & Click|309, 108 Left, 1|1|10|Click|||||80|
+62|[Pause]||1|350|Sleep|||||82|
+63|[End If]|EndIf|1|0|If_Statement|||||83|
+64|[Pause]||1|5000|Sleep|||||84|
+65|[End If]|EndIf|1|0|If_Statement|||||85|
+66|[Pause]||1|3000|Sleep|||||86|
+67|Control|{Control Down}|1|100|Send|||||87|
+68|Home|{Home}|1|100|Send|||||89|
+69|Control|{Control Up}|1|100|Send|||||91|
+70|[Pause]||1|500|Sleep|||||93|
+71|Control|{Control Down}|1|100|Send|||||94|
+72|c|{c}|1|100|Send|||||96|
+73|Control|{Control Up}|1|100|Send|||||98|
+74|[Pause]||1|500|Sleep|||||100|
+75|WinActivate||1|333|WinActivate||ForgeRock Access Management - Google Chrome|||101|
+76|[Pause]||1|500|Sleep|||||103|
+77|Control|{Control Down}|1|100|Send|||||104|
+78|V|{V}|1|100|Send|||||106|
+79|Control|{Control Up}|1|100|Send|||||108|
+80|[Pause]||1|300|Sleep|||||110|
+81|Tab|{Tab}|1|100|Send|||||111|
+82|[Pause]||1|300|Sleep|||||113|
+83|WinActivate||1|333|WinActivate||dd login.ods - LibreOffice Calc|||114|
+84|[Pause]||1|300|Sleep|||||116|
+85|Down|{Down}|1|100|Send|||||117|
+86|[Pause]||1|300|Sleep|||||119|
+87|Control|{Control Down}|1|100|Send|||||120|
+88|c|{c}|1|100|Send|||||122|
+89|Control|{Control Up}|1|100|Send|||||124|
+90|[Pause]||1|300|Sleep|||||126|
+91|WinActivate||1|333|WinActivate||ForgeRock Access Management - Google Chrome|||127|
+92|[Pause]||1|300|Sleep|||||129|
+93|Control|{Control Down}|1|100|Send|||||130|
+94|V|{V}|1|100|Send|||||132|
+95|Control|{Control Up}|1|100|Send|||||134|
+96|[Pause]||1|300|Sleep|||||136|
+97|Left Move & Click|%dd%, %loginbox% Left, 1|1|100|Click|||||137|
+98|[Pause]||1|300|Sleep|||||139|
+99|Continue, Continue, dd, loginbutt, 1|757, 269, 1595, 1006, C:\Users\ReynoldsPurge\Documents\Images\dd loginbutt.png|1|0|ImageSearch|UntilFound|Window|||140|
+100|[Pause]||1|300|Sleep|||||147|
+101|Left Move & Click|%dd%, %loginbutt% Left, 1|1|100|Click|||||148|
+102|[Pause]||1|60000|Sleep|||||150|
+103|Continue, Continue, FoundX, FoundY, 0|623, 156, 1460, 555, *10 C:\Users\ReynoldsPurge\Documents\Images\dd validate.png|1|100|ImageSearch||Screen|||151|
+104|If Image/Pixel Found||1|0|If_Statement|||||154|
+105|[Pause]||1|300|Sleep|||||156|
+106|Left Move & Click|970, 388 Left, 1|1|100|Click|||||157|
+107|[Pause]||1|300|Sleep|||||159|
+108|LWin|{LWin}|1|500|Send|||||160|
+109|[Pause]||1|300|Sleep|||||162|
+110|o|{o}|1|500|Send|||||163|
+111|[Pause]||1|300|Sleep|||||165|
+112|u|{u}|1|500|Send|||||166|
+113|[Pause]||1|300|Sleep|||||168|
+114|t|{t}|1|500|Send|||||169|
+115|[Pause]||1|300|Sleep|||||171|
+116|l|{l}|1|500|Send|||||172|
+117|[Pause]||1|300|Sleep|||||174|
+118|Enter|{Enter}|1|500|Send|||||175|
+119|[Pause]||1|30000|Sleep|||||177|
+120|Home|{Home}|1|300|Send|||||178|
+121|[Pause]||1|2000|Sleep|||||180|
+122|Left Move & Click|978, 277 Left, 2|1|100|Click|||||181|
+123|[Pause]||1|2000|Sleep|||||183|
+124|Control|{Control Down}|1|100|Send|||||184|
+125|c|{c}|1|100|Send|||||186|
+126|Control|{Control Up}|1|100|Send|||||188|
+127|[Pause]||1|2000|Sleep|||||190|
+128|Delete|{Delete}|1|100|Send|||||191|
+129|[Pause]||1|2000|Sleep|||||193|
+130|Alt|{Alt Down}|1|100|Send|||||194|
+131|F4|{F4}|1|100|Send|||||196|
+132|Alt|{Alt Up}|1|100|Send|||||198|
+133|[Pause]||1|2000|Sleep|||||200|
+134|WinActivate||1|333|WinActivate||ForgeRock Access Management - Google Chrome|||201|
+135|[Pause]||1|2000|Sleep|||||203|
+136|Control|{Control Down}|1|100|Send|||||204|
+137|V|{V}|1|100|Send|||||206|
+138|Control|{Control Up}|1|100|Send|||||208|
+139|[Pause]||1|2000|Sleep|||||210|
+140|Continue, Continue, submit, otp, 1|511, 145, 1383, 600, *50 C:\Users\ReynoldsPurge\Documents\Images\dd otp.png|1|100|ImageSearch|UntilFound|Screen|||211|
+141|[Pause]||1|300|Sleep|||||219|
+142|Left Move & Click|%submit%, %otp% Left, 1|1|100|Click|||||220|
+143|[Pause]||1|500|Sleep|||||222|
+144|Continue, Continue, save, otp, 1|489, 138, 1359, 561, *50 C:\Users\ReynoldsPurge\Documents\Images\dd save otp.png|1|300|ImageSearch|UntilFound|Screen|||223|
+145|[Pause]||1|300|Sleep|||||231|
+146|Left Move & Click|%save%, %otp% Left, 1|1|100|Click|||||232|
+147|[Pause]||1|300|Sleep|||||234|
+148|Left Move & Click|976, 394 Left, 1|1|10|Click|||||235|
+149|[Pause]||1|500|Sleep|||||237|
+150|[End If]|EndIf|1|0|If_Statement|||||238|
+151|WinActivate||1|333|WinActivate||dd login.ods - LibreOffice Calc|||239|
+152|[Pause]||1|300|Sleep|||||241|
+153|Alt|{Alt Down}|1|100|Send|||||242|
+154|F4|{F4}|1|100|Send|||||244|
+155|Alt|{Alt Up}|1|100|Send|||||246|
+156|[Pause]||1|300|Sleep|||||248|
+157|FileAppend|done, C:\engine\ddlogin.txt|1|0|FileAppend|||||249|
+158|[Pause]||1|500|Sleep|||||250|
+159|ExitApp||1|0|ExitApp|||||251|
+

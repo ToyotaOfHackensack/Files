@@ -1,0 +1,299 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|[LoopStart]|LoopStart|0|0|Loop||||||
+2|WinActivate||1|333|WinActivate||delete pdi.csv - LibreOffice Calc||||
+3|[Pause]||1|500|Sleep||||||
+4|Control|{Control Down}|1|300|Send||||||
+5|Home|{Home}|1|300|Send||||||
+6|Control|{Control Up}|1|300|Send||||||
+7|[Pause]||1|500|Sleep||||||
+8|Shift|{Shift Down}|1|300|Send||||||
+9|Space|{Space}|1|300|Send||||||
+10|Shift|{Shift Up}|1|300|Send||||||
+11|[Pause]||1|500|Sleep||||||
+12|Control|{Control Down}|1|300|Send||||||
+13|-|{-}|1|300|Send||||||
+14|Control|{Control Up}|1|300|Send||||||
+15|[Pause]||1|800|Sleep||||||
+16|Control|{Control Down}|1|300|Send||||||
+17|Home|{Home}|1|300|Send||||||
+18|Control|{Control Up}|1|300|Send||||||
+19|[Pause]||1|500|Sleep||||||
+20|Control|{Control Down}|1|300|Send||||||
+21|c|{c}|1|300|Send||||||
+22|Control|{Control Up}|1|300|Send||||||
+23|[Pause]||1|800|Sleep||||||
+24|WinActivate||1|333|WinActivate||SVC||||
+25|[Pause]||1|1000|Sleep||||||
+26|Control|{Control Down}|1|300|Send||||||
+27|v|{v}|1|300|Send||||||
+28|Control|{Control Up}|1|300|Send||||||
+29|[Pause]||1|800|Sleep||||||
+30|Enter|{Enter}|1|800|Send||||||
+31|[Pause]||1|800|Sleep||||||
+32|Enter|{Enter}|1|800|Send||||||
+33|[Pause]||1|800|Sleep||||||
+34|Continue, Continue, FoundX, FoundY, 0|181, 39, 780, 474, *50 C:\Users\ReynoldsPurge\Documents\Images\ro billing.png|1|300|ImageSearch|UntilFound|Window||||
+35|[Pause]||1|500|Sleep||||||
+36|Tab|{Tab}|1|500|Send||||||
+37|[Pause]||1|800|Sleep||||||
+38|3|{3}|1|500|Send||||||
+39|[Pause]||1|800|Sleep||||||
+40|Move|637, 43, 0|1|100|Click||||||
+41|[Pause]||1|800|Sleep||||||
+42|Continue, Continue, update, button, 1|395, 549, 1012, 717, *50 C:\Users\ReynoldsPurge\Documents\Images\update button.png|1|300|ImageSearch|UntilFound|Window||||
+43|[Pause]||1|800|Sleep||||||
+44|Left Move & Click|%update%, %button% Left, 1|1|100|Click||||||
+45|[Pause]||1|1000|Sleep||||||
+46|Continue, Continue, labor, button, 1|112, 112, 720, 575, *50 C:\Users\ReynoldsPurge\Documents\Images\labor button.png|1|300|ImageSearch|UntilFound|Window||||
+47|[Pause]||1|1000|Sleep||||||
+48|Left Move & Click|%labor%, %button% Left, 1|1|200|Click||||||
+49|[Pause]||1|500|Sleep||||||
+50|Continue, Continue, edit, job, 1|188, 273, 981, 718, *50 C:\Users\ReynoldsPurge\Documents\Images\edit job.png|1|200|ImageSearch|UntilFound|Window||||
+51|[Pause]||1|500|Sleep||||||
+52|Left Move & Click|%edit%, %job% Left, 1|1|200|Click||||||
+53|[Pause]||1|1000|Sleep||||||
+54|Tab|{Tab}|3|300|Send||||||
+55|[Pause]||1|800|Sleep||||||
+56|0|{0}|1|300|Send||||||
+57|[Pause]||1|800|Sleep||||||
+58|Tab|{Tab}|3|300|Send||||||
+59|[Pause]||1|800|Sleep||||||
+60|0|{0}|1|300|Send||||||
+61|[Pause]||1|800|Sleep||||||
+62|Continue, Continue, tech, field, 1|39, 295, 479, 565, *50 C:\Users\ReynoldsPurge\Documents\Images\tech field.png|1|300|ImageSearch|UntilFound|Window||||
+63|[Pause]||1|800|Sleep||||||
+64|Left Move & Click|%tech%, %field% Left, 1|1|200|Click||||||
+65|[Pause]||1|800|Sleep||||||
+66|[Text]|35|1|200|SendRaw||||||
+67|[Pause]||1|800|Sleep||||||
+68|Tab|{Tab}|1|300|Send||||||
+69|[Pause]||1|800|Sleep||||||
+70|Continue, Continue, start, field, 1|294, 230, 822, 605, *50 C:\Users\ReynoldsPurge\Documents\Images\start field.png|1|300|ImageSearch|UntilFound|Window||||
+71|[Pause]||1|800|Sleep||||||
+72|Left Move & Click|%start%, %field% Left, 1|1|200|Click||||||
+73|[Pause]||1|800|Sleep||||||
+74|0|{0}|1|300|Send||||||
+75|[Pause]||1|800|Sleep||||||
+76|Continue, Continue, finish, field, 1|294, 230, 822, 605, *50 C:\Users\ReynoldsPurge\Documents\Images\finish field.png|1|300|ImageSearch|UntilFound|Window||||
+77|[Pause]||1|800|Sleep||||||
+78|Left Move & Click|%finish%, %field% Left, 1|1|200|Click||||||
+79|[Pause]||1|800|Sleep||||||
+80|0|{0}|1|300|Send||||||
+81|[Pause]||1|800|Sleep||||||
+82|Tab|{Tab}|1|300|Send||||||
+83|[Pause]||1|800|Sleep||||||
+84|0|{0}|1|300|Send||||||
+85|[Pause]||1|800|Sleep||||||
+86|Tab|{Tab}|1|300|Send||||||
+87|[Pause]||1|800|Sleep||||||
+88|Continue, Continue, apply, button, 1|443, 365, 728, 639, *50 C:\Users\ReynoldsPurge\Documents\Images\pdi apply button.png|1|300|ImageSearch|UntilFound|Window||||
+89|[Pause]||1|800|Sleep||||||
+90|Left Move & Click|%apply%, %button% Left, 1|1|300|Click||||||
+91|[Pause]||1|1500|Sleep||||||
+92|Continue, Continue, next, record, 1|8, 585, 69, 638, C:\Users\ReynoldsPurge\Documents\Images\next record.png|1|300|ImageSearch|UntilFound|Window||||
+93|[Pause]||1|800|Sleep||||||
+94|Left Move & Click|%next%, %record% Left, 1|1|300|Click||||||
+95|[Pause]||1|1000|Sleep||||||
+96|Tab|{Tab}|3|300|Send||||||
+97|[Pause]||1|800|Sleep||||||
+98|0|{0}|1|300|Send||||||
+99|[Pause]||1|800|Sleep||||||
+100|Tab|{Tab}|3|300|Send||||||
+101|[Pause]||1|800|Sleep||||||
+102|0|{0}|1|300|Send||||||
+103|[Pause]||1|800|Sleep||||||
+104|Continue, Continue, tech, field, 1|39, 295, 479, 565, *50 C:\Users\ReynoldsPurge\Documents\Images\tech field.png|1|300|ImageSearch|UntilFound|Window||||
+105|[Pause]||1|800|Sleep||||||
+106|Left Move & Click|%tech%, %field% Left, 1|1|200|Click||||||
+107|[Pause]||1|800|Sleep||||||
+108|[Text]|35|1|200|SendRaw||||||
+109|[Pause]||1|800|Sleep||||||
+110|Tab|{Tab}|1|300|Send||||||
+111|[Pause]||1|800|Sleep||||||
+112|Continue, Continue, start, field, 1|294, 230, 822, 605, *50 C:\Users\ReynoldsPurge\Documents\Images\start field.png|1|300|ImageSearch|UntilFound|Window||||
+113|[Pause]||1|800|Sleep||||||
+114|Left Move & Click|%start%, %field% Left, 1|1|200|Click||||||
+115|[Pause]||1|800|Sleep||||||
+116|0|{0}|1|300|Send||||||
+117|[Pause]||1|800|Sleep||||||
+118|Continue, Continue, finish, field, 1|294, 230, 822, 605, *50 C:\Users\ReynoldsPurge\Documents\Images\finish field.png|1|300|ImageSearch|UntilFound|Window||||
+119|[Pause]||1|800|Sleep||||||
+120|Left Move & Click|%finish%, %field% Left, 1|1|200|Click||||||
+121|[Pause]||1|800|Sleep||||||
+122|0|{0}|1|300|Send||||||
+123|[Pause]||1|800|Sleep||||||
+124|Tab|{Tab}|1|300|Send||||||
+125|[Pause]||1|800|Sleep||||||
+126|0|{0}|1|300|Send||||||
+127|[Pause]||1|800|Sleep||||||
+128|Tab|{Tab}|1|300|Send||||||
+129|[Pause]||1|800|Sleep||||||
+130|Continue, Continue, ok, button, 1|599, 536, 818, 640, *50 C:\Users\ReynoldsPurge\Documents\Images\ok button.png|1|200|ImageSearch|UntilFound|Window||||
+131|[Pause]||1|800|Sleep||||||
+132|Left Move & Click|%ok%, %button% Left, 1|1|100|Click||||||
+133|[Pause]||1|800|Sleep||||||
+134|[Pause]||1|1000|Sleep||||||
+135|Escape|{Escape}|1|300|Send||||||
+136|[Pause]||1|1000|Sleep||||||
+137|Alt|{Alt}|1|500|Send||||||
+138|[Pause]||1|800|Sleep||||||
+139|Enter|{Enter}|1|500|Send||||||
+140|[Pause]||1|800|Sleep||||||
+141|Down|{Down}|1|500|Send||||||
+142|[Pause]||1|800|Sleep||||||
+143|Enter|{Enter}|1|500|Send||||||
+144|[Pause]||1|800|Sleep||||||
+145|Move|637, 43, 0|1|100|Click||||||
+146|[Pause]||1|300|Sleep||||||
+147|Continue, Continue, edit, job, 1|462, 558, 990, 718, *50 C:\Users\ReynoldsPurge\Documents\Images\edit job.png|1|300|ImageSearch|UntilFound|Window||||
+148|[Pause]||1|800|Sleep||||||
+149|Left Move & Click|%edit%, %job% Left, 1|1|100|Click||||||
+150|[Pause]||1|500|Sleep||||||
+151|Continue, Continue, status, button, 1|25, 17, 801, 296, *50 C:\Users\ReynoldsPurge\Documents\Images\status button.png|1|300|ImageSearch|UntilFound|Window||||
+152|[Pause]||1|500|Sleep||||||
+153|Left Move & Click|%status%, %button% Left, 1|1|100|Click||||||
+154|[Pause]||1|800|Sleep||||||
+155|F|{F}|1|400|Send||||||
+156|[Pause]||1|800|Sleep||||||
+157|Enter|{Enter}|1|400|Send||||||
+158|[Pause]||1|800|Sleep||||||
+159|[Text]|35|1|200|SendRaw||||||
+160|[Pause]||1|800|Sleep||||||
+161|Tab|{Tab}|1|300|Send||||||
+162|[Pause]||1|800|Sleep||||||
+163|Continue, Continue, apply, button, 1|443, 365, 728, 639, *50 C:\Users\ReynoldsPurge\Documents\Images\pdi apply button.png|1|300|ImageSearch|UntilFound|Window||||
+164|[Pause]||1|800|Sleep||||||
+165|Left Move & Click|%apply%, %button% Left, 1|1|300|Click||||||
+166|[Pause]||1|1500|Sleep||||||
+167|Continue, Continue, next, record, 1|11, 418, 107, 465, *50 C:\Users\ReynoldsPurge\Documents\Images\next record.png|1|300|ImageSearch|UntilFound|Window||||
+168|[Pause]||1|800|Sleep||||||
+169|Left Move & Click|%next%, %record% Left, 1|1|300|Click||||||
+170|[Pause]||1|1000|Sleep||||||
+171|Continue, Continue, status, button, 1|25, 17, 801, 296, *50 C:\Users\ReynoldsPurge\Documents\Images\status button.png|1|300|ImageSearch|UntilFound|Window||||
+172|[Pause]||1|500|Sleep||||||
+173|Left Move & Click|%status%, %button% Left, 1|1|100|Click||||||
+174|[Pause]||1|800|Sleep||||||
+175|F|{F}|1|400|Send||||||
+176|[Pause]||1|800|Sleep||||||
+177|Enter|{Enter}|1|400|Send||||||
+178|[Pause]||1|800|Sleep||||||
+179|[Text]|35|1|200|SendRaw||||||
+180|[Pause]||1|800|Sleep||||||
+181|Tab|{Tab}|1|300|Send||||||
+182|[Pause]||1|800|Sleep||||||
+183|Continue, Continue, ok, button, 1|428, 278, 843, 466, *50 C:\Users\ReynoldsPurge\Documents\Images\ok button.png|1|200|ImageSearch|UntilFound|Window||||
+184|[Pause]||1|800|Sleep||||||
+185|Left Move & Click|%ok%, %button% Left, 1|1|100|Click||||||
+186|[Pause]||1|1500|Sleep||||||
+187|Continue, Continue, functions, button, 1|9, 15, 82, 78, *50 C:\Users\ReynoldsPurge\Documents\Images\functions button.png|1|200|ImageSearch|UntilFound|Window||||
+188|[Pause]||1|300|Sleep||||||
+189|Left Move & Click|%functions%, %button% Left, 1|1|100|Click||||||
+190|[Pause]||1|800|Sleep||||||
+191|Continue, Continue, ro, billing, 1|8, 11, 412, 246, *50 C:\Users\ReynoldsPurge\Documents\Images\switch ro billing.png|1|200|ImageSearch|UntilFound|Window||||
+192|[Pause]||1|300|Sleep||||||
+193|Left Move & Click|%ro%, %billing% Left, 1|1|100|Click||||||
+194|[Pause]||1|1500|Sleep||||||
+195|Continue, Continue, functions, button, 1|9, 15, 82, 78, *50 C:\Users\ReynoldsPurge\Documents\Images\functions button.png|1|200|ImageSearch|UntilFound|Window||||
+196|[Pause]||1|300|Sleep||||||
+197|Left Move & Click|%functions%, %button% Left, 1|1|100|Click||||||
+198|[Pause]||1|800|Sleep||||||
+199|Continue, Continue, lt, entry, 1|11, 404, 381, 641, *50 C:\Users\ReynoldsPurge\Documents\Images\lt entry.png|1|200|ImageSearch|UntilFound|Window||||
+200|[Pause]||1|300|Sleep||||||
+201|Left Move & Click|%lt%, %entry% Left, 1|1|100|Click||||||
+202|[Pause]||1|800|Sleep||||||
+203|Continue, Continue, FoundX, FoundY, 0|257, 285, 703, 439, *50 C:\Users\ReynoldsPurge\Documents\Images\no remove.png|1|200|ImageSearch|UntilFound|Window||||
+204|[Pause]||1|800|Sleep||||||
+205|Left|{Left}|1|300|Send||||||
+206|[Pause]||1|800|Sleep||||||
+207|Up|{Up}|7|300|Send||||||
+208|[Pause]||1|800|Sleep||||||
+209|[LoopStart]|LoopStart|0|0|Loop||||||
+210|[Pause]||1|800|Sleep||||||
+211|Continue, Continue, remove, button, 1|395, 291, 709, 440, *50 C:\Users\ReynoldsPurge\Documents\Images\remove button.png|1|500|ImageSearch||Window||||
+212|If Image/Pixel Found||1|0|If_Statement||||||
+213|[Pause]||1|500|Sleep||||||
+214|Left Move & Click|%remove%, %button% Left, 1|1|200|Click||||||
+215|[Pause]||1|800|Sleep||||||
+216|If Window Active|SVCSLOP1 - 2029|1|0|If_Statement||||||
+217|[Pause]||1|800|Sleep||||||
+218|Enter|{Enter}|1|300|Send||||||
+219|[Pause]||1|800|Sleep||||||
+220|[End If]|EndIf|1|0|If_Statement||||||
+221|[Else]|Else|1|0|If_Statement||||||
+222|Break||1|0|Break||||||
+223|[End If]|EndIf|1|0|If_Statement||||||
+224|[LoopEnd]|LoopEnd|1|0|Loop||||||
+225|[Pause]||1|500|Sleep||||||
+226|Continue, Continue, ok, button, 1|518, 301, 828, 438, *50 C:\Users\ReynoldsPurge\Documents\Images\ok button.png|1|200|ImageSearch|UntilFound|Window||||
+227|[Pause]||1|800|Sleep||||||
+228|Left Move & Click|%ok%, %button% Left, 1|1|100|Click||||||
+229|[Pause]||1|1500|Sleep||||||
+230|Continue, Continue, labor, button, 1|112, 112, 720, 575, *50 C:\Users\ReynoldsPurge\Documents\Images\labor button.png|1|300|ImageSearch|UntilFound|Window||||
+231|[Pause]||1|800|Sleep||||||
+232|Left Move & Click|%labor%, %button% Left, 1|1|200|Click||||||
+233|[Pause]||1|500|Sleep||||||
+234|Continue, Continue, delete, job, 1|27, 487, 488, 719, C:\Users\ReynoldsPurge\Documents\Images\delete job.png|1|300|ImageSearch|UntilFound|Window||||
+235|[Pause]||1|800|Sleep||||||
+236|Left Move & Click|%delete%, %job% Left, 1|1|200|Click||||||
+237|[Pause]||1|800|Sleep||||||
+238|If Window Active|SVCADOPC - 1013|1|0|If_Statement||||||
+239|[Pause]||1|800|Sleep||||||
+240|Enter|{Enter}|1|300|Send||||||
+241|[Pause]||1|800|Sleep||||||
+242|[End If]|EndIf|1|0|If_Statement||||||
+243|[Pause]||1|800|Sleep||||||
+244|Move|637, 43, 0|1|100|Click||||||
+245|[Pause]||1|300|Sleep||||||
+246|Continue, Continue, delete, job, 1|27, 487, 488, 719, C:\Users\ReynoldsPurge\Documents\Images\delete job.png|1|300|ImageSearch|UntilFound|Window||||
+247|[Pause]||1|800|Sleep||||||
+248|Left Move & Click|%delete%, %job% Left, 1|1|200|Click||||||
+249|[Pause]||1|800|Sleep||||||
+250|If Window Active|SVCADOPC - 1013|1|0|If_Statement||||||
+251|[Pause]||1|800|Sleep||||||
+252|Enter|{Enter}|1|300|Send||||||
+253|[Pause]||1|800|Sleep||||||
+254|[End If]|EndIf|1|0|If_Statement||||||
+255|[Pause]||1|800|Sleep||||||
+256|Escape|{Escape}|1|500|Send||||||
+257|[Pause]||1|1000|Sleep||||||
+258|Continue, Continue, misc, button, 1|111, 199, 642, 572, *50 C:\Users\ReynoldsPurge\Documents\Images\misc button.png|1|300|ImageSearch|UntilFound|Window||||
+259|[Pause]||1|800|Sleep||||||
+260|Left Move & Click|%misc%, %button% Left, 1|1|100|Click||||||
+261|[Pause]||1|800|Sleep||||||
+262|Continue, Continue, delete, misc, 1|153, 54, 547, 325, *50 C:\Users\ReynoldsPurge\Documents\Images\delete misc.png|1|300|ImageSearch|UntilFound|Window||||
+263|[Pause]||1|800|Sleep||||||
+264|Left Move & Click|%delete%, %misc% Left, 1|1|100|Click||||||
+265|[Pause]||1|500|Sleep||||||
+266|Continue, Continue, f8, delete, 1|28, 554, 368, 717, C:\Users\ReynoldsPurge\Documents\Images\f8 delete.png|1|300|ImageSearch|UntilFound|Window||||
+267|[Pause]||1|800|Sleep||||||
+268|Left Move & Click|%f8%, %delete% Left, 1|1|200|Click||||||
+269|[Pause]||1|800|Sleep||||||
+270|If Window Active|SVCSMIS0 - 1002|1|0|If_Statement||||||
+271|[Pause]||1|800|Sleep||||||
+272|Enter|{Enter}|1|300|Send||||||
+273|[Pause]||1|800|Sleep||||||
+274|[End If]|EndIf|1|0|If_Statement||||||
+275|[Pause]||1|800|Sleep||||||
+276|Continue, Continue, update, button, 1|395, 549, 1012, 717, *50 C:\Users\ReynoldsPurge\Documents\Images\update button.png|1|300|ImageSearch|UntilFound|Window||||
+277|[Pause]||1|800|Sleep||||||
+278|Left Move & Click|%update%, %button% Left, 1|1|100|Click||||||
+279|[Pause]||1|1000|Sleep||||||
+280|Alt|{Alt}|1|500|Send||||||
+281|[Pause]||1|800|Sleep||||||
+282|Right|{Right}|1|500|Send||||||
+283|[Pause]||1|800|Sleep||||||
+284|Enter|{Enter}|1|500|Send||||||
+285|[Pause]||1|800|Sleep||||||
+286|V|{V}|1|500|Send||||||
+287|[Pause]||1|2500|Sleep||||||
+288|If Window Active|SVCMAIN0 - 1003|1|0|If_Statement||||||
+289|[Pause]||1|800|Sleep||||||
+290|Enter|{Enter}|1|300|Send||||||
+291|[Pause]||1|800|Sleep||||||
+292|[End If]|EndIf|1|0|If_Statement||||||
+293|[Pause]||1|1200|Sleep||||||
+294|[LoopEnd]|LoopEnd|1|0|Loop||||||
+

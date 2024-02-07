@@ -1,0 +1,66 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|tohbot@toyotaofhackensack.com|Started PDI export=0:Started PDI export|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||1|
+2|If Window Not Exist|(Home Page) - ERA-IGNITE|1|0|If_Statement|||||4|
+3|Run|C:\Users\ReynoldsPurge\Documents\live\reylogin.exe|1|0|Run|||||6|
+4|[Pause]||1|1000|Sleep|||||7|
+5|Continue, Continue, FoundX, FoundY, 0|7, 84, 141, 129, C:\Users\ReynoldsPurge\Documents\Images\Rey Home Page.png|1|1000|ImageSearch|UntilFound|Window|||8|
+6|[End If]|EndIf|1|0|If_Statement|||||15|
+7|[Pause]||1|1000|Sleep|||||16|
+8|WinActivate||1|333|WinActivate||(Home Page) - ERA-IGNITE|||17|
+9|[Pause]||1|300|Sleep|||||19|
+10|Control|{Control Down}|1|300|Send|||||20|
+11|8|{8}|1|300|Send|||||22|
+12|Control|{Control Up}|1|300|Send|||||24|
+13|[Pause]||1|1000|Sleep|||||26|
+14|Continue, Continue, FoundX, FoundY, 0|236, 83, 505, 130, C:\Users\ReynoldsPurge\Documents\Images\Report Export Loaded.png|1|1000|ImageSearch|UntilFound|Window|||27|
+15|[Pause]||1|1000|Sleep|||||34|
+16|Left Move & Click|791, 186 Left, 1|1|200|Click|||||35|
+17|[Pause]||1|2000|Sleep|||||37|
+18|[Text]|1274|1|300|SendRaw|||||38|
+19|[Pause]||1|1000|Sleep|||||40|
+20|F5|{F5}|1|300|Send|||||41|
+21|[Pause]||1|1000|Sleep|||||43|
+22|F11|{F11}|1|500|Send|||||44|
+23|[Pause]||1|1500|Sleep|||||46|
+24|[LoopStart]|LoopStart|0|0|Loop|||||47|
+25|If Window Exist|Run Options|1|0|If_Statement|||||49|
+26|WinActivate||1|333|WinActivate||Run Options|||51|
+27|[Pause]||1|1500|Sleep|||||53|
+28|Left Move & Click|25, 77 Left, 1|1|300|Click|||||54|
+29|[Pause]||1|300|Sleep|||||56|
+30|Left Move & Click|148, 125 Left, 1|1|400|Click|||||57|
+31|Break||1|0|Break|||||59|
+32|[End If]|EndIf|1|0|If_Statement|||||60|
+33|[LoopEnd]|LoopEnd|1|0|Loop|||||61|
+34|[Pause]||1|1500|Sleep|||||62|
+35|Continue, Continue, FoundX, FoundY, 0|400, 86, 1385, 453, C:\Users\ReynoldsPurge\Documents\Images\No records found.png|1|300|ImageSearch||Window|||63|
+36|If Image/Pixel Found||1|0|If_Statement|||||66|
+37|Alt|{Alt Down}|1|300|Send|||||68|
+38|F4|{F4}|1|300|Send|||||70|
+39|Alt|{Alt Up}|1|300|Send|||||72|
+40|[Pause]||1|300|Sleep|||||74|
+41|tohbot@toyotaofhackensack.com|Finished PDI with no results=0:Finished PDI with no results|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||75|
+42|FileAppend|done, C:\engine\donepdi.txt|1|0|FileAppend|||||78|
+43|ExitApp||1|0|ExitApp|||||79|
+44|[End If]|EndIf|1|0|If_Statement|||||80|
+45|[Pause]||1|1000|Sleep|||||81|
+46|Run|C:\Users\ReynoldsPurge\Documents\live\captcha.exe|1|0|Run|||||82|
+47|[Pause]||1|2000|Sleep|||||83|
+48|[LoopStart]|LoopStart|0|0|Loop|||||84|
+49|If File Exist|C:\engine\captcha.txt|1|0|If_Statement|||||86|
+50|[Pause]||1|300|Sleep|||||88|
+51|FileDelete|C:\engine\captcha.txt|1|0|FileDelete|||||89|
+52|[Pause]||1|300|Sleep|||||90|
+53|Break||1|0|Break|||||91|
+54|[End If]|EndIf|1|0|If_Statement|||||92|
+55|[LoopEnd]|LoopEnd|1|0|Loop|||||93|
+56|[Pause]||1|1000|Sleep|||||94|
+57|tohbot@toyotaofhackensack.com|Finished PDI export=0:Finished PDI export|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||95|
+58|[Pause]||1|300|Sleep|||||98|
+59|Run|C:\Users\ReynoldsPurge\Documents\live\PDI.exe|1|0|Run|||||99|
+60|[Pause]||1|300|Sleep|||||100|
+61|ExitApp||1|0|ExitApp|||||101|
+

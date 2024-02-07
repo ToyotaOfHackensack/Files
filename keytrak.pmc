@@ -1,0 +1,424 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|tohbot@toyotaofhackensack.com|Started keytrak=0:Started keytrak |1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||1|
+2|[Pause]||1|300|Sleep|||||4|
+3|FileDelete|C:\Users\ReynoldsPurge\Documents\temp folder\keytrakupdate.csv|1|0|FileDelete|||||5|
+4|[Pause]||1|300|Sleep|||||6|
+5|Run|C:\Program Files\KeyTrak Automotive\KeyTrak Automotive.exe, C:\Program Files\KeyTrak Automotive\, maximized|1|0|Run|||||7|
+6|[Pause]||1|300|Sleep|||||8|
+7|Continue, Continue, login, button, 1|47, 144, 335, 502, C:\Users\ReynoldsPurge\Documents\Images\keytrak\login button.PNG|1|200|ImageSearch|UntilFound|Client|||9|
+8|[Pause]||1|500|Sleep|||||17|
+9|Left Move & Click|%login%, %button% Left, 1|1|200|Click|||||18|
+10|[Pause]||1|600|Sleep|||||20|
+11|Continue, Continue, FoundX, FoundY, 0|78, 368, 816, 622, C:\Users\ReynoldsPurge\Documents\Images\keytrak\user id.png|1|100|ImageSearch|UntilFound|Window|||21|
+12|[Pause]||1|600|Sleep|||||28|
+13|[Text]|tohbot|1|200|SendRaw|||||29|
+14|[Pause]||1|300|Sleep|||||31|
+15|Enter|{Enter}|1|300|Send|||||32|
+16|[Pause]||1|300|Sleep|||||34|
+17|Continue, Continue, FoundX, FoundY, 0|85, 355, 797, 667, C:\Users\ReynoldsPurge\Documents\Images\keytrak\password.png|1|100|ImageSearch|UntilFound|Window|||35|
+18|[Pause]||1|300|Sleep|||||42|
+19|[Text]|tohbot!|1|100|SendRaw|||||43|
+20|[Pause]||1|300|Sleep|||||45|
+21|Enter|{Enter}|1|200|Send|||||46|
+22|[Pause]||1|3000|Sleep|||||48|
+23|Continue, Continue, FoundX, FoundY, 1|720, 425, 865, 498, *20 C:\Users\ReynoldsPurge\Documents\Images\keytrak\alerts.png|1|500|ImageSearch||Window|||49|
+24|If Image/Pixel Found||1|0|If_Statement|||||53|
+25|[Pause]||1|300|Sleep|||||55|
+26|Left Move & Click|1163, 573 Left, 1|1|100|Click|||||56|
+27|[Pause]||1|1500|Sleep|||||58|
+28|[End If]|EndIf|1|0|If_Statement|||||59|
+29|Continue, Continue, add, vehicle, 1|1627, 72, 1927, 327, C:\Users\ReynoldsPurge\Documents\Images\keytrak\add vehicle.png|1|200|ImageSearch||Window|||60|
+30|[Pause]||1|300|Sleep|||||64|
+31|[LoopStart]|LoopStart|0|0|Loop|||||65|
+32|If Window Not Exist|new_keytrak.csv - LibreOffice Calc|1|0|If_Statement|||||67|
+33|Break||1|0|Break|||||69|
+34|[End If]|EndIf|1|0|If_Statement|||||70|
+35|WinActivate||1|333|WinActivate||new_keytrak.csv - LibreOffice Calc|||71|
+36|Continue, Continue, FoundX, FoundY, 0|229, 98, 326, 130, *50 C:\Users\ReynoldsPurge\Documents\Images\Stock Over.png|1|0|ImageSearch||Window|||73|
+37|If Image/Pixel Found||1|0|If_Statement|||||75|
+38|WinActivate||1|333|WinActivate||new_keytrak.csv - LibreOffice Calc|||77|
+39|[Pause]||1|300|Sleep|||||79|
+40|Alt|{Alt Down}|1|200|Send|||||80|
+41|F4|{F4}|1|200|Send|||||82|
+42|Alt|{Alt Up}|1|200|Send|||||84|
+43|[Pause]||1|3000|Sleep|||||86|
+44|If Window Exist|Save Document?|1|0|If_Statement|||||87|
+45|Left Move & Click|243, 134 Left, 1|1|10|Click|||||89|
+46|[End If]|EndIf|1|0|If_Statement|||||91|
+47|FileDelete|R:\new_keytrak.csv|1|0|FileDelete|||||92|
+48|[Pause]||1|300|Sleep|||||93|
+49|Break||1|0|Break|||||94|
+50|[End If]|EndIf|1|0|If_Statement|||||95|
+51|[Pause]||1|300|Sleep|||||96|
+52|Shift|{Shift Down}|1|200|Send|||||97|
+53|Space|{Space}|1|200|Send|||||99|
+54|Shift|{Shift Up}|1|200|Send|||||101|
+55|[Pause]||1|300|Sleep|||||103|
+56|Control|{Control Down}|1|200|Send|||||104|
+57|-|{-}|1|200|Send|||||106|
+58|Control|{Control Up}|1|200|Send|||||108|
+59|[Pause]||1|300|Sleep|||||110|
+60|Control|{Control Down}|1|200|Send|||||111|
+61|c|{c}|1|200|Send|||||113|
+62|Control|{Control Up}|1|200|Send|||||115|
+63|[Pause]||1|300|Sleep|||||117|
+64|WinActivate||1|333|WinActivate||KeyTrak|||118|
+65|[Pause]||1|750|Sleep|||||120|
+66|Continue, Continue, add, vehicle, 1|1627, 72, 1927, 327, C:\Users\ReynoldsPurge\Documents\Images\keytrak\add vehicle.png|1|200|ImageSearch||Window|||121|
+67|[Pause]||1|1000|Sleep|||||125|
+68|Left Move & Click|%add%, %vehicle% Left, 1|1|100|Click|||||126|
+69|[Pause]||1|3000|Sleep|||||128|
+70|Left Move & Click|352, 199 Left, 1|1|10|Click|||||129|
+71|[Pause]||1|300|Sleep|||||131|
+72|Control|{Control Down}|1|200|Send|||||132|
+73|v|{v}|1|200|Send|||||134|
+74|Control|{Control Up}|1|200|Send|||||136|
+75|[Pause]||1|500|Sleep|||||138|
+76|Tab|{Tab}|1|300|Send|||||139|
+77|[Pause]||1|300|Sleep|||||141|
+78|Continue, Continue, data, import, 1|1547, 86, 1672, 187, C:\Users\ReynoldsPurge\Documents\Images\keytrak\data import.png|1|200|ImageSearch|UntilFound|Window|||142|
+79|[Pause]||1|300|Sleep|||||150|
+80|Left Move & Click|%data%, %import% Left, 1|1|100|Click|||||151|
+81|[Pause]||1|7000|Sleep|||||153|
+82|Continue, Continue, FoundX, FoundY, 0|627, 385, 1321, 657, *50 C:\Users\ReynoldsPurge\Documents\Images\keytrak\no stock.png|1|300|ImageSearch||Window|||154|
+83|If Image/Pixel Found||1|0|If_Statement|||||157|
+84|[Pause]||1|300|Sleep|||||159|
+85|Enter|{Enter}|1|300|Send|||||160|
+86|[Pause]||1|300|Sleep|||||162|
+87|Left Move & Click|418, 202 Left, 2|1|200|Click|||||163|
+88|[Pause]||1|300|Sleep|||||165|
+89|Backspace|{Backspace}|1|300|Send|||||166|
+90|[Pause]||1|300|Sleep|||||168|
+91|Control|{Control Down}|1|200|Send|||||169|
+92|v|{v}|1|200|Send|||||171|
+93|Control|{Control Up}|1|200|Send|||||173|
+94|[Pause]||1|500|Sleep|||||175|
+95|Tab|{Tab}|1|300|Send|||||176|
+96|[Pause]||1|300|Sleep|||||178|
+97|[End If]|EndIf|1|0|If_Statement|||||179|
+98|[Pause]||1|300|Sleep|||||180|
+99|Continue, Continue, FoundX, FoundY, 0|627, 385, 1321, 657, *50 C:\Users\ReynoldsPurge\Documents\Images\keytrak\no stock.png|1|300|ImageSearch||Window|||181|
+100|If Image/Pixel Found||1|0|If_Statement|||||184|
+101|[Pause]||1|300|Sleep|||||186|
+102|Enter|{Enter}|1|300|Send|||||187|
+103|[Pause]||1|300|Sleep|||||189|
+104|Left Move & Click|418, 202 Left, 2|1|200|Click|||||190|
+105|[Pause]||1|300|Sleep|||||192|
+106|Backspace|{Backspace}|1|300|Send|||||193|
+107|[Pause]||1|300|Sleep|||||195|
+108|Continue||1|0|Continue|||||196|
+109|[End If]|EndIf|1|0|If_Statement|||||197|
+110|[Pause]||1|300|Sleep|||||198|
+111|Continue, Continue, FoundX, FoundY, 0|530, 317, 1540, 755, *50 C:\Users\ReynoldsPurge\Documents\Images\keytrak\no info new.png|1|300|ImageSearch||Window|||199|
+112|If Image/Pixel Found||1|0|If_Statement|||||202|
+113|[Pause]||1|300|Sleep|||||204|
+114|Enter|{Enter}|1|300|Send|||||205|
+115|[Pause]||1|300|Sleep|||||207|
+116|Left Move & Click|418, 202 Left, 2|1|200|Click|||||208|
+117|[Pause]||1|300|Sleep|||||210|
+118|Backspace|{Backspace}|1|300|Send|||||211|
+119|[Pause]||1|300|Sleep|||||213|
+120|Continue||1|0|Continue|||||214|
+121|[End If]|EndIf|1|0|If_Statement|||||215|
+122|Continue, Continue, FoundX, FoundY, 0|440, 128, 903, 273, C:\Users\ReynoldsPurge\Documents\Images\keytrak\data imported.png|1|100|ImageSearch|UntilNotFound|Window|||216|
+123|[Pause]||1|750|Sleep|||||223|
+124|Continue, Continue, add, vehicle2, 1|1421, 836, 1743, 994, C:\Users\ReynoldsPurge\Documents\Images\keytrak\add vehicle2.png|1|100|ImageSearch|UntilFound|Window|||224|
+125|[Pause]||1|300|Sleep|||||232|
+126|Left Move & Click|%add%, %vehicle2% Left, 1|1|100|Click|||||233|
+127|[Pause]||1|3000|Sleep|||||235|
+128|Continue, Continue, existing, stock, 1|696, 491, 1135, 572, *250 C:\Users\ReynoldsPurge\Documents\Images\keytrak\existing stock.png|1|200|ImageSearch||Window|||236|
+129|If Image/Pixel Found||1|0|If_Statement|||||240|
+130|[Pause]||1|300|Sleep|||||242|
+131|Left Move & Click|1119, 599 Left, 1|1|100|Click|||||243|
+132|[Pause]||1|500|Sleep|||||245|
+133|Left Move & Click|1039, 930 Left, 1|1|100|Click|||||246|
+134|Continue||1|0|Continue|||||248|
+135|[End If]|EndIf|1|0|If_Statement|||||249|
+136|[Pause]||1|300|Sleep|||||250|
+137|Continue, Continue, FoundX, FoundY, 0|1377, 799, 1772, 972, C:\Users\ReynoldsPurge\Documents\Images\keytrak\invalid field.png|1|200|ImageSearch||Window|||251|
+138|If Image/Pixel Found||1|0|If_Statement|||||254|
+139|[Pause]||1|300|Sleep|||||256|
+140|Continue, Continue, cancel, add, 1|909, 832, 1149, 994, C:\Users\ReynoldsPurge\Documents\Images\keytrak\cancel.png|1|100|ImageSearch|UntilFound|Window|||257|
+141|If Image/Pixel Found||1|0|If_Statement|||||265|
+142|[Pause]||1|300|Sleep|||||267|
+143|Left Move & Click|%cancel%, %add% Left, 1|1|100|Click|||||268|
+144|[Pause]||1|300|Sleep|||||270|
+145|[End If]|EndIf|1|0|If_Statement|||||271|
+146|[End If]|EndIf|1|0|If_Statement|||||272|
+147|[LoopEnd]|LoopEnd|1|0|Loop|||||273|
+148|[Pause]||1|500|Sleep|||||274|
+149|[LoopStart]|LoopStart|0|0|Loop|||||275|
+150|If Window Not Exist|used_keytrak.csv - LibreOffice Calc|1|0|If_Statement|||||277|
+151|Break||1|0|Break|||||279|
+152|[End If]|EndIf|1|0|If_Statement|||||280|
+153|WinActivate||1|333|WinActivate||used_keytrak.csv - LibreOffice Calc|||281|
+154|Continue, Continue, FoundX, FoundY, 0|229, 98, 326, 130, *50 C:\Users\ReynoldsPurge\Documents\Images\Stock Over.png|1|0|ImageSearch||Window|||283|
+155|If Image/Pixel Found||1|0|If_Statement|||||285|
+156|WinActivate||1|333|WinActivate||used_keytrak.csv - LibreOffice Calc|||287|
+157|[Pause]||1|300|Sleep|||||289|
+158|Alt|{Alt Down}|1|200|Send|||||290|
+159|F4|{F4}|1|200|Send|||||292|
+160|Alt|{Alt Up}|1|200|Send|||||294|
+161|[Pause]||1|3000|Sleep|||||296|
+162|If Window Exist|Save Document?|1|0|If_Statement|||||297|
+163|Left Move & Click|243, 134 Left, 1|1|10|Click|||||299|
+164|[End If]|EndIf|1|0|If_Statement|||||301|
+165|FileDelete|R:\used_keytrak.csv|1|0|FileDelete|||||302|
+166|[Pause]||1|300|Sleep|||||303|
+167|Break||1|0|Break|||||304|
+168|[End If]|EndIf|1|0|If_Statement|||||305|
+169|[Pause]||1|300|Sleep|||||306|
+170|Shift|{Shift Down}|1|200|Send|||||307|
+171|Space|{Space}|1|200|Send|||||309|
+172|Shift|{Shift Up}|1|200|Send|||||311|
+173|[Pause]||1|300|Sleep|||||313|
+174|Control|{Control Down}|1|200|Send|||||314|
+175|-|{-}|1|200|Send|||||316|
+176|Control|{Control Up}|1|200|Send|||||318|
+177|[Pause]||1|300|Sleep|||||320|
+178|Control|{Control Down}|1|200|Send|||||321|
+179|c|{c}|1|200|Send|||||323|
+180|Control|{Control Up}|1|200|Send|||||325|
+181|[Pause]||1|300|Sleep|||||327|
+182|WinActivate||1|333|WinActivate||KeyTrak|||328|
+183|[Pause]||1|750|Sleep|||||330|
+184|Continue, Continue, add, vehicle, 1|1627, 72, 1927, 327, C:\Users\ReynoldsPurge\Documents\Images\keytrak\add vehicle.png|1|200|ImageSearch||Window|||331|
+185|[Pause]||1|1000|Sleep|||||335|
+186|Left Move & Click|%add%, %vehicle% Left, 1|1|100|Click|||||336|
+187|[Pause]||1|3000|Sleep|||||338|
+188|Left Move & Click|352, 199 Left, 1|1|10|Click|||||339|
+189|[Pause]||1|300|Sleep|||||341|
+190|Control|{Control Down}|1|200|Send|||||342|
+191|v|{v}|1|200|Send|||||344|
+192|Control|{Control Up}|1|200|Send|||||346|
+193|[Pause]||1|1000|Sleep|||||348|
+194|Tab|{Tab}|1|300|Send|||||349|
+195|[Pause]||1|300|Sleep|||||351|
+196|Continue, Continue, data, import, 1|1547, 86, 1672, 187, C:\Users\ReynoldsPurge\Documents\Images\keytrak\data import.png|1|200|ImageSearch|UntilFound|Window|||352|
+197|[Pause]||1|300|Sleep|||||360|
+198|Left Move & Click|%data%, %import% Left, 1|1|100|Click|||||361|
+199|[Pause]||1|5000|Sleep|||||363|
+200|[Pause]||1|7000|Sleep|||||364|
+201|Continue, Continue, FoundX, FoundY, 0|627, 385, 1321, 657, *50 C:\Users\ReynoldsPurge\Documents\Images\keytrak\no stock.png|1|300|ImageSearch||Window|||365|
+202|If Image/Pixel Found||1|0|If_Statement|||||368|
+203|[Pause]||1|300|Sleep|||||370|
+204|Enter|{Enter}|1|300|Send|||||371|
+205|[Pause]||1|300|Sleep|||||373|
+206|Left Move & Click|418, 202 Left, 2|1|200|Click|||||374|
+207|[Pause]||1|300|Sleep|||||376|
+208|Backspace|{Backspace}|1|300|Send|||||377|
+209|[Pause]||1|300|Sleep|||||379|
+210|Control|{Control Down}|1|200|Send|||||380|
+211|v|{v}|1|200|Send|||||382|
+212|Control|{Control Up}|1|200|Send|||||384|
+213|[Pause]||1|500|Sleep|||||386|
+214|Tab|{Tab}|1|300|Send|||||387|
+215|[Pause]||1|300|Sleep|||||389|
+216|[End If]|EndIf|1|0|If_Statement|||||390|
+217|[Pause]||1|300|Sleep|||||391|
+218|Continue, Continue, FoundX, FoundY, 0|627, 385, 1321, 657, *50 C:\Users\ReynoldsPurge\Documents\Images\keytrak\no stock.png|1|300|ImageSearch||Window|||392|
+219|If Image/Pixel Found||1|0|If_Statement|||||395|
+220|[Pause]||1|300|Sleep|||||397|
+221|Enter|{Enter}|1|300|Send|||||398|
+222|[Pause]||1|300|Sleep|||||400|
+223|Left Move & Click|418, 202 Left, 2|1|200|Click|||||401|
+224|[Pause]||1|300|Sleep|||||403|
+225|Backspace|{Backspace}|1|300|Send|||||404|
+226|[Pause]||1|300|Sleep|||||406|
+227|Continue||1|0|Continue|||||407|
+228|[End If]|EndIf|1|0|If_Statement|||||408|
+229|[Pause]||1|300|Sleep|||||409|
+230|Continue, Continue, FoundX, FoundY, 0|440, 128, 903, 273, C:\Users\ReynoldsPurge\Documents\Images\keytrak\data imported.png|1|100|ImageSearch|UntilNotFound|Window|||410|
+231|[Pause]||1|750|Sleep|||||417|
+232|Continue, Continue, add, vehicle2, 1|1421, 836, 1743, 994, C:\Users\ReynoldsPurge\Documents\Images\keytrak\add vehicle2.png|1|100|ImageSearch|UntilFound|Window|||418|
+233|[Pause]||1|300|Sleep|||||426|
+234|Left Move & Click|%add%, %vehicle2% Left, 1|1|100|Click|||||427|
+235|[Pause]||1|2000|Sleep|||||429|
+236|Continue, Continue, existing, stock, 1|667, 395, 1249, 617, C:\Users\ReynoldsPurge\Documents\Images\keytrak\existing stock.png|1|200|ImageSearch||Screen|||430|
+237|If Image/Pixel Found||1|0|If_Statement|||||434|
+238|[Pause]||1|300|Sleep|||||436|
+239|Enter|{Enter}|1|100|Send|||||437|
+240|[Pause]||1|500|Sleep|||||439|
+241|Left Move & Click|1039, 930 Left, 1|1|100|Click|||||440|
+242|Continue||1|0|Continue|||||442|
+243|[End If]|EndIf|1|0|If_Statement|||||443|
+244|[Pause]||1|300|Sleep|||||444|
+245|Continue, Continue, FoundX, FoundY, 0|1377, 799, 1772, 972, C:\Users\ReynoldsPurge\Documents\Images\keytrak\invalid field.png|1|200|ImageSearch||Window|||445|
+246|If Image/Pixel Found||1|0|If_Statement|||||448|
+247|[Pause]||1|300|Sleep|||||450|
+248|Continue, Continue, cancel, add, 1|909, 832, 1149, 994, C:\Users\ReynoldsPurge\Documents\Images\keytrak\cancel.png|1|100|ImageSearch|UntilFound|Window|||451|
+249|If Image/Pixel Found||1|0|If_Statement|||||459|
+250|[Pause]||1|300|Sleep|||||461|
+251|Left Move & Click|%cancel%, %add% Left, 1|1|100|Click|||||462|
+252|[Pause]||1|300|Sleep|||||464|
+253|[End If]|EndIf|1|0|If_Statement|||||465|
+254|[End If]|EndIf|1|0|If_Statement|||||466|
+255|[LoopEnd]|LoopEnd|1|0|Loop|||||467|
+256|WinActivate||1|333|WinActivate||KeyTrak|||468|
+257|[Pause]||1|300|Sleep|||||470|
+258|Continue, Continue, reports, button, 1|1610, 82, 1927, 469, C:\Users\ReynoldsPurge\Documents\Images\keytrak\report button.png|1|100|ImageSearch|UntilFound|Window|||471|
+259|[Pause]||1|500|Sleep|||||479|
+260|Left Move & Click|%reports%, %button% Left, 1|1|200|Click|||||480|
+261|[Pause]||1|500|Sleep|||||482|
+262|Continue, Continue, blank, vehicles, 1|57, 168, 1551, 781, C:\Users\ReynoldsPurge\Documents\Images\keytrak\blank vehicles.png|1|100|ImageSearch|UntilFound|Window|||483|
+263|[Pause]||1|300|Sleep|||||491|
+264|Left Move & Click|%blank%, %vehicles% Left, 1|1|200|Click|||||492|
+265|[Pause]||1|500|Sleep|||||494|
+266|Continue, Continue, view, report, 1|1103, 592, 1786, 899, C:\Users\ReynoldsPurge\Documents\Images\keytrak\view report.png|1|100|ImageSearch|UntilFound|Window|||495|
+267|[Pause]||1|500|Sleep|||||503|
+268|Left Move & Click|%view%, %report% Left, 1|1|100|Click|||||504|
+269|[Pause]||1|500|Sleep|||||506|
+270|Continue, Continue, export, report, 1|811, 584, 1803, 1036, C:\Users\ReynoldsPurge\Documents\Images\keytrak\export report.png|1|100|ImageSearch|UntilFound|Window|||507|
+271|[Pause]||1|500|Sleep|||||515|
+272|Left Move & Click|%export%, %report% Left, 1|1|100|Click|||||516|
+273|[Pause]||1|3000|Sleep|||||518|
+274|[Pause]||1|500|Sleep|||||519|
+275|Backspace|{Backspace}|1|500|Send|||||520|
+276|[Pause]||1|500|Sleep|||||522|
+277|[Text]|C:\Users\ReynoldsPurge\Documents\temp folder\keytrakupdate.csv|1|0|SendRaw|||||523|
+278|[Pause]||1|500|Sleep|||||524|
+279|Enter|{Enter}|1|300|Send|||||525|
+280|[Pause]||1|500|Sleep|||||527|
+281|[Pause]||1|500|Sleep|||||528|
+282|Enter|{Enter}|1|500|Send|||||529|
+283|[Pause]||1|5000|Sleep|||||531|
+284|Run|C:\Users\ReynoldsPurge\Documents\temp folder\keytrakupdate.csv|1|0|Run|||||532|
+285|[Pause]||1|1500|Sleep|||||533|
+286|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||534|
+287|Left Move & Click|388, 396 Left, 1|1|10|Click|||||536|
+288|[Pause]||1|350|Sleep|||||538|
+289|Left Move & Click|309, 108 Left, 1|1|10|Click|||||539|
+290|[Pause]||1|350|Sleep|||||541|
+291|[End If]|EndIf|1|0|If_Statement|||||542|
+292|[Pause]||1|300|Sleep|||||543|
+293|If Window Exist|Text Import - [keytrakupdate.csv]|1|0|If_Statement|||||544|
+294|WinActivate||1|333|WinActivate||Text Import - [used_keytrak.csv]|||546|
+295|[Pause]||1|300|Sleep|||||548|
+296|Left Move & Click|305, 555 Left, 1|1|300|Click|||||549|
+297|[End If]|EndIf|1|0|If_Statement|||||551|
+298|[Pause]||1|3000|Sleep|||||552|
+299|Shift|{Shift Down}|1|100|Send|||||553|
+300|Down|{Down}|1|100|Send|||||555|
+301|Down|{Down}|1|100|Send|||||557|
+302|Space|{Space}|1|100|Send|||||559|
+303|Shift|{Shift Up}|1|100|Send|||||561|
+304|Control|{Control Down}|1|100|Send|||||563|
+305|-|{-}|1|100|Send|||||565|
+306|Control|{Control Up}|1|100|Send|||||567|
+307|[Pause]||1|500|Sleep|||||569|
+308|[LoopStart]|LoopStart|0|0|Loop|||||570|
+309|WinActivate||1|333|WinActivate||keytrakupdate.csv - LibreOffice Calc|||572|
+310|[Pause]||1|500|Sleep|||||574|
+311|Continue, Continue, FoundX, FoundY, 0|229, 98, 326, 130, *50 C:\Users\ReynoldsPurge\Documents\Images\Stock Over.png|1|0|ImageSearch||Window|||575|
+312|If Image/Pixel Found||1|0|If_Statement|||||577|
+313|[Pause]||1|300|Sleep|||||579|
+314|Alt|{Alt Down}|1|200|Send|||||580|
+315|F4|{F4}|1|200|Send|||||582|
+316|Alt|{Alt Up}|1|200|Send|||||584|
+317|[Pause]||1|3000|Sleep|||||586|
+318|If Window Exist|Save Document?|1|0|If_Statement|||||587|
+319|Left Move & Click|243, 134 Left, 1|1|10|Click|||||589|
+320|[End If]|EndIf|1|0|If_Statement|||||591|
+321|[Pause]||1|300|Sleep|||||592|
+322|FileDelete|C:\Users\ReynoldsPurge\Documents\temp folder\keytrakupdate.csv|1|0|FileDelete|||||593|
+323|[Pause]||1|300|Sleep|||||594|
+324|Break||1|0|Break|||||595|
+325|[End If]|EndIf|1|0|If_Statement|||||596|
+326|[Pause]||1|300|Sleep|||||597|
+327|Shift|{Shift Down}|1|200|Send|||||598|
+328|Space|{Space}|1|200|Send|||||600|
+329|Shift|{Shift Up}|1|200|Send|||||602|
+330|[Pause]||1|300|Sleep|||||604|
+331|Control|{Control Down}|1|200|Send|||||605|
+332|-|{-}|1|200|Send|||||607|
+333|Control|{Control Up}|1|200|Send|||||609|
+334|[Pause]||1|300|Sleep|||||611|
+335|Control|{Control Down}|1|200|Send|||||612|
+336|c|{c}|1|200|Send|||||614|
+337|Control|{Control Up}|1|200|Send|||||616|
+338|[Pause]||1|300|Sleep|||||618|
+339|WinActivate||1|333|WinActivate||KeyTrak|||619|
+340|[Pause]||1|700|Sleep|||||621|
+341|Continue, Continue, vehicles, button, 1|1562, 77, 1925, 451, *5 C:\Users\ReynoldsPurge\Documents\Images\keytrak\vehicles button.png|1|100|ImageSearch|UntilFound|Screen|||622|
+342|[Pause]||1|300|Sleep|||||630|
+343|Left Move & Click|%vehicles%, %button% Left, 1|1|100|Click|||||631|
+344|[Pause]||1|1000|Sleep|||||633|
+345|Continue, Continue, FoundX, FoundY, 1|1478, 228, 1755, 884, *5 C:\Users\ReynoldsPurge\Documents\Images\keytrak\vehicles loaded.png|1|100|ImageSearch|UntilFound|Screen|||634|
+346|[Pause]||1|1000|Sleep|||||642|
+347|Control|{Control Down}|1|200|Send|||||643|
+348|v|{v}|1|200|Send|||||645|
+349|Control|{Control Up}|1|200|Send|||||647|
+350|[Pause]||1|1000|Sleep|||||649|
+351|Enter|{Enter}|1|200|Send|||||650|
+352|[Pause]||1|300|Sleep|||||652|
+353|Continue, Continue, edit, vehicle, 1|1478, 228, 1755, 884, *5 C:\Users\ReynoldsPurge\Documents\Images\keytrak\vehicles loaded.png|1|100|ImageSearch|UntilFound|Screen|||653|
+354|[Pause]||1|1000|Sleep|||||661|
+355|Left Move & Click|%edit%, %vehicle% Left, 1|1|100|Click|||||662|
+356|[Pause]||1|300|Sleep|||||664|
+357|Continue, Continue, data, import, 1|1547, 86, 1672, 187, *5 C:\Users\ReynoldsPurge\Documents\Images\keytrak\data import.png|1|200|ImageSearch|UntilFound|Screen|||665|
+358|[Pause]||1|300|Sleep|||||673|
+359|Left Move & Click|%data%, %import% Left, 1|1|100|Click|||||674|
+360|[Pause]||1|2500|Sleep|||||676|
+361|[Pause]||1|7000|Sleep|||||677|
+362|Continue, Continue, FoundX, FoundY, 0|627, 385, 1321, 657, *50 C:\Users\ReynoldsPurge\Documents\Images\keytrak\no stock.png|1|300|ImageSearch||Window|||678|
+363|If Image/Pixel Found||1|0|If_Statement|||||681|
+364|[Pause]||1|300|Sleep|||||683|
+365|Enter|{Enter}|1|300|Send|||||684|
+366|[Pause]||1|300|Sleep|||||686|
+367|Left Move & Click|418, 202 Left, 2|1|200|Click|||||687|
+368|[Pause]||1|300|Sleep|||||689|
+369|Backspace|{Backspace}|1|300|Send|||||690|
+370|[Pause]||1|300|Sleep|||||692|
+371|Control|{Control Down}|1|200|Send|||||693|
+372|v|{v}|1|200|Send|||||695|
+373|Control|{Control Up}|1|200|Send|||||697|
+374|[Pause]||1|500|Sleep|||||699|
+375|Tab|{Tab}|1|300|Send|||||700|
+376|[Pause]||1|300|Sleep|||||702|
+377|[End If]|EndIf|1|0|If_Statement|||||703|
+378|[Pause]||1|300|Sleep|||||704|
+379|Continue, Continue, FoundX, FoundY, 0|627, 385, 1321, 657, *50 C:\Users\ReynoldsPurge\Documents\Images\keytrak\no stock.png|1|300|ImageSearch||Window|||705|
+380|If Image/Pixel Found||1|0|If_Statement|||||708|
+381|[Pause]||1|300|Sleep|||||710|
+382|Enter|{Enter}|1|300|Send|||||711|
+383|[Pause]||1|300|Sleep|||||713|
+384|Left Move & Click|418, 202 Left, 2|1|200|Click|||||714|
+385|[Pause]||1|300|Sleep|||||716|
+386|Backspace|{Backspace}|1|300|Send|||||717|
+387|[Pause]||1|300|Sleep|||||719|
+388|Continue||1|0|Continue|||||720|
+389|[End If]|EndIf|1|0|If_Statement|||||721|
+390|[Pause]||1|300|Sleep|||||722|
+391|Continue, Continue, yes, button, 1|690, 405, 1237, 619, *5 C:\Users\ReynoldsPurge\Documents\Images\keytrak\yes button.png|1|100|ImageSearch|UntilFound|Screen|||723|
+392|[Pause]||1|300|Sleep|||||731|
+393|Left Move & Click|%yes%, %button% Left, 1|1|100|Click|||||732|
+394|[Pause]||1|20000|Sleep|||||734|
+395|Continue, Continue, FoundX, FoundY, 0|683, 407, 1246, 615, *250 C:\Users\ReynoldsPurge\Documents\Images\keytrak\no info.png|1|100|ImageSearch||Screen|||735|
+396|If Image/Pixel Found||1|0|If_Statement|||||738|
+397|[Pause]||1|300|Sleep|||||740|
+398|Enter|{Enter}|1|0|Send|||||741|
+399|[Pause]||1|500|Sleep|||||742|
+400|Continue||1|0|Continue|||||743|
+401|[End If]|EndIf|1|0|If_Statement|||||744|
+402|Continue, Continue, FoundX, FoundY, 0|440, 128, 903, 273, *5 C:\Users\ReynoldsPurge\Documents\Images\keytrak\data imported.png|1|100|ImageSearch|UntilNotFound|Screen|||745|
+403|[Pause]||1|750|Sleep|||||752|
+404|Continue, Continue, save, button, 1|1318, 778, 1793, 1015, *5 C:\Users\ReynoldsPurge\Documents\Images\keytrak\save button.png|1|100|ImageSearch|UntilFound|Screen|||753|
+405|[Pause]||1|500|Sleep|||||761|
+406|Left Move & Click|%save%, %button% Left, 1|1|100|Click|||||762|
+407|[Pause]||1|500|Sleep|||||764|
+408|[LoopEnd]|LoopEnd|1|0|Loop|||||765|
+409|WinActivate||1|333|WinActivate||KeyTrak|||766|
+410|[Pause]||1|300|Sleep|||||768|
+411|Alt|{Alt Down}|1|200|Send|||||769|
+412|F4|{F4}|1|200|Send|||||771|
+413|Alt|{Alt Up}|1|200|Send|||||773|
+414|[Pause]||1|300|Sleep|||||775|
+415|tohbot@toyotaofhackensack.com|Finished keytrak=0:Finished keytrak|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||776|
+416|[Pause]||1|500|Sleep|||||779|
+417|FileAppend|done, C:\engine\donekeytrak.txt|1|0|FileAppend|||||780|
+418|[Pause]||1|300|Sleep|||||781|
+419|ExitApp||1|0|ExitApp|||||782|
+

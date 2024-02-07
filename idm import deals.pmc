@@ -1,0 +1,303 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|tohbot@toyotaofhackensack.com|Started IDM Deal Import=0:Started IDM Deal Import|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||1|
+2|[Pause]||1|300|Sleep|||||4|
+3|Run|C:\Users\ReynoldsPurge\Documents\live\idm paths.ahk|1|0|Run|||||5|
+4|[Pause]||1|5000|Sleep|||||6|
+5|If Window Not Exist|(Home Page) - ERA-IGNITE|1|0|If_Statement|||||7|
+6|Run|C:\Users\ReynoldsPurge\Documents\live\reylogin.exe|1|0|Run|||||9|
+7|[Pause]||1|1000|Sleep|||||10|
+8|Continue, Continue, FoundX, FoundY, 0|7, 84, 141, 129, C:\Users\ReynoldsPurge\Documents\Images\Rey Home Page.png|1|1000|ImageSearch|UntilFound|Window|||11|
+9|[End If]|EndIf|1|0|If_Statement|||||18|
+10|[Pause]||1|300|Sleep|||||19|
+11|WinActivate||1|333|WinActivate||(Home Page) - ERA-IGNITE|||20|
+12|[Pause]||1|2000|Sleep|||||22|
+13|If File Exist|R:\noimport.txt|1|0|If_Statement|||||23|
+14|[Pause]||1|500|Sleep|||||25|
+15|FileDelete|R:\noimport.txt|1|0|FileDelete|||||26|
+16|[Pause]||1|500|Sleep|||||27|
+17|tohbot@toyotaofhackensack.com|Finished IDM Deal Import=0:Finished IDM Deal Import|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||28|
+18|[Pause]||1|1000|Sleep|||||31|
+19|FileAppend|done, C:\engine\doneidmdeal.txt|1|0|FileAppend|||||32|
+20|[Pause]||1|200|Sleep|||||33|
+21|ExitApp||1|0|ExitApp|||||34|
+22|[End If]|EndIf|1|0|If_Statement|||||35|
+23|[Pause]||1|500|Sleep|||||36|
+24|Control|{Control Down}|1|300|Send|||||37|
+25|1|{1}|1|500|Send|||||39|
+26|Control|{Control Up}|1|300|Send|||||41|
+27|[Pause]||1|5000|Sleep|||||43|
+28|Continue, Continue, scan, catalog, 1|13, 93, 408, 246, *50 C:\Users\ReynoldsPurge\Documents\Images\scan-catalog.png|1|500|ImageSearch|UntilFound|Window|||44|
+29|[Pause]||1|300|Sleep|||||52|
+30|Left Move & Click|%scan%, %catalog% Left, 1|1|500|Click|||||53|
+31|[Pause]||1|1000|Sleep|||||55|
+32|Run|R:\filelist.csv|1|0|Run|||||56|
+33|[Pause]||1|3500|Sleep|||||57|
+34|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||58|
+35|[Pause]||1|500|Sleep|||||60|
+36|Left Move & Click|388, 396 Left, 1|1|10|Click|||||61|
+37|[Pause]||1|500|Sleep|||||63|
+38|Left Move & Click|309, 108 Left, 1|1|10|Click|||||64|
+39|[Pause]||1|500|Sleep|||||66|
+40|[End If]|EndIf|1|0|If_Statement|||||67|
+41|[Pause]||1|750|Sleep|||||68|
+42|If Window Exist|Text Import - [filelist.csv]|1|0|If_Statement|||||69|
+43|[Pause]||1|750|Sleep|||||71|
+44|WinActivate||1|333|WinActivate||Text Import - [filelist.csv]|||72|
+45|[Pause]||1|500|Sleep|||||74|
+46|Continue, Continue, FoundX, FoundY, 0|37, 37, 405, 137, C:\Users\ReynoldsPurge\Documents\Images\bad unicode.png|1|500|ImageSearch||Window|||75|
+47|If Image/Pixel Found||1|0|If_Statement|||||78|
+48|u|{u}|1|200|Send|||||80|
+49|[End If]|EndIf|1|0|If_Statement|||||82|
+50|[Pause]||1|500|Sleep|||||83|
+51|Left Move & Click|305, 555 Left, 1|1|300|Click|||||84|
+52|[Pause]||1|500|Sleep|||||86|
+53|[End If]|EndIf|1|0|If_Statement|||||87|
+54|[Pause]||1|300|Sleep|||||88|
+55|[LoopStart]|LoopStart|0|0|Loop|||||89|
+56|WinActivate||1|333|WinActivate||(IDM - Catalog) - ERA-IGNITE|||91|
+57|[Pause]||1|1000|Sleep|||||93|
+58|[LoopStart]|LoopStart|0|0|Loop|||||94|
+59|[Pause]||1|500|Sleep|||||96|
+60|Continue, Continue, delete, idm, 1|456, 108, 709, 303, *50 C:\Users\ReynoldsPurge\Documents\Images\delete idm.png|1|500|ImageSearch||Window|||97|
+61|If Image/Pixel Found||1|0|If_Statement|||||101|
+62|[Pause]||1|500|Sleep|||||103|
+63|Left Move & Click|%delete%, %idm% Left, 1|1|500|Click|||||104|
+64|[Pause]||1|500|Sleep|||||106|
+65|Right Move & Click|%delete%, %idm% Right, 1|1|500|Click|||||107|
+66|[Pause]||1|500|Sleep|||||109|
+67|d|{d}|1|500|Send|||||110|
+68|[Pause]||1|500|Sleep|||||112|
+69|Enter|{Enter}|1|500|Send|||||113|
+70|[Pause]||1|500|Sleep|||||115|
+71|Shift|{Shift Down}|1|500|Send|||||116|
+72|Tab|{Tab}|1|500|Send|||||118|
+73|Shift|{Shift Up}|1|500|Send|||||120|
+74|[Pause]||1|500|Sleep|||||122|
+75|Enter|{Enter}|1|500|Send|||||123|
+76|[Pause]||1|500|Sleep|||||125|
+77|[Else]|Else|1|0|If_Statement|||||126|
+78|Break||1|0|Break|||||129|
+79|[End If]|EndIf|1|0|If_Statement|||||130|
+80|[LoopEnd]|LoopEnd|1|0|Loop|||||131|
+81|Continue, Continue, f3, import, 1|190, 556, 578, 748, *50 C:\Users\ReynoldsPurge\Documents\Images\import idm.png|1|500|ImageSearch|UntilFound|Window|||132|
+82|[Pause]||1|750|Sleep|||||140|
+83|Left Move & Click|%f3%, %import% Left, 1|1|500|Click|||||141|
+84|[Pause]||1|1000|Sleep|||||143|
+85|[Label]|OpenCSV|1|0|Label|||||144|
+86|[Pause]||1|750|Sleep|||||145|
+87|WinActivate||1|333|WinActivate||filelist.csv - LibreOffice Calc|||146|
+88|[Pause]||1|1000|Sleep|||||148|
+89|Continue, Continue, FoundX, FoundY, 0|652, 148, 1833, 874, *50 C:\Users\ReynoldsPurge\Documents\Images\csv loaded.png|1|500|ImageSearch|UntilFound|Window|||149|
+90|[Pause]||1|750|Sleep|||||156|
+91|Control|{Control Down}|1|500|Send|||||157|
+92|Home|{Home}|1|500|Send|||||159|
+93|Control|{Control Up}|1|500|Send|||||161|
+94|[Pause]||1|750|Sleep|||||163|
+95|Continue, Continue, FoundX, FoundY, 0|229, 98, 326, 130, C:\Users\ReynoldsPurge\Documents\Images\Stock Over.png|1|0|ImageSearch||Window|||164|
+96|If Image/Pixel Found||1|0|If_Statement|||||166|
+97|WinActivate||1|333|WinActivate||filelist.csv - LibreOffice Calc|||168|
+98|[Pause]||1|300|Sleep|||||170|
+99|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||171|
+100|If Window Active|Save Document?|1|0|If_Statement|||||173|
+101|[Pause]||1|300|Sleep|||||175|
+102|Enter|{Enter}|1|200|Send|||||176|
+103|[End If]|EndIf|1|0|If_Statement|||||178|
+104|[Pause]||1|300|Sleep|||||179|
+105|WinActivate||1|333|WinActivate||(IDM - Catalog) - ERA-IGNITE|||180|
+106|[Pause]||1|750|Sleep|||||182|
+107|Alt|{Alt Down}|1|200|Send|||||183|
+108|F4|{F4}|1|200|Send|||||185|
+109|Alt|{Alt Up}|1|200|Send|||||187|
+110|[Pause]||1|750|Sleep|||||189|
+111|Alt|{Alt Down}|1|200|Send|||||190|
+112|F4|{F4}|1|200|Send|||||192|
+113|Alt|{Alt Up}|1|200|Send|||||194|
+114|[Pause]||1|3000|Sleep|||||196|
+115|FileDelete|R:\filelist.csv|1|0|FileDelete|||||197|
+116|[Pause]||1|300|Sleep|||||198|
+117|tohbot@toyotaofhackensack.com|Finished IDM Deal Import=0:Finished IDM Deal Import|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||199|
+118|[Pause]||1|1000|Sleep|||||202|
+119|Run|C:\Users\ReynoldsPurge\Documents\live\dated folder move idm deals.ahk|1|0|Run|||||203|
+120|[Pause]||1|2000|Sleep|||||204|
+121|FileAppend|done, C:\engine\doneidmdeal.txt|1|0|FileAppend|||||205|
+122|[Pause]||1|200|Sleep|||||206|
+123|ExitApp||1|0|ExitApp|||||207|
+124|[End If]|EndIf|1|0|If_Statement|||||208|
+125|Control|{Control Down}|1|500|Send|||||209|
+126|c|{c}|1|500|Send|||||211|
+127|Control|{Control Up}|1|500|Send|||||213|
+128|[Pause]||1|750|Sleep|||||215|
+129|WinActivate||1|333|WinActivate||Import|||216|
+130|[Pause]||1|750|Sleep|||||218|
+131|Continue, Continue, import, path, 1|24, 38, 581, 248, *50 C:\Users\ReynoldsPurge\Documents\Images\idm import path.png|1|500|ImageSearch|UntilFound|Window|||219|
+132|[Pause]||1|750|Sleep|||||227|
+133|Left Move & Click|%import%, %path% Left, 1|1|500|Click|||||228|
+134|[Pause]||1|750|Sleep|||||230|
+135|Control|{Control Down}|1|500|Send|||||231|
+136|V|{V}|1|500|Send|||||233|
+137|Control|{Control Up}|1|500|Send|||||235|
+138|[Pause]||1|750|Sleep|||||237|
+139|Enter|{Enter}|1|500|Send|||||238|
+140|If Window Exist|PWRFILIO - 52|1|0|If_Statement|||||240|
+141|[Pause]||1|500|Sleep|||||242|
+142|WinActivate||1|333|WinActivate||PWRFILIO - 52|||243|
+143|[Pause]||1|500|Sleep|||||245|
+144|Enter|{Enter}|1|500|Send|||||246|
+145|[Pause]||1|500|Sleep|||||248|
+146|Alt|{Alt Down}|1|500|Send|||||249|
+147|F4|{F4}|1|500|Send|||||251|
+148|Alt|{Alt Up}|1|500|Send|||||253|
+149|[Pause]||1|500|Sleep|||||255|
+150|WinActivate||1|333|WinActivate||filelist.csv - LibreOffice Calc|||256|
+151|[Pause]||1|1250|Sleep|||||258|
+152|Control|{Control Down}|1|500|Send|||||259|
+153|Home|{Home}|1|500|Send|||||261|
+154|Control|{Control Up}|1|500|Send|||||263|
+155|[Pause]||1|750|Sleep|||||265|
+156|Shift|{Shift Down}|1|500|Send|||||266|
+157|Space|{Space}|1|500|Send|||||268|
+158|Shift|{Shift Up}|1|500|Send|||||270|
+159|[Pause]||1|750|Sleep|||||272|
+160|Control|{Control Down}|1|500|Send|||||273|
+161|-|{-}|1|500|Send|||||275|
+162|Control|{Control Up}|1|500|Send|||||277|
+163|[Pause]||1|750|Sleep|||||279|
+164|[Goto]|OpenCSV|1|0|Goto|||||280|
+165|[End If]|EndIf|1|0|If_Statement|||||281|
+166|[Pause]||1|2500|Sleep|||||282|
+167|If Window Exist|IDMCTLG0 - 1001|1|0|If_Statement|||||283|
+168|[Pause]||1|500|Sleep|||||285|
+169|Enter|{Enter}|1|500|Send|||||286|
+170|[Pause]||1|500|Sleep|||||288|
+171|Backspace|{Backspace}|1|500|Send|||||289|
+172|[Pause]||1|500|Sleep|||||291|
+173|Tab|{Tab}|2|500|Send|||||292|
+174|[Pause]||1|500|Sleep|||||294|
+175|[Goto]|OpenCSV|1|0|Goto|||||295|
+176|[End If]|EndIf|1|0|If_Statement|||||296|
+177|[Pause]||1|500|Sleep|||||297|
+178|If Window Exist|PWRFILIO - 51|1|0|If_Statement|||||298|
+179|[Pause]||1|500|Sleep|||||300|
+180|Enter|{Enter}|1|500|Send|||||301|
+181|[Pause]||1|500|Sleep|||||303|
+182|Backspace|{Backspace}|1|500|Send|||||304|
+183|[Pause]||1|500|Sleep|||||306|
+184|Tab|{Tab}|2|500|Send|||||307|
+185|[Pause]||1|500|Sleep|||||309|
+186|[Goto]|OpenCSV|1|0|Goto|||||310|
+187|[End If]|EndIf|1|0|If_Statement|||||311|
+188|F12|{F12}|1|500|Send|||||312|
+189|[Pause]||1|1200|Sleep|||||314|
+190|WinActivate||1|333|WinActivate||filelist.csv - LibreOffice Calc|||315|
+191|[Pause]||1|1000|Sleep|||||317|
+192|Right|{Right}|1|500|Send|||||318|
+193|[Pause]||1|750|Sleep|||||320|
+194|Control|{Control Down}|1|500|Send|||||321|
+195|c|{c}|1|500|Send|||||323|
+196|Control|{Control Up}|1|500|Send|||||325|
+197|[Pause]||1|750|Sleep|||||327|
+198|WinActivate||1|333|WinActivate||(IDM - Catalog) - ERA-IGNITE|||328|
+199|[Pause]||1|1250|Sleep|||||330|
+200|Continue, Continue, batch, idm, 1|194, 121, 657, 367, *50 C:\Users\ReynoldsPurge\Documents\Images\batch idm.png|1|500|ImageSearch|UntilFound|Window|||331|
+201|[Pause]||1|750|Sleep|||||339|
+202|Left Move & Click|%batch%, %idm% Left, 1|1|500|Click|||||340|
+203|[Pause]||1|750|Sleep|||||342|
+204|Left Move & Click|179, 296 Left, 1|1|500|Click|||||343|
+205|[Pause]||1|750|Sleep|||||345|
+206|Enter|{Enter}|1|500|Send|||||346|
+207|[Pause]||1|750|Sleep|||||348|
+208|Control|{Control Down}|1|500|Send|||||349|
+209|V|{V}|1|500|Send|||||351|
+210|Control|{Control Up}|1|500|Send|||||353|
+211|[Pause]||1|1250|Sleep|||||355|
+212|Enter|{Enter}|1|500|Send|||||356|
+213|[Pause]||1|3000|Sleep|||||358|
+214|If Window Exist|IDMLCST0 - 1005|1|0|If_Statement|||||359|
+215|[Pause]||1|500|Sleep|||||361|
+216|Tab|{Tab}|1|500|Send|||||362|
+217|[Pause]||1|500|Sleep|||||364|
+218|Enter|{Enter}|1|500|Send|||||365|
+219|[Pause]||1|500|Sleep|||||367|
+220|Continue, Continue, deal, posted, 1|456, 125, 669, 301, *50 C:\Users\ReynoldsPurge\Documents\Images\deal posted.png|1|500|ImageSearch|UntilFound|Window|||368|
+221|[Pause]||1|500|Sleep|||||376|
+222|Right Move & Click|%deal%, %posted% Right, 1|1|300|Click|||||377|
+223|[Pause]||1|500|Sleep|||||379|
+224|d|{d}|1|500|Send|||||380|
+225|[Pause]||1|500|Sleep|||||382|
+226|Enter|{Enter}|1|500|Send|||||383|
+227|[Pause]||1|500|Sleep|||||385|
+228|Shift|{Shift Down}|1|500|Send|||||386|
+229|Tab|{Tab}|1|500|Send|||||388|
+230|Shift|{Shift Up}|1|500|Send|||||390|
+231|[Pause]||1|500|Sleep|||||392|
+232|Enter|{Enter}|1|500|Send|||||393|
+233|[Pause]||1|500|Sleep|||||395|
+234|WinActivate||1|333|WinActivate||filelist.csv - LibreOffice Calc|||396|
+235|[Pause]||1|1250|Sleep|||||398|
+236|Control|{Control Down}|1|500|Send|||||399|
+237|Home|{Home}|1|500|Send|||||401|
+238|Control|{Control Up}|1|500|Send|||||403|
+239|[Pause]||1|750|Sleep|||||405|
+240|Left Move & Click|801, 113 Left, 1|1|500|Click|||||406|
+241|[Pause]||1|750|Sleep|||||408|
+242|Control|{Control Down}|1|500|Send|||||409|
+243|a|{a}|1|500|Send|||||411|
+244|Control|{Control Up}|1|500|Send|||||413|
+245|[Pause]||1|750|Sleep|||||415|
+246|Control|{Control Down}|1|500|Send|||||416|
+247|c|{c}|1|500|Send|||||418|
+248|Control|{Control Up}|1|500|Send|||||420|
+249|[Pause]||1|750|Sleep|||||422|
+250|Enter|{Enter}|1|500|Send|||||423|
+251|[Pause]||1|750|Sleep|||||425|
+252|Up|{Up}|1|500|Send|||||426|
+253|[Pause]||1|750|Sleep|||||428|
+254|Shift|{Shift Down}|1|500|Send|||||429|
+255|Space|{Space}|1|500|Send|||||431|
+256|Shift|{Shift Up}|1|500|Send|||||433|
+257|[Pause]||1|750|Sleep|||||435|
+258|Control|{Control Down}|1|500|Send|||||436|
+259|-|{-}|1|500|Send|||||438|
+260|Control|{Control Up}|1|500|Send|||||440|
+261|[Pause]||1|750|Sleep|||||442|
+262|FileMove|%Clipboard%, C:\Users\ReynoldsPurge\Toyota of Hackensack\TOH - Deals\Error|1|0|FileMove|||||443|
+263|[Pause]||1|1250|Sleep|||||444|
+264|Continue||1|0|Continue|||||445|
+265|[End If]|EndIf|1|0|If_Statement|||||446|
+266|F12|{F12}|1|500|Send|||||447|
+267|[Pause]||1|2500|Sleep|||||449|
+268|WinActivate||1|333|WinActivate||filelist.csv - LibreOffice Calc|||450|
+269|[Pause]||1|1250|Sleep|||||452|
+270|Control|{Control Down}|1|500|Send|||||453|
+271|Home|{Home}|1|500|Send|||||455|
+272|Control|{Control Up}|1|500|Send|||||457|
+273|[Pause]||1|750|Sleep|||||459|
+274|Left Move & Click|801, 113 Left, 1|1|500|Click|||||460|
+275|[Pause]||1|750|Sleep|||||462|
+276|Control|{Control Down}|1|500|Send|||||463|
+277|a|{a}|1|500|Send|||||465|
+278|Control|{Control Up}|1|500|Send|||||467|
+279|[Pause]||1|750|Sleep|||||469|
+280|Control|{Control Down}|1|500|Send|||||470|
+281|c|{c}|1|500|Send|||||472|
+282|Control|{Control Up}|1|500|Send|||||474|
+283|[Pause]||1|750|Sleep|||||476|
+284|Enter|{Enter}|1|500|Send|||||477|
+285|[Pause]||1|750|Sleep|||||479|
+286|Up|{Up}|1|500|Send|||||480|
+287|[Pause]||1|750|Sleep|||||482|
+288|Shift|{Shift Down}|1|500|Send|||||483|
+289|Space|{Space}|1|500|Send|||||485|
+290|Shift|{Shift Up}|1|500|Send|||||487|
+291|[Pause]||1|750|Sleep|||||489|
+292|Control|{Control Down}|1|500|Send|||||490|
+293|-|{-}|1|500|Send|||||492|
+294|Control|{Control Up}|1|500|Send|||||494|
+295|[Pause]||1|750|Sleep|||||496|
+296|Run|C:\Users\ReynoldsPurge\Documents\live\move to date folder.ahk|1|0|Run|||||497|
+297|[Pause]||1|2000|Sleep|||||498|
+298|[LoopEnd]|LoopEnd|1|0|Loop|||||499|
+

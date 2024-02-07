@@ -1,0 +1,159 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|Run|C:\REY\bin\pwrsuite.exe, C:\REY\bin\|1|0|Run|||||1|
+2|[Pause]||1|40000|Sleep|||||2|
+3|If Window Exist|Reynolds and Reynolds Software Installation|1|0|If_Statement|||||3|
+4|Left Click|Left, 1,  NA|1|300|ControlClick|Button2|Reynolds and Reynolds Software Installation|||5|
+5|[Pause]||1|60000|Sleep|||||7|
+6|[End If]|EndIf|1|0|If_Statement|||||8|
+7|Run|R:\login.xlsx|1|0|Run|||||9|
+8|[Pause]||1|3000|Sleep|||||10|
+9|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||11|
+10|Left Move & Click|388, 396 Left, 1|1|10|Click|||||13|
+11|[Pause]||1|350|Sleep|||||15|
+12|Left Move & Click|309, 108 Left, 1|1|10|Click|||||16|
+13|[Pause]||1|350|Sleep|||||18|
+14|[End If]|EndIf|1|0|If_Statement|||||19|
+15|[Pause]||1|900|Sleep|||||20|
+16|If Window Exist|Text Import - [login.xlsx]|1|0|If_Statement|||||21|
+17|Left Move & Click|307, 552 Left, 1|1|10|Click|||||23|
+18|[End If]|EndIf|1|0|If_Statement|||||25|
+19|[Pause]||1|2500|Sleep|||||26|
+20|Left Move & Click|71, 151 Left, 1|1|10|Click|||||27|
+21|[Pause]||1|300|Sleep|||||29|
+22|Control|{Control Down}|1|200|Send|||||30|
+23|c|{c}|1|200|Send|||||32|
+24|Control|{Control Up}|1|200|Send|||||34|
+25|[Pause]||1|300|Sleep|||||36|
+26|WinActivate||1|333|WinActivate||User Sign-On|||37|
+27|[Pause]||1|300|Sleep|||||39|
+28|Control|{Control Down}|1|200|Send|||||40|
+29|v|{v}|1|200|Send|||||42|
+30|Control|{Control Up}|1|200|Send|||||44|
+31|[Pause]||1|300|Sleep|||||46|
+32|Enter|{Enter}|1|200|Send|||||47|
+33|[Pause]||1|300|Sleep|||||49|
+34|WinActivate||1|333|WinActivate||login.xlsx - LibreOffice Calc|||50|
+35|[Pause]||1|300|Sleep|||||52|
+36|Down|{Down}|1|200|Send|||||53|
+37|[Pause]||1|300|Sleep|||||55|
+38|Control|{Control Down}|1|200|Send|||||56|
+39|c|{c}|1|200|Send|||||58|
+40|Control|{Control Up}|1|200|Send|||||60|
+41|[Pause]||1|300|Sleep|||||62|
+42|WinActivate||1|333|WinActivate||User Sign-On|||63|
+43|[Pause]||1|300|Sleep|||||65|
+44|Control|{Control Down}|1|200|Send|||||66|
+45|v|{v}|1|200|Send|||||68|
+46|Control|{Control Up}|1|200|Send|||||70|
+47|[Pause]||1|10000|Sleep|||||72|
+48|Continue, Continue, FoundX, FoundY, 0|734, 459, 1100, 592, *50 C:\Users\ReynoldsPurge\Documents\Images\pw expired.png|1|0|ImageSearch||Screen|||73|
+49|If Image/Pixel Found||1|0|If_Statement|||||75|
+50|[Pause]||1|300|Sleep|||||77|
+51|Enter|{Enter}|1|200|Send|||||78|
+52|WinActivate||1|333|WinActivate||login.xlsx - LibreOffice Calc|||80|
+53|[Pause]||1|900|Sleep|||||82|
+54|Shift|{Shift Down}|1|300|Send|||||83|
+55|Space|{Space}|1|300|Send|||||85|
+56|Shift|{Shift Up}|1|300|Send|||||87|
+57|[Pause]||1|300|Sleep|||||89|
+58|Control|{Control Down}|1|300|Send|||||90|
+59|-|{-}|1|300|Send|||||92|
+60|Control|{Control Up}|1|300|Send|||||94|
+61|[Pause]||1|300|Sleep|||||96|
+62|Control|{Control Down}|1|300|Send|||||97|
+63|s|{s}|1|300|Send|||||99|
+64|Control|{Control Up}|1|300|Send|||||101|
+65|[Pause]||1|300|Sleep|||||103|
+66|Control|{Control Down}|1|200|Send|||||104|
+67|c|{c}|1|200|Send|||||106|
+68|Control|{Control Up}|1|200|Send|||||108|
+69|[Pause]||1|300|Sleep|||||110|
+70|Alt|{Alt Down}|1|200|Send|||||111|
+71|Tab|{Tab}|1|200|Send|||||113|
+72|Alt|{Alt Up}|1|200|Send|||||115|
+73|[Pause]||1|800|Sleep|||||117|
+74|Control|{Control Down}|1|200|Send|||||118|
+75|v|{v}|1|200|Send|||||120|
+76|Control|{Control Up}|1|200|Send|||||122|
+77|[Pause]||1|300|Sleep|||||124|
+78|Enter|{Enter}|1|200|Send|||||125|
+79|[Pause]||1|300|Sleep|||||127|
+80|[Pause]||1|300|Sleep|||||128|
+81|Control|{Control Down}|1|200|Send|||||129|
+82|v|{v}|1|200|Send|||||131|
+83|Control|{Control Up}|1|200|Send|||||133|
+84|[Pause]||1|300|Sleep|||||135|
+85|Enter|{Enter}|1|200|Send|||||136|
+86|[Pause]||1|300|Sleep|||||138|
+87|Enter|{Enter}|1|200|Send|||||139|
+88|[Pause]||1|300|Sleep|||||141|
+89|Left Click|Left, 1,  NA|1|10|ControlClick|Button2|User Sign-On|||142|
+90|[Pause]||1|500|Sleep|||||144|
+91|[Else]|Else|1|0|If_Statement|||||145|
+92|Enter|{Enter}|1|200|Send|||||148|
+93|[End If]|EndIf|1|0|If_Statement|||||150|
+94|Enter|{Enter}|1|200|Send|||||151|
+95|[Pause]||1|500|Sleep|||||153|
+96|Continue, Continue, FoundX, FoundY, 0|734, 459, 1100, 592, *50 C:\Users\ReynoldsPurge\Documents\Images\pw expired.png|1|0|ImageSearch||Screen|||154|
+97|If Image/Pixel Found||1|0|If_Statement|||||156|
+98|[Pause]||1|300|Sleep|||||158|
+99|Enter|{Enter}|1|200|Send|||||159|
+100|WinActivate||1|333|WinActivate||login.xlsx - LibreOffice Calc|||161|
+101|[Pause]||1|900|Sleep|||||163|
+102|Shift|{Shift Down}|1|300|Send|||||164|
+103|Space|{Space}|1|300|Send|||||166|
+104|Shift|{Shift Up}|1|300|Send|||||168|
+105|[Pause]||1|300|Sleep|||||170|
+106|Control|{Control Down}|1|300|Send|||||171|
+107|-|{-}|1|300|Send|||||173|
+108|Control|{Control Up}|1|300|Send|||||175|
+109|[Pause]||1|300|Sleep|||||177|
+110|Control|{Control Down}|1|300|Send|||||178|
+111|s|{s}|1|300|Send|||||180|
+112|Control|{Control Up}|1|300|Send|||||182|
+113|[Pause]||1|300|Sleep|||||184|
+114|Control|{Control Down}|1|200|Send|||||185|
+115|c|{c}|1|200|Send|||||187|
+116|Control|{Control Up}|1|200|Send|||||189|
+117|[Pause]||1|300|Sleep|||||191|
+118|Alt|{Alt Down}|1|200|Send|||||192|
+119|Tab|{Tab}|1|200|Send|||||194|
+120|Alt|{Alt Up}|1|200|Send|||||196|
+121|[Pause]||1|800|Sleep|||||198|
+122|Control|{Control Down}|1|200|Send|||||199|
+123|v|{v}|1|200|Send|||||201|
+124|Control|{Control Up}|1|200|Send|||||203|
+125|[Pause]||1|300|Sleep|||||205|
+126|Enter|{Enter}|1|200|Send|||||206|
+127|[Pause]||1|300|Sleep|||||208|
+128|[Pause]||1|300|Sleep|||||209|
+129|Control|{Control Down}|1|200|Send|||||210|
+130|v|{v}|1|200|Send|||||212|
+131|Control|{Control Up}|1|200|Send|||||214|
+132|[Pause]||1|300|Sleep|||||216|
+133|Enter|{Enter}|1|200|Send|||||217|
+134|[Pause]||1|300|Sleep|||||219|
+135|Enter|{Enter}|1|200|Send|||||220|
+136|[Pause]||1|300|Sleep|||||222|
+137|Left Click|Left, 1,  NA|1|10|ControlClick|Button2|User Sign-On|||223|
+138|[Pause]||1|500|Sleep|||||225|
+139|[Else]|Else|1|0|If_Statement|||||226|
+140|Enter|{Enter}|1|200|Send|||||229|
+141|[End If]|EndIf|1|0|If_Statement|||||231|
+142|[Pause]||1|500|Sleep|||||232|
+143|If Window Exist|Learn about New Features|1|0|If_Statement|||||233|
+144|Left Move & Click|19, 186 Left, 1|1|300|Click|||||235|
+145|Left Move & Click|454, 184 Left, 1|1|300|Click|||||237|
+146|[End If]|EndIf|1|0|If_Statement|||||239|
+147|[Pause]||1|5000|Sleep|||||240|
+148|If Window Exist|Sign-On Complete|1|0|If_Statement|||||241|
+149|[Pause]||1|500|Sleep|||||243|
+150|Enter|{Enter}|1|500|Send|||||244|
+151|[Pause]||1|500|Sleep|||||246|
+152|[End If]|EndIf|1|0|If_Statement|||||247|
+153|Process|close, soffice.bin|1|0|Process|||||248|
+154|ExitApp||1|0|ExitApp|||||249|
+

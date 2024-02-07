@@ -1,0 +1,71 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|[Pause]||1|500|Sleep|||||1|
+2|tohbot@toyotaofhackensack.com|Started report export=0:Started report export|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||2|
+3|[Pause]||1|500|Sleep|||||5|
+4|If Window Not Exist|(Home Page) - ERA-IGNITE|1|0|If_Statement|||||6|
+5|Run|C:\Users\ReynoldsPurge\Documents\live\reylogin.exe|1|0|Run|||||8|
+6|[Pause]||1|1000|Sleep|||||9|
+7|Continue, Continue, FoundX, FoundY, 0|7, 84, 141, 129, C:\Users\ReynoldsPurge\Documents\Images\Rey Home Page.png|1|1000|ImageSearch|UntilFound|Window|||10|
+8|[End If]|EndIf|1|0|If_Statement|||||17|
+9|[Pause]||1|1000|Sleep|||||18|
+10|WinActivate||1|333|WinActivate||(Home Page) - ERA-IGNITE|||19|
+11|[Pause]||1|300|Sleep|||||21|
+12|Control|{Control Down}|1|300|Send|||||22|
+13|8|{8}|1|300|Send|||||24|
+14|Control|{Control Up}|1|300|Send|||||26|
+15|[Pause]||1|1000|Sleep|||||28|
+16|Continue, Continue, FoundX, FoundY, 0|236, 83, 505, 130, C:\Users\ReynoldsPurge\Documents\Images\Report Export Loaded.png|1|1000|ImageSearch|UntilFound|Window|||29|
+17|[Pause]||1|1000|Sleep|||||36|
+18|Left Move & Click|791, 186 Left, 1|1|200|Click|||||37|
+19|[Pause]||1|2000|Sleep|||||39|
+20|[Text]|994|1|300|SendRaw|||||40|
+21|[Pause]||1|1000|Sleep|||||42|
+22|F5|{F5}|1|300|Send|||||43|
+23|[Pause]||1|1000|Sleep|||||45|
+24|F11|{F11}|1|500|Send|||||46|
+25|[Pause]||1|1500|Sleep|||||48|
+26|[LoopStart]|LoopStart|0|0|Loop|||||49|
+27|If Window Exist|Run Options|1|0|If_Statement|||||51|
+28|WinActivate||1|333|WinActivate||Run Options|||53|
+29|[Pause]||1|1500|Sleep|||||55|
+30|Left Move & Click|25, 77 Left, 1|1|300|Click|||||56|
+31|[Pause]||1|300|Sleep|||||58|
+32|Left Move & Click|148, 125 Left, 1|1|400|Click|||||59|
+33|Break||1|0|Break|||||61|
+34|[End If]|EndIf|1|0|If_Statement|||||62|
+35|[LoopEnd]|LoopEnd|1|0|Loop|||||63|
+36|[Pause]||1|1500|Sleep|||||64|
+37|Continue, Continue, FoundX, FoundY, 0|400, 86, 1385, 453, C:\Users\ReynoldsPurge\Documents\Images\No records found.png|1|300|ImageSearch||Window|||65|
+38|If Image/Pixel Found||1|0|If_Statement|||||68|
+39|[Pause]||1|300|Sleep|||||70|
+40|Alt|{Alt Down}|1|300|Send|||||71|
+41|F4|{F4}|1|300|Send|||||73|
+42|Alt|{Alt Up}|1|300|Send|||||75|
+43|[Pause]||1|300|Sleep|||||77|
+44|tohbot@toyotaofhackensack.com|Finished report export with no new results=0:Finished report export with no new results|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||78|
+45|[Pause]||1|300|Sleep|||||81|
+46|FileAppend|done, C:\engine\donestockin.txt|1|0|FileAppend|||||82|
+47|[Pause]||1|300|Sleep|||||83|
+48|ExitApp||1|0|ExitApp|||||84|
+49|[End If]|EndIf|1|0|If_Statement|||||85|
+50|[Pause]||1|300|Sleep|||||86|
+51|Run|C:\Users\ReynoldsPurge\Documents\live\captcha.exe|1|0|Run|||||87|
+52|[Pause]||1|1000|Sleep|||||88|
+53|[LoopStart]|LoopStart|0|0|Loop|||||89|
+54|If File Exist|C:\engine\captcha.txt|1|0|If_Statement|||||91|
+55|[Pause]||1|300|Sleep|||||93|
+56|FileDelete|C:\engine\captcha.txt|1|0|FileDelete|||||94|
+57|[Pause]||1|300|Sleep|||||95|
+58|Break||1|0|Break|||||96|
+59|[End If]|EndIf|1|0|If_Statement|||||97|
+60|[LoopEnd]|LoopEnd|1|0|Loop|||||98|
+61|[Pause]||1|1000|Sleep|||||99|
+62|tohbot@toyotaofhackensack.com|Finished report export=0:Finished report export|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||100|
+63|[Pause]||1|300|Sleep|||||103|
+64|Run|C:\Users\ReynoldsPurge\Documents\live\stock in vms.exe|1|0|Run|||||104|
+65|[Pause]||1|300|Sleep|||||105|
+66|ExitApp||1|0|ExitApp|||||106|
+

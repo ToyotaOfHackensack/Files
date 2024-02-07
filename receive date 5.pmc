@@ -1,0 +1,461 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|[Pause]||1|500|Sleep|||||1|
+2|tohbot@toyotaofhackensack.com|Started Receive date 5=0:Started Receive date 5|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||2|
+3|If Window Not Exist|(Home Page) - ERA-IGNITE|1|0|If_Statement|||||5|
+4|Run|C:\Users\ReynoldsPurge\Documents\live\reylogin.exe|1|0|Run|||||7|
+5|[Pause]||1|1000|Sleep|||||8|
+6|Continue, Continue, FoundX, FoundY, 0|7, 84, 141, 129, C:\Users\ReynoldsPurge\Documents\Images\Rey Home Page.png|1|1000|ImageSearch|UntilFound|Window|||9|
+7|[End If]|EndIf|1|0|If_Statement|||||16|
+8|[Pause]||1|300|Sleep|||||17|
+9|Run|C:\Program Files (x86)\Google\Chrome\Application\chrome.exe|1|0|Run|||||18|
+10|[Pause]||1|4000|Sleep|||||19|
+11|Control|{Control Down}|1|100|Send|||||20|
+12|l|{l}|1|100|Send|||||22|
+13|Control|{Control Up}|1|100|Send|||||24|
+14|[Pause]||1|600|Sleep|||||26|
+15|[Text]|https://dealer.toyota.com|1|100|SendRaw|||||27|
+16|[Pause]||1|600|Sleep|||||29|
+17|Enter|{Enter}|1|200|Send|||||30|
+18|[Pause]||1|2000|Sleep|||||32|
+19|Continue, Continue, FoundX, FoundY, 0|835, 324, 1504, 780, C:\Users\ReynoldsPurge\Documents\Images\dd loginbox.png|1|0|ImageSearch|UntilFound|Window|||33|
+20|[Pause]||1|2000|Sleep|||||39|
+21|Run|R:\dd login.ods|1|0|Run|||||40|
+22|[Pause]||1|3000|Sleep|||||41|
+23|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||42|
+24|Left Move & Click|388, 396 Left, 1|1|10|Click|||||44|
+25|[Pause]||1|350|Sleep|||||46|
+26|Left Move & Click|309, 108 Left, 1|1|10|Click|||||47|
+27|[Pause]||1|350|Sleep|||||49|
+28|[End If]|EndIf|1|0|If_Statement|||||50|
+29|[Pause]||1|1500|Sleep|||||51|
+30|Control|{Control Down}|1|100|Send|||||52|
+31|Home|{Home}|1|100|Send|||||54|
+32|Control|{Control Up}|1|100|Send|||||56|
+33|[Pause]||1|300|Sleep|||||58|
+34|Control|{Control Down}|1|100|Send|||||59|
+35|c|{c}|1|100|Send|||||61|
+36|Control|{Control Up}|1|100|Send|||||63|
+37|[Pause]||1|300|Sleep|||||65|
+38|WinActivate||1|333|WinActivate||ForgeRock Access Management - Google Chrome|||66|
+39|[Pause]||1|300|Sleep|||||68|
+40|Control|{Control Down}|1|100|Send|||||69|
+41|V|{V}|1|100|Send|||||71|
+42|Control|{Control Up}|1|100|Send|||||73|
+43|[Pause]||1|300|Sleep|||||75|
+44|Tab|{Tab}|1|100|Send|||||76|
+45|[Pause]||1|300|Sleep|||||78|
+46|WinActivate||1|333|WinActivate||dd login.ods - LibreOffice Calc|||79|
+47|[Pause]||1|300|Sleep|||||81|
+48|Down|{Down}|1|100|Send|||||82|
+49|[Pause]||1|300|Sleep|||||84|
+50|Control|{Control Down}|1|100|Send|||||85|
+51|c|{c}|1|100|Send|||||87|
+52|Control|{Control Up}|1|100|Send|||||89|
+53|[Pause]||1|300|Sleep|||||91|
+54|WinActivate||1|333|WinActivate||ForgeRock Access Management - Google Chrome|||92|
+55|[Pause]||1|300|Sleep|||||94|
+56|Control|{Control Down}|1|100|Send|||||95|
+57|V|{V}|1|100|Send|||||97|
+58|Control|{Control Up}|1|100|Send|||||99|
+59|[Pause]||1|300|Sleep|||||101|
+60|Continue, Continue, dd, loginbox, 1|671, 197, 1579, 776, C:\Users\ReynoldsPurge\Documents\Images\dd loginbox.png|1|0|ImageSearch|UntilFound|Window|||102|
+61|Left Move & Click|%dd%, %loginbox% Left, 1|1|100|Click|||||109|
+62|[Pause]||1|300|Sleep|||||111|
+63|Continue, Continue, dd, loginbutt, 1|757, 269, 1595, 1006, C:\Users\ReynoldsPurge\Documents\Images\dd loginbutt.png|1|0|ImageSearch|UntilFound|Window|||112|
+64|Left Move & Click|%dd%, %loginbutt% Left, 1|1|100|Click|||||119|
+65|[Pause]||1|10000|Sleep|||||121|
+66|Left Move & Click|1210, 105 Left, 1|1|100|Click|||||122|
+67|[Pause]||1|300|Sleep|||||124|
+68|Control|{Control Down}|1|100|Send|||||125|
+69|l|{l}|1|100|Send|||||127|
+70|Control|{Control Up}|1|100|Send|||||129|
+71|[Pause]||1|600|Sleep|||||131|
+72|[Text]|https://dealerdaily.toyota.com/Home#url=/Vehicles/VehicleInvoice/LoadVehicleInvoices&title=wsVehicleInvoices|1|100|SendRaw|||||132|
+73|[Pause]||1|600|Sleep|||||134|
+74|Enter|{Enter}|1|200|Send|||||135|
+75|[Pause]||1|10000|Sleep|||||137|
+76|Control|{Control Down}|1|100|Send|||||138|
+77|l|{l}|1|100|Send|||||140|
+78|Control|{Control Up}|1|100|Send|||||142|
+79|[Pause]||1|600|Sleep|||||144|
+80|[Text]|https://dealerdaily.toyota.com/Home#url=/Vehicles/VehicleInvoice/LoadVehicleInvoices&title=wsVehicleInvoices|1|100|SendRaw|||||145|
+81|[Pause]||1|600|Sleep|||||147|
+82|Enter|{Enter}|1|200|Send|||||148|
+83|[Pause]||1|6500|Sleep|||||150|
+84|Run|r:\received_date.csv|1|0|Run|||||151|
+85|[Pause]||1|500|Sleep|||||152|
+86|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||153|
+87|Left Move & Click|388, 396 Left, 1|1|10|Click|||||155|
+88|[Pause]||1|350|Sleep|||||157|
+89|Left Move & Click|309, 108 Left, 1|1|10|Click|||||158|
+90|[Pause]||1|350|Sleep|||||160|
+91|[End If]|EndIf|1|0|If_Statement|||||161|
+92|[Pause]||1|300|Sleep|||||162|
+93|If Window Exist|Text Import - [received_date.csv]|1|0|If_Statement|||||163|
+94|WinActivate||1|333|WinActivate||Text Import - [new_label_keytag_temp.csv]|||165|
+95|[Pause]||1|300|Sleep|||||167|
+96|Left Move & Click|305, 555 Left, 1|1|300|Click|||||168|
+97|[End If]|EndIf|1|0|If_Statement|||||170|
+98|[Pause]||1|3000|Sleep|||||171|
+99|Control|{Control Down}|1|100|Send|||||172|
+100|Home|{Home}|1|100|Send|||||174|
+101|Control|{Control Up}|1|100|Send|||||176|
+102|[Pause]||1|300|Sleep|||||178|
+103|Control|{Control Down}|1|100|Send|||||179|
+104|a|{a}|1|100|Send|||||181|
+105|Control|{Control Up}|1|100|Send|||||183|
+106|[Pause]||1|750|Sleep|||||185|
+107|Delete|{Delete}|1|100|Send|||||186|
+108|[Pause]||1|750|Sleep|||||188|
+109|Control|{Control Down}|1|100|Send|||||189|
+110|Home|{Home}|1|100|Send|||||191|
+111|Control|{Control Up}|1|100|Send|||||193|
+112|[Pause]||1|15000|Sleep|||||195|
+113|WinActivate||1|333|WinActivate||Dealer Daily - Google Chrome|||196|
+114|[Pause]||1|600|Sleep|||||198|
+115|Continue, Continue, FoundX, FoundY, 0|562, 357, 1416, 728, C:\Users\ReynoldsPurge\Documents\Images\DD expired PW.png|1|500|ImageSearch||Window|||199|
+116|If Image/Pixel Found||1|0|If_Statement|||||202|
+117|Left Move & Click|1067, 597 Left, 1|1|100|Click|||||204|
+118|Continue, Continue, FoundX, FoundY, 0|725, 376, 1206, 703, C:\Users\ReynoldsPurge\Documents\Images\DD PW Change.png|1|100|ImageSearch|UntilFound|Window|||206|
+119|WinActivate||1|333|WinActivate||dd login.ods - LibreOffice Calc|||213|
+120|Control|{Control Down}|1|200|Send|||||215|
+121|C|{C}|1|200|Send|||||217|
+122|Control|{Control Up}|1|200|Send|||||219|
+123|[Pause]||1|300|Sleep|||||221|
+124|Alt|{Alt Down}|1|200|Send|||||222|
+125|Tab|{Tab}|1|200|Send|||||224|
+126|Alt|{Alt Up}|1|200|Send|||||226|
+127|[Pause]||1|500|Sleep|||||228|
+128|Control|{Control Down}|1|200|Send|||||229|
+129|V|{V}|1|200|Send|||||231|
+130|Control|{Control Up}|1|200|Send|||||233|
+131|Tab|{Tab}|1|200|Send|||||235|
+132|WinActivate||1|333|WinActivate||dd login.ods - LibreOffice Calc|||237|
+133|[Pause]||1|1000|Sleep|||||239|
+134|Shift|{Shift Down}|1|200|Send|||||240|
+135|Space|{Space}|1|200|Send|||||242|
+136|Shift|{Shift Up}|1|200|Send|||||244|
+137|Control|{Control Down}|1|200|Send|||||246|
+138|-|{-}|1|200|Send|||||248|
+139|Control|{Control Up}|1|200|Send|||||250|
+140|Control|{Control Down}|1|200|Send|||||252|
+141|S|{S}|1|200|Send|||||254|
+142|Control|{Control Up}|1|200|Send|||||256|
+143|[Pause]||1|500|Sleep|||||258|
+144|If Window Exist|Save As|1|0|If_Statement|||||259|
+145|Enter|{Enter}|1|400|Send|||||261|
+146|Left|{Left}|1|400|Send|||||263|
+147|Enter|{Enter}|1|400|Send|||||265|
+148|[Pause]||1|500|Sleep|||||267|
+149|[End If]|EndIf|1|0|If_Statement|||||268|
+150|Control|{Control Down}|1|200|Send|||||269|
+151|C|{C}|1|200|Send|||||271|
+152|Control|{Control Up}|1|200|Send|||||273|
+153|WinActivate||1|333|WinActivate||Dealer Daily - Google Chrome|||275|
+154|[Pause]||1|1000|Sleep|||||277|
+155|Control|{Control Down}|1|200|Send|||||278|
+156|V|{V}|1|200|Send|||||280|
+157|Control|{Control Up}|1|200|Send|||||282|
+158|Tab|{Tab}|1|200|Send|||||284|
+159|Control|{Control Down}|1|200|Send|||||286|
+160|V|{V}|1|200|Send|||||288|
+161|Control|{Control Up}|1|200|Send|||||290|
+162|Left Move & Click|1134, 733 Left, 1|1|100|Click|||||292|
+163|Continue, Continue, dd, ok, 1|795, 492, 1141, 638, C:\Users\ReynoldsPurge\Documents\Images\DD OK.png|1|100|ImageSearch|UntilFound|Window|||294|
+164|Left Move & Click|%dd%, %ok% Left, 1|1|100|Click|||||302|
+165|WinActivate||1|333|WinActivate||dd login.ods - LibreOffice Calc|||304|
+166|[Pause]||1|500|Sleep|||||306|
+167|Control|{Control Down}|1|200|Send|||||307|
+168|Home|{Home}|1|200|Send|||||309|
+169|Control|{Control Up}|1|200|Send|||||311|
+170|[Pause]||1|300|Sleep|||||313|
+171|Control|{Control Down}|1|100|Send|||||314|
+172|c|{c}|1|100|Send|||||316|
+173|Control|{Control Up}|1|100|Send|||||318|
+174|[Pause]||1|300|Sleep|||||320|
+175|WinActivate||1|333|WinActivate||ForgeRock Access Management - Google Chrome|||321|
+176|[Pause]||1|300|Sleep|||||323|
+177|Control|{Control Down}|1|100|Send|||||324|
+178|V|{V}|1|100|Send|||||326|
+179|Control|{Control Up}|1|100|Send|||||328|
+180|[Pause]||1|300|Sleep|||||330|
+181|Tab|{Tab}|1|100|Send|||||331|
+182|[Pause]||1|300|Sleep|||||333|
+183|WinActivate||1|333|WinActivate||dd login.ods - LibreOffice Calc|||334|
+184|[Pause]||1|300|Sleep|||||336|
+185|Down|{Down}|1|100|Send|||||337|
+186|[Pause]||1|300|Sleep|||||339|
+187|Control|{Control Down}|1|100|Send|||||340|
+188|c|{c}|1|100|Send|||||342|
+189|Control|{Control Up}|1|100|Send|||||344|
+190|[Pause]||1|300|Sleep|||||346|
+191|WinActivate||1|333|WinActivate||ForgeRock Access Management - Google Chrome|||347|
+192|[Pause]||1|300|Sleep|||||349|
+193|Control|{Control Down}|1|100|Send|||||350|
+194|V|{V}|1|100|Send|||||352|
+195|Control|{Control Up}|1|100|Send|||||354|
+196|[Pause]||1|300|Sleep|||||356|
+197|Continue, Continue, dd, loginbox, 1|671, 197, 1579, 776, C:\Users\ReynoldsPurge\Documents\Images\dd loginbox.png|1|0|ImageSearch|UntilFound|Window|||357|
+198|Left Move & Click|%dd%, %loginbox% Left, 1|1|100|Click|||||364|
+199|[Pause]||1|300|Sleep|||||366|
+200|Continue, Continue, dd, loginbutt, 1|757, 269, 1595, 1006, C:\Users\ReynoldsPurge\Documents\Images\dd loginbutt.png|1|0|ImageSearch|UntilFound|Window|||367|
+201|Left Move & Click|%dd%, %loginbutt% Left, 1|1|100|Click|||||374|
+202|[Pause]||1|10000|Sleep|||||376|
+203|Control|{Control Down}|1|100|Send|||||377|
+204|l|{l}|1|100|Send|||||379|
+205|Control|{Control Up}|1|100|Send|||||381|
+206|[Pause]||1|600|Sleep|||||383|
+207|[Text]|https://dealerdaily.toyota.com/Home#url=/Vehicles/VehicleInvoice/LoadVehicleInvoices&title=wsVehicleInvoices|1|100|SendRaw|||||384|
+208|[Pause]||1|600|Sleep|||||386|
+209|Enter|{Enter}|1|200|Send|||||387|
+210|[Pause]||1|10000|Sleep|||||389|
+211|Control|{Control Down}|1|100|Send|||||390|
+212|l|{l}|1|100|Send|||||392|
+213|Control|{Control Up}|1|100|Send|||||394|
+214|[Pause]||1|600|Sleep|||||396|
+215|[Text]|https://dealerdaily.toyota.com/Home#url=/Vehicles/VehicleInvoice/LoadVehicleInvoices&title=wsVehicleInvoices|1|100|SendRaw|||||397|
+216|[Pause]||1|600|Sleep|||||399|
+217|Enter|{Enter}|1|200|Send|||||400|
+218|[Pause]||1|6500|Sleep|||||402|
+219|[End If]|EndIf|1|0|If_Statement|||||403|
+220|Continue, Continue, dd, invoicedate, 1|358, 214, 553, 394, *40 C:\Users\ReynoldsPurge\Documents\Images\dd invoicedate.png|1|200|ImageSearch|UntilFound|Screen|||404|
+221|Left Move & Click|%dd%, %invoicedate% Left, 1|1|100|Click|||||412|
+222|[Pause]||1|600|Sleep|||||414|
+223|5|{5}|1|500|Send|||||415|
+224|Enter|{Enter}|1|200|Send|||||417|
+225|[Pause]||1|600|Sleep|||||419|
+226|Continue, Continue, dd, retail, 1|1247, 194, 1454, 499, *50 C:\Users\ReynoldsPurge\Documents\Images\dd retail.png|1|200|ImageSearch|UntilFound|Screen|||420|
+227|Left Move & Click|%dd%, %retail% Left, 1|1|100|Click|||||428|
+228|[Pause]||1|600|Sleep|||||430|
+229|r|{r}|1|200|Send|||||431|
+230|Enter|{Enter}|1|200|Send|||||433|
+231|[Pause]||1|600|Sleep|||||435|
+232|[Pause]||1|600|Sleep|||||436|
+233|Control|{Control Down}|1|100|Send|||||437|
+234|-|{-}|1|200|Send|||||439|
+235|-|{-}|1|200|Send|||||441|
+236|-|{-}|1|200|Send|||||443|
+237|-|{-}|1|200|Send|||||445|
+238|-|{-}|1|200|Send|||||447|
+239|Control|{Control Up}|1|100|Send|||||449|
+240|[Pause]||1|600|Sleep|||||451|
+241|Left Move & Click|944, 991 Left, 1|3|100|Click|||||452|
+242|[Pause]||1|600|Sleep|||||457|
+243|Control|{Control Down}|1|100|Send|||||458|
+244|c|{c}|1|100|Send|||||460|
+245|Control|{Control Up}|1|100|Send|||||462|
+246|[Pause]||1|600|Sleep|||||464|
+247|Control|{Control Down}|1|100|Send|||||465|
+248|+|{+}|1|200|Send|||||467|
+249|+|{+}|1|200|Send|||||469|
+250|+|{+}|1|200|Send|||||471|
+251|+|{+}|1|200|Send|||||473|
+252|+|{+}|1|200|Send|||||475|
+253|Control|{Control Up}|1|100|Send|||||477|
+254|[Pause]||1|2000|Sleep|||||479|
+255|WinActivate||1|333|WinActivate||received_date.csv - LibreOffice Calc|||480|
+256|[Pause]||1|2000|Sleep|||||482|
+257|Control|{Control Down}|1|100|Send|||||483|
+258|Alt|{Alt Down}|1|100|Send|||||485|
+259|Shift|{Shift Down}|1|100|Send|||||487|
+260|V|{V}|1|100|Send|||||489|
+261|Control|{Control Up}|1|100|Send|||||491|
+262|Alt|{Alt Up}|1|100|Send|||||493|
+263|Shift|{Shift Up}|1|100|Send|||||495|
+264|[Pause]||1|600|Sleep|||||497|
+265|If Window Exist|Text Import|1|0|If_Statement|||||498|
+266|Enter|{Enter}|1|100|Send|||||500|
+267|[Pause]||1|750|Sleep|||||502|
+268|Shift|{Shift Down}|1|100|Send|||||503|
+269|Space|{Space}|1|100|Send|||||505|
+270|Shift|{Shift Up}|1|100|Send|||||507|
+271|[Pause]||1|300|Sleep|||||509|
+272|Control|{Control Down}|1|100|Send|||||510|
+273|-|{-}|1|100|Send|||||512|
+274|Control|{Control Up}|1|100|Send|||||514|
+275|[Pause]||1|300|Sleep|||||516|
+276|[End If]|EndIf|1|0|If_Statement|||||517|
+277|Control|{Control Down}|1|100|Send|||||518|
+278|Home|{Home}|1|100|Send|||||520|
+279|Control|{Control Up}|1|100|Send|||||522|
+280|[Pause]||1|600|Sleep|||||524|
+281|WinActivate||1|333|WinActivate||ahk_exe pwrsuite.exe|||525|
+282|[Pause]||1|600|Sleep|||||527|
+283|Control|{Control Down}|1|100|Send|||||528|
+284|6|{6}|1|100|Send|||||530|
+285|Control|{Control Up}|1|100|Send|||||532|
+286|Continue, Continue, FoundX, FoundY, 0|134, 45, 669, 222, C:\Users\ReynoldsPurge\Documents\Images\VMS loaded2.png|1|100|ImageSearch|UntilFound|Window|||534|
+287|[Pause]||1|600|Sleep|||||541|
+288|Shift|{Shift Down}|1|100|Send|||||542|
+289|Tab|{Tab}|1|100|Send|||||544|
+290|Shift|{Shift Up}|1|100|Send|||||546|
+291|[Pause]||1|600|Sleep|||||548|
+292|v|{v}|1|100|Send|||||549|
+293|[Pause]||1|600|Sleep|||||551|
+294|[LoopStart]|LoopStart|0|0|Loop|||||552|
+295|WinActivate||1|333|WinActivate||received_date.csv - LibreOffice Calc|||554|
+296|[Pause]||1|500|Sleep|||||556|
+297|Continue, Continue, FoundX, FoundY, 0|234, 99, 326, 128, C:\Users\ReynoldsPurge\Documents\Images\Stock Over.png|1|0|ImageSearch||Window|||557|
+298|If Image/Pixel Found||1|0|If_Statement|||||559|
+299|[Pause]||1|300|Sleep|||||561|
+300|WinActivate||1|333|WinActivate||(VMS) - ERA-IGNITE|||562|
+301|[Pause]||1|300|Sleep|||||564|
+302|Alt|{Alt Down}|1|100|Send|||||565|
+303|F4|{F4}|1|100|Send|||||567|
+304|Alt|{Alt Up}|1|100|Send|||||569|
+305|[Pause]||1|300|Sleep|||||571|
+306|WinActivate||1|333|WinActivate||dd login.ods - LibreOffice Calc|||572|
+307|[Pause]||1|300|Sleep|||||574|
+308|Alt|{Alt Down}|1|100|Send|||||575|
+309|F4|{F4}|1|100|Send|||||577|
+310|Alt|{Alt Up}|1|100|Send|||||579|
+311|If Window Exist|Save Document?|1|0|If_Statement|||||581|
+312|Enter|{Enter}|1|300|Send|||||583|
+313|[Pause]||1|300|Sleep|||||585|
+314|[End If]|EndIf|1|0|If_Statement|||||586|
+315|[Pause]||1|300|Sleep|||||587|
+316|WinActivate||1|333|WinActivate||received_date.csv - LibreOffice Calc|||588|
+317|[Pause]||1|300|Sleep|||||590|
+318|Alt|{Alt Down}|1|100|Send|||||591|
+319|F4|{F4}|1|100|Send|||||593|
+320|Alt|{Alt Up}|1|100|Send|||||595|
+321|If Window Exist|Save Document?|1|0|If_Statement|||||597|
+322|Enter|{Enter}|1|300|Send|||||599|
+323|[Pause]||1|300|Sleep|||||601|
+324|[End If]|EndIf|1|0|If_Statement|||||602|
+325|WinActivate||1|333|WinActivate||Dealer Daily - Google Chrome|||603|
+326|[Pause]||1|300|Sleep|||||605|
+327|Alt|{Alt Down}|1|100|Send|||||606|
+328|F4|{F4}|1|100|Send|||||608|
+329|Alt|{Alt Up}|1|100|Send|||||610|
+330|[Pause]||1|300|Sleep|||||612|
+331|tohbot@toyotaofhackensack.com|Finished Receive date 5=0:Finished Receive date 5|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||613|
+332|[Pause]||1|500|Sleep|||||616|
+333|FileAppend|done, C:\engine\donereceivedate5.txt|1|0|FileAppend|||||617|
+334|[Pause]||1|500|Sleep|||||618|
+335|ExitApp||1|0|ExitApp|||||619|
+336|[End If]|EndIf|1|0|If_Statement|||||620|
+337|[Pause]||1|300|Sleep|||||621|
+338|Right|{Right}|2|150|Send|||||622|
+339|[Pause]||1|300|Sleep|||||624|
+340|Control|{Control Down}|1|100|Send|||||625|
+341|c|{c}|1|100|Send|||||627|
+342|Control|{Control Up}|1|100|Send|||||629|
+343|[Pause]||1|300|Sleep|||||631|
+344|Left|{Left}|2|150|Send|||||632|
+345|WinActivate||1|333|WinActivate||(VMS) - ERA-IGNITE|||634|
+346|[Pause]||1|500|Sleep|||||636|
+347|Left Move & Click|687, 179 Left, 1|2|100|Click|||||637|
+348|[Pause]||1|300|Sleep|||||642|
+349|Backspace|{Backspace}|1|150|Send|||||643|
+350|[Pause]||1|300|Sleep|||||645|
+351|Control|{Control Down}|1|100|Send|||||646|
+352|v|{v}|1|100|Send|||||648|
+353|Control|{Control Up}|1|100|Send|||||650|
+354|[Pause]||1|300|Sleep|||||652|
+355|Enter|{Enter}|1|100|Send|||||653|
+356|[Pause]||1|1500|Sleep|||||655|
+357|Continue, Continue, FoundX, FoundY, 1|132, 90, 532, 357, *50 C:\Users\ReynoldsPurge\Documents\Images\duplicate vin.png|1|500|ImageSearch||Window|||656|
+358|If Image/Pixel Found||1|0|If_Statement|||||660|
+359|[Pause]||1|300|Sleep|||||662|
+360|tohbot@toyotaofhackensack.com|Duplicate VIN %Clipboard% RECEIVE DATE=0:Duplicate VIN %Clipboard% RECEIVE DATE|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=rcurci@toyotaofhackensack.com||||663|
+361|[Pause]||1|300|Sleep|||||666|
+362|Left Move & Click|688, 180 Left, 1|1|500|Click|||||667|
+363|[Pause]||1|300|Sleep|||||669|
+364|Backspace|{Backspace}|1|500|Send|||||670|
+365|[Pause]||1|300|Sleep|||||672|
+366|WinActivate||1|333|WinActivate||received_date.csv - LibreOffice Calc|||673|
+367|[Pause]||1|1000|Sleep|||||675|
+368|Shift|{Shift Down}|1|500|Send|||||676|
+369|Space|{Space}|1|500|Send|||||678|
+370|Shift|{Shift Up}|1|500|Send|||||680|
+371|[Pause]||1|300|Sleep|||||682|
+372|Control|{Control Down}|1|500|Send|||||683|
+373|-|{-}|1|500|Send|||||685|
+374|Control|{Control Up}|1|500|Send|||||687|
+375|[Pause]||1|300|Sleep|||||689|
+376|Left|{Left}|1|500|Send|||||690|
+377|[Pause]||1|300|Sleep|||||692|
+378|[Pause]||1|1000|Sleep|||||693|
+379|Continue||1|0|Continue|||||694|
+380|[End If]|EndIf|1|0|If_Statement|||||695|
+381|[Pause]||1|300|Sleep|||||696|
+382|If Window Exist|VMSXX005 - 8113|1|0|If_Statement|||||697|
+383|Enter|{Enter}|1|100|Send|||||699|
+384|[End If]|EndIf|1|0|If_Statement|||||701|
+385|[Pause]||1|300|Sleep|||||702|
+386|Continue, Continue, FoundX, FoundY, 0|271, 201, 953, 361, C:\Users\ReynoldsPurge\Documents\Images\Stock In Not Found.png|1|100|ImageSearch||Window|||703|
+387|If Image/Pixel Found||1|0|If_Statement|||||706|
+388|Left Move & Click|638, 182 Left, 1|2|100|Click|||||708|
+389|[Pause]||1|300|Sleep|||||713|
+390|Backspace|{Backspace}|1|100|Send|||||714|
+391|[Pause]||1|300|Sleep|||||716|
+392|WinActivate||1|333|WinActivate||received_date.csv - LibreOffice Calc|||717|
+393|[Pause]||1|300|Sleep|||||719|
+394|Shift|{Shift Down}|1|300|Send|||||720|
+395|Space|{Space}|1|300|Send|||||722|
+396|Shift|{Shift Up}|1|300|Send|||||724|
+397|[Pause]||1|300|Sleep|||||726|
+398|Control|{Control Down}|1|300|Send|||||727|
+399|-|{-}|1|300|Send|||||729|
+400|Control|{Control Up}|1|300|Send|||||731|
+401|[Pause]||1|300|Sleep|||||733|
+402|Continue||1|0|Continue|||||734|
+403|[End If]|EndIf|1|0|If_Statement|||||735|
+404|[Pause]||1|300|Sleep|||||736|
+405|Continue, Continue, FoundX, FoundY, 0|182, 50, 612, 290, C:\Users\ReynoldsPurge\Documents\Images\VMS loaded3.png|1|0|ImageSearch|UntilFound|Window|||737|
+406|[Pause]||1|300|Sleep|||||743|
+407|tohbot@toyotaofhackensack.com|Updated received date on %Clipboard%=0:Updated received date on %Clipboard%|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||744|
+408|WinActivate||1|333|WinActivate||received_date.csv - LibreOffice Calc|||747|
+409|[Pause]||1|300|Sleep|||||749|
+410|Control|{Control Down}|1|100|Send|||||750|
+411|c|{c}|1|100|Send|||||752|
+412|Control|{Control Up}|1|100|Send|||||754|
+413|[Pause]||1|300|Sleep|||||756|
+414|Shift|{Shift Down}|1|300|Send|||||757|
+415|Space|{Space}|1|300|Send|||||759|
+416|Shift|{Shift Up}|1|300|Send|||||761|
+417|[Pause]||1|300|Sleep|||||763|
+418|Control|{Control Down}|1|300|Send|||||764|
+419|-|{-}|1|300|Send|||||766|
+420|Control|{Control Up}|1|300|Send|||||768|
+421|[Pause]||1|500|Sleep|||||770|
+422|Alt|{Alt Down}|1|100|Send|||||771|
+423|Tab|{Tab}|1|100|Send|||||773|
+424|Alt|{Alt Up}|1|100|Send|||||775|
+425|[Pause]||1|500|Sleep|||||777|
+426|Left Move & Click|647, 168 Left, 1|2|100|Click|||||778|
+427|[Pause]||1|500|Sleep|||||783|
+428|Control|{Control Down}|1|100|Send|||||784|
+429|v|{v}|1|100|Send|||||786|
+430|Control|{Control Up}|1|100|Send|||||788|
+431|[Pause]||1|300|Sleep|||||790|
+432|Enter|{Enter}|1|300|Send|||||791|
+433|[Pause]||1|300|Sleep|||||793|
+434|Left Move & Click|404, 148 Left, 1|1|100|Click|||||794|
+435|[Pause]||1|500|Sleep|||||796|
+436|Tab|{Tab}|1|300|Send|||||797|
+437|[Pause]||1|300|Sleep|||||799|
+438|1|{1}|1|200|Send|||||800|
+439|[Pause]||1|300|Sleep|||||802|
+440|Enter|{Enter}|1|200|Send|||||803|
+441|[Pause]||1|300|Sleep|||||805|
+442|Escape|{Escape}|1|300|Send|||||806|
+443|[Pause]||1|3500|Sleep|||||808|
+444|If Window Exist|VMSMAIN0 - 1007|1|0|If_Statement|||||809|
+445|[Pause]||1|300|Sleep|||||811|
+446|Left Click|Left, 1,  NA|1|10|ControlClick|Button1|VMSMAIN0 - 1007|||812|
+447|[Pause]||1|2500|Sleep|||||814|
+448|[End If]|EndIf|1|0|If_Statement|||||815|
+449|If Window Exist|VEHICLE DESCRIPTION SELECTION|1|0|If_Statement|||||816|
+450|Escape|{Escape}|1|350|Send|||||818|
+451|[Pause]||1|2500|Sleep|||||820|
+452|Enter|{Enter}|1|350|Send|||||821|
+453|[Pause]||1|2500|Sleep|||||823|
+454|[End If]|EndIf|1|0|If_Statement|||||824|
+455|[Pause]||1|2500|Sleep|||||825|
+456|[LoopEnd]|LoopEnd|1|0|Loop|||||826|
+

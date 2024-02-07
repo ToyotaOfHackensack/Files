@@ -1,0 +1,576 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|tohbot@toyotaofhackensack.com|Started PDI=0:Started PDI|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||1|
+2|[Pause]||1|300|Sleep|||||4|
+3|If Window Not Exist|(Home Page) - ERA-IGNITE|1|0|If_Statement|||||5|
+4|Run|C:\Users\ReynoldsPurge\Documents\live\reylogin.exe|1|0|Run|||||7|
+5|[Pause]||1|1000|Sleep|||||8|
+6|Continue, Continue, FoundX, FoundY, 0|7, 84, 141, 129, C:\Users\ReynoldsPurge\Documents\Images\Rey Home Page.png|1|1000|ImageSearch|UntilFound|Window|||9|
+7|[End If]|EndIf|1|0|If_Statement|||||16|
+8|[Pause]||1|300|Sleep|||||17|
+9|WinActivate||1|333|WinActivate||(Home Page) - ERA-IGNITE|||18|
+10|[Pause]||1|300|Sleep|||||20|
+11|Control|{Control Down}|1|300|Send|||||21|
+12|2|{2}|1|500|Send|||||23|
+13|Control|{Control Up}|1|300|Send|||||25|
+14|[Pause]||1|5000|Sleep|||||27|
+15|Continue, Continue, stock, #, 1|271, 117, 862, 267, *50 C:\Users\ReynoldsPurge\Documents\Images\pdi\stock#.png|1|50|ImageSearch|UntilFound|Window|||28|
+16|[Pause]||1|300|Sleep|||||36|
+17|[Pause]||1|300|Sleep|||||37|
+18|Run|R:\pdi.csv|1|0|Run|||||38|
+19|[Pause]||1|2000|Sleep|||||39|
+20|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||40|
+21|Left Move & Click|388, 396 Left, 1|1|10|Click|||||42|
+22|[Pause]||1|350|Sleep|||||44|
+23|Left Move & Click|309, 108 Left, 1|1|10|Click|||||45|
+24|[Pause]||1|350|Sleep|||||47|
+25|[End If]|EndIf|1|0|If_Statement|||||48|
+26|[Pause]||1|2000|Sleep|||||49|
+27|If Window Exist|Text Import - [pdi.csv]|1|0|If_Statement|||||50|
+28|WinActivate||1|333|WinActivate||Text Import - [new_label_keytag_temp.csv]|||52|
+29|[Pause]||1|2000|Sleep|||||54|
+30|Continue, Continue, FoundX, FoundY, 0|37, 37, 405, 137, *50 C:\Users\ReynoldsPurge\Documents\Images\bad unicode.png|1|500|ImageSearch||Window|||55|
+31|If Image/Pixel Found||1|0|If_Statement|||||58|
+32|u|{u}|1|200|Send|||||60|
+33|[End If]|EndIf|1|0|If_Statement|||||62|
+34|[Pause]||1|300|Sleep|||||63|
+35|Continue, Continue, space, button, 1|185, 138, 366, 265, *50 C:\Users\ReynoldsPurge\Documents\Images\pdi\space button.png|1|500|ImageSearch||Window|||64|
+36|If Image/Pixel Found||1|0|If_Statement|||||68|
+37|Left Move & Click|%space%, %button% Left, 1|1|200|Click|||||70|
+38|[End If]|EndIf|1|0|If_Statement|||||72|
+39|[Pause]||1|300|Sleep|||||73|
+40|Left Move & Click|305, 555 Left, 1|1|300|Click|||||74|
+41|[End If]|EndIf|1|0|If_Statement|||||76|
+42|[Pause]||1|3000|Sleep|||||77|
+43|Shift|{Shift Down}|1|300|Send|||||78|
+44|Space|{Space}|1|300|Send|||||80|
+45|Shift|{Shift Up}|1|300|Send|||||82|
+46|[Pause]||1|300|Sleep|||||84|
+47|Control|{Control Down}|1|300|Send|||||85|
+48|-|{-}|1|300|Send|||||87|
+49|Control|{Control Up}|1|300|Send|||||89|
+50|[Pause]||1|500|Sleep|||||91|
+51|[LoopStart]|LoopStart|0|0|Loop|||||92|
+52|[Pause]||1|300|Sleep|||||94|
+53|Control|{Control Down}|1|300|Send|||||95|
+54|Home|{Home}|1|300|Send|||||97|
+55|Control|{Control Up}|1|300|Send|||||99|
+56|[Pause]||1|800|Sleep|||||101|
+57|Control|{Control Down}|1|200|Send|||||102|
+58|Shift|{Shift Down}|1|200|Send|||||104|
+59|F2|{F2}|1|200|Send|||||106|
+60|Shift|{Shift Up}|1|200|Send|||||108|
+61|Control|{Control Up}|1|200|Send|||||110|
+62|[Pause]||1|300|Sleep|||||112|
+63|Control|{Control Down}|1|200|Send|||||113|
+64|a|{a}|1|200|Send|||||115|
+65|Control|{Control Up}|1|200|Send|||||117|
+66|[Pause]||1|300|Sleep|||||119|
+67|Control|{Control Down}|1|300|Send|||||120|
+68|c|{c}|1|300|Send|||||122|
+69|Control|{Control Up}|1|300|Send|||||124|
+70|[Pause]||1|300|Sleep|||||126|
+71|WinActivate||1|333|WinActivate||(SVC - No Appointment Read) - ERA-IGNITE|||127|
+72|[Pause]||1|500|Sleep|||||129|
+73|Left Move & Click|%stock%, %#% Left, 1|1|200|Click|||||130|
+74|[Pause]||1|300|Sleep|||||132|
+75|Control|{Control Down}|1|300|Send|||||133|
+76|V|{V}|1|300|Send|||||135|
+77|Control|{Control Up}|1|300|Send|||||137|
+78|[Pause]||1|300|Sleep|||||139|
+79|Enter|{Enter}|1|300|Send|||||140|
+80|[Pause]||1|300|Sleep|||||142|
+81|Continue, Continue, reception, button, 1|101, 572, 501, 710, *50 C:\Users\ReynoldsPurge\Documents\Images\pdi\reception button.png|1|200|ImageSearch|UntilFound|Window|||143|
+82|[Pause]||1|300|Sleep|||||151|
+83|F8|{F8}|1|300|Send|||||152|
+84|[Pause]||1|300|Sleep|||||154|
+85|Continue, Continue, FoundX, FoundY, 0|247, 84, 591, 217, *50 C:\Users\ReynoldsPurge\Documents\Images\pdi\reception loaded.png|1|0|ImageSearch|UntilFound|Window|||155|
+86|[Pause]||1|500|Sleep|||||161|
+87|P|{P}|1|300|Send|||||162|
+88|[Pause]||1|500|Sleep|||||164|
+89|If Window Active|SVCSAFLO - 1024|1|0|If_Statement|||||165|
+90|[Pause]||1|300|Sleep|||||167|
+91|tohbot@toyotaofhackensack.com|%Clipboard% has open RO=0:%Clipboard% has error1|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||168|
+92|[Pause]||1|300|Sleep|||||171|
+93|N|{N}|1|300|Send|||||172|
+94|[Pause]||1|300|Sleep|||||174|
+95|WinActivate||1|333|WinActivate||pdi.csv - LibreOffice Calc|||175|
+96|[Pause]||1|800|Sleep|||||177|
+97|Tab|{Tab}|1|500|Send|||||178|
+98|[Pause]||1|300|Sleep|||||180|
+99|Shift|{Shift Down}|1|300|Send|||||181|
+100|Space|{Space}|1|300|Send|||||183|
+101|Shift|{Shift Up}|1|300|Send|||||185|
+102|[Pause]||1|300|Sleep|||||187|
+103|Control|{Control Down}|1|300|Send|||||188|
+104|-|{-}|1|300|Send|||||190|
+105|Control|{Control Up}|1|300|Send|||||192|
+106|[Pause]||1|500|Sleep|||||194|
+107|Continue||1|0|Continue|||||195|
+108|[End If]|EndIf|1|0|If_Statement|||||196|
+109|[Pause]||1|500|Sleep|||||197|
+110|If Window Exist|Please make a selection:|1|0|If_Statement|||||198|
+111|[Pause]||1|300|Sleep|||||200|
+112|tohbot@toyotaofhackensack.com|%Clipboard% has open RO=0:%Clipboard% has error|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||201|
+113|[Pause]||1|300|Sleep|||||204|
+114|3|{3}|1|300|Send|||||205|
+115|[Pause]||1|300|Sleep|||||207|
+116|Enter|{Enter}|1|300|Send|||||208|
+117|[Pause]||1|300|Sleep|||||210|
+118|WinActivate||1|333|WinActivate||pdi.csv - LibreOffice Calc|||211|
+119|Enter|{Enter}|1|300|Send|||||213|
+120|[Pause]||1|500|Sleep|||||215|
+121|Control|{Control Down}|1|300|Send|||||216|
+122|Home|{Home}|1|300|Send|||||218|
+123|Control|{Control Up}|1|300|Send|||||220|
+124|[Pause]||1|500|Sleep|||||222|
+125|Shift|{Shift Down}|1|300|Send|||||223|
+126|Space|{Space}|1|300|Send|||||225|
+127|Shift|{Shift Up}|1|300|Send|||||227|
+128|[Pause]||1|300|Sleep|||||229|
+129|Control|{Control Down}|1|300|Send|||||230|
+130|-|{-}|1|300|Send|||||232|
+131|Control|{Control Up}|1|300|Send|||||234|
+132|[Pause]||1|1500|Sleep|||||236|
+133|Continue, Continue, FoundX, FoundY, 0|229, 98, 326, 130, C:\Users\ReynoldsPurge\Documents\Images\Stock Over.png|1|0|ImageSearch||Window|||237|
+134|If Image/Pixel Found||1|0|If_Statement|||||239|
+135|WinActivate||1|333|WinActivate||pdi.csv - LibreOffice Calc|||241|
+136|[Pause]||1|300|Sleep|||||243|
+137|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||244|
+138|If Window Active|Save Document?|1|0|If_Statement|||||246|
+139|[Pause]||1|300|Sleep|||||248|
+140|Enter|{Enter}|1|200|Send|||||249|
+141|[End If]|EndIf|1|0|If_Statement|||||251|
+142|[Pause]||1|300|Sleep|||||252|
+143|WinActivate||1|333|WinActivate||(SVC - No Appointment Read) - ERA-IGNITE|||253|
+144|[Pause]||1|300|Sleep|||||255|
+145|Alt|{Alt Down}|1|200|Send|||||256|
+146|F4|{F4}|1|200|Send|||||258|
+147|Alt|{Alt Up}|1|200|Send|||||260|
+148|[Pause]||1|3000|Sleep|||||262|
+149|FileDelete|R:\pdi.csv|1|0|FileDelete|||||263|
+150|[Pause]||1|300|Sleep|||||264|
+151|[Pause]||1|300|Sleep|||||265|
+152|tohbot@toyotaofhackensack.com|Finished PDI=0:Finished PDI|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||266|
+153|FileAppend|done, C:\engine\donepdi.txt|1|0|FileAppend|||||269|
+154|ExitApp||1|0|ExitApp|||||270|
+155|[End If]|EndIf|1|0|If_Statement|||||271|
+156|Continue||1|0|Continue|||||272|
+157|[End If]|EndIf|1|0|If_Statement|||||273|
+158|[Pause]||1|500|Sleep|||||274|
+159|[Text]|29025|1|300|SendRaw|||||275|
+160|[Pause]||1|500|Sleep|||||277|
+161|Enter|{Enter}|1|300|Send|||||278|
+162|[Pause]||1|500|Sleep|||||280|
+163|2|{2}|1|300|Send|||||281|
+164|[Pause]||1|500|Sleep|||||283|
+165|Enter|{Enter}|1|300|Send|||||284|
+166|[Pause]||1|500|Sleep|||||286|
+167|Continue, Continue, date, button, 1|216, 120, 799, 429, *50 C:\Users\ReynoldsPurge\Documents\Images\pdi\date button.png|1|300|ImageSearch|UntilFound|Window|||287|
+168|[Pause]||1|500|Sleep|||||295|
+169|Left Move & Click|%date%, %button% Left, 1|1|500|Click|||||296|
+170|[Pause]||1|500|Sleep|||||298|
+171|Right|{Right}|1|500|Send|||||299|
+172|[Pause]||1|500|Sleep|||||301|
+173|Enter|{Enter}|1|300|Send|||||302|
+174|[Pause]||1|500|Sleep|||||304|
+175|Enter|{Enter}|1|300|Send|||||305|
+176|[Pause]||1|500|Sleep|||||307|
+177|Enter|{Enter}|1|300|Send|||||308|
+178|[Pause]||1|500|Sleep|||||310|
+179|Enter|{Enter}|1|300|Send|||||311|
+180|[Pause]||1|500|Sleep|||||313|
+181|WinActivate||1|333|WinActivate||pdi.csv - LibreOffice Calc|||314|
+182|[Pause]||1|500|Sleep|||||316|
+183|Tab|{Tab}|1|300|Send|||||317|
+184|[Pause]||1|300|Sleep|||||319|
+185|Control|{Control Down}|1|300|Send|||||320|
+186|c|{c}|1|300|Send|||||322|
+187|Control|{Control Up}|1|300|Send|||||324|
+188|[Pause]||1|300|Sleep|||||326|
+189|WinActivate||1|333|WinActivate||(SVC - Add In Progress) - ERA-IGNITE|||327|
+190|[Pause]||1|500|Sleep|||||329|
+191|!|{!}|1|300|Send|||||330|
+192|[Pause]||1|300|Sleep|||||332|
+193|Control|{Control Down}|1|300|Send|||||333|
+194|V|{V}|1|300|Send|||||335|
+195|Control|{Control Up}|1|300|Send|||||337|
+196|[Pause]||1|300|Sleep|||||339|
+197|Enter|{Enter}|1|300|Send|||||340|
+198|[Pause]||1|3000|Sleep|||||342|
+199|If Window Exist|SVCSARO0 - 1001|1|0|If_Statement|||||343|
+200|[Pause]||1|300|Sleep|||||345|
+201|Enter|{Enter}|1|300|Send|||||346|
+202|[Pause]||1|300|Sleep|||||348|
+203|@|{@}|1|200|Send|||||349|
+204|[Pause]||1|300|Sleep|||||351|
+205|Control|{Control Down}|1|300|Send|||||352|
+206|V|{V}|1|300|Send|||||354|
+207|Control|{Control Up}|1|300|Send|||||356|
+208|[Pause]||1|300|Sleep|||||358|
+209|Enter|{Enter}|1|300|Send|||||359|
+210|[Pause]||1|300|Sleep|||||361|
+211|[End If]|EndIf|1|0|If_Statement|||||362|
+212|[Pause]||1|600|Sleep|||||363|
+213|If Window Exist|SVCSARO0 - 1001|1|0|If_Statement|||||364|
+214|[Pause]||1|300|Sleep|||||366|
+215|Enter|{Enter}|1|300|Send|||||367|
+216|[Pause]||1|300|Sleep|||||369|
+217|#|{#}|1|300|Send|||||370|
+218|[Pause]||1|300|Sleep|||||372|
+219|Control|{Control Down}|1|300|Send|||||373|
+220|V|{V}|1|300|Send|||||375|
+221|Control|{Control Up}|1|300|Send|||||377|
+222|[Pause]||1|300|Sleep|||||379|
+223|Enter|{Enter}|1|300|Send|||||380|
+224|[Pause]||1|300|Sleep|||||382|
+225|[End If]|EndIf|1|0|If_Statement|||||383|
+226|[Pause]||1|600|Sleep|||||384|
+227|If Window Exist|SVCSARO0 - 1001|1|0|If_Statement|||||385|
+228|[Pause]||1|300|Sleep|||||387|
+229|Enter|{Enter}|1|300|Send|||||388|
+230|[Pause]||1|300|Sleep|||||390|
+231|$|{$}|1|300|Send|||||391|
+232|[Pause]||1|300|Sleep|||||393|
+233|Control|{Control Down}|1|300|Send|||||394|
+234|V|{V}|1|300|Send|||||396|
+235|Control|{Control Up}|1|300|Send|||||398|
+236|[Pause]||1|300|Sleep|||||400|
+237|Enter|{Enter}|1|300|Send|||||401|
+238|[Pause]||1|300|Sleep|||||403|
+239|[End If]|EndIf|1|0|If_Statement|||||404|
+240|[Pause]||1|600|Sleep|||||405|
+241|If Window Exist|SVCSARO0 - 1001|1|0|If_Statement|||||406|
+242|[Pause]||1|300|Sleep|||||408|
+243|Enter|{Enter}|1|300|Send|||||409|
+244|[Pause]||1|300|Sleep|||||411|
+245|^|{^}|1|300|Send|||||412|
+246|[Pause]||1|300|Sleep|||||414|
+247|Control|{Control Down}|1|300|Send|||||415|
+248|V|{V}|1|300|Send|||||417|
+249|Control|{Control Up}|1|300|Send|||||419|
+250|[Pause]||1|300|Sleep|||||421|
+251|Enter|{Enter}|1|300|Send|||||422|
+252|[Pause]||1|300|Sleep|||||424|
+253|[End If]|EndIf|1|0|If_Statement|||||425|
+254|[Pause]||1|300|Sleep|||||426|
+255|[Text]|22|1|300|SendRaw|||||427|
+256|[Pause]||1|300|Sleep|||||429|
+257|2|{2}|1|300|Send|||||430|
+258|[Pause]||1|300|Sleep|||||432|
+259|Continue, Continue, op, codes, 1|177, 273, 605, 476, *50 C:\Users\ReynoldsPurge\Documents\Images\pdi\op codes.png|1|300|ImageSearch|UntilFound|Window|||433|
+260|[Pause]||1|300|Sleep|||||441|
+261|Left Move & Click|%op%, %codes% Left, 1|1|300|Click|||||442|
+262|[Pause]||1|3500|Sleep|||||444|
+263|If Window Active|SVCSARO0 - 1006|1|0|If_Statement|||||445|
+264|[Pause]||1|300|Sleep|||||447|
+265|Enter|{Enter}|1|300|Send|||||448|
+266|[Pause]||1|300|Sleep|||||450|
+267|Left Move & Click|464, 240 Left, 1|1|300|Click|||||451|
+268|[Pause]||1|300|Sleep|||||453|
+269|Continue, Continue, next, date, 1|-31, -36, 232, 187, *50 C:\Users\ReynoldsPurge\Documents\Images\pdi\next date.png|1|300|ImageSearch||Window|||454|
+270|[Pause]||1|300|Sleep|||||458|
+271|Left Move & Click|%next%, %date% Left, 1|1|300|Click|||||459|
+272|[Pause]||1|300|Sleep|||||461|
+273|Left Move & Click|%op%, %codes% Left, 1|1|300|Click|||||462|
+274|[End If]|EndIf|1|0|If_Statement|||||464|
+275|[Pause]||1|3000|Sleep|||||465|
+276|If Window Active|Manufacturer Inquiry|1|0|If_Statement|||||466|
+277|[Pause]||1|300|Sleep|||||468|
+278|Escape|{Escape}|1|200|Send|||||469|
+279|[Pause]||1|300|Sleep|||||471|
+280|[End If]|EndIf|1|0|If_Statement|||||472|
+281|[Pause]||1|2500|Sleep|||||473|
+282|If Window Active|SYSERR00 - 0002|1|0|If_Statement|||||474|
+283|[Pause]||1|300|Sleep|||||476|
+284|Enter|{Enter}|1|200|Send|||||477|
+285|[Pause]||1|300|Sleep|||||479|
+286|[Text]|TOZZ|1|200|Clipboard|||||480|
+287|[Pause]||1|300|Sleep|||||485|
+288|Enter|{Enter}|1|200|Send|||||486|
+289|[Pause]||1|300|Sleep|||||488|
+290|Escape|{Escape}|1|200|Send|||||489|
+291|[End If]|EndIf|1|0|If_Statement|||||491|
+292|[Pause]||1|1000|Sleep|||||492|
+293|If Window Active|SVCSVEH0 - 1002|1|0|If_Statement|||||493|
+294|[Pause]||1|300|Sleep|||||495|
+295|Enter|{Enter}|1|200|Send|||||496|
+296|[Pause]||1|300|Sleep|||||498|
+297|[End If]|EndIf|1|0|If_Statement|||||499|
+298|[Pause]||1|1000|Sleep|||||500|
+299|Left Move & Click|%op%, %codes% Left, 1|1|300|Click|||||501|
+300|[Pause]||1|500|Sleep|||||503|
+301|WinActivate||1|333|WinActivate||pdi.csv - LibreOffice Calc|||504|
+302|[Pause]||1|500|Sleep|||||506|
+303|Right|{Right}|1|300|Send|||||507|
+304|[Pause]||1|300|Sleep|||||509|
+305|Control|{Control Down}|1|200|Send|||||510|
+306|Shift|{Shift Down}|1|200|Send|||||512|
+307|F2|{F2}|1|200|Send|||||514|
+308|Shift|{Shift Up}|1|200|Send|||||516|
+309|Control|{Control Up}|1|200|Send|||||518|
+310|[Pause]||1|300|Sleep|||||520|
+311|Control|{Control Down}|1|200|Send|||||521|
+312|a|{a}|1|200|Send|||||523|
+313|Control|{Control Up}|1|200|Send|||||525|
+314|[Pause]||1|300|Sleep|||||527|
+315|Control|{Control Down}|1|300|Send|||||528|
+316|c|{c}|1|300|Send|||||530|
+317|Control|{Control Up}|1|300|Send|||||532|
+318|[Pause]||1|300|Sleep|||||534|
+319|WinActivate||1|333|WinActivate||(SVC - Add In Progress) - ERA-IGNITE|||535|
+320|[Pause]||1|500|Sleep|||||537|
+321|Continue, Continue, FoundX, FoundY, 0|131, 16, 730, 343, *50 C:\Users\ReynoldsPurge\Documents\Images\pdi\labor operations.png|1|500|ImageSearch|UntilFound|Window|||538|
+322|[Pause]||1|500|Sleep|||||545|
+323|Left Move & Click|418, 158 Left, 2|1|100|Click|||||546|
+324|[Pause]||1|300|Sleep|||||548|
+325|If Clipboard Text|"4RUNNER"|1|0|If_Statement|||||549|
+326|[Pause]||1|300|Sleep|||||551|
+327|[Text]|97TOZ4RUNNER|1|300|Clipboard|||||552|
+328|[End If]|EndIf|1|0|If_Statement|||||557|
+329|[Pause]||1|50|Sleep|||||558|
+330|If Clipboard Text|"86"|1|0|If_Statement|||||559|
+331|[Pause]||1|300|Sleep|||||561|
+332|[Text]|97TOZ86|1|300|Clipboard|||||562|
+333|[End If]|EndIf|1|0|If_Statement|||||567|
+334|[Pause]||1|50|Sleep|||||568|
+335|If Clipboard Text|"AVALON"|1|0|If_Statement|||||569|
+336|[Pause]||1|300|Sleep|||||571|
+337|[Text]|97TOZAVALON|1|300|Clipboard|||||572|
+338|[End If]|EndIf|1|0|If_Statement|||||577|
+339|[Pause]||1|50|Sleep|||||578|
+340|If Clipboard Text|"AVALON HYB"|1|0|If_Statement|||||579|
+341|[Pause]||1|300|Sleep|||||581|
+342|[Text]|97TOZAVALONH|1|300|Clipboard|||||582|
+343|[End If]|EndIf|1|0|If_Statement|||||587|
+344|[Pause]||1|50|Sleep|||||588|
+345|If Clipboard Text|"BZ4X"|1|0|If_Statement|||||589|
+346|[Pause]||1|300|Sleep|||||591|
+347|[Text]|97TOZBZ4X|1|300|Clipboard|||||592|
+348|[End If]|EndIf|1|0|If_Statement|||||597|
+349|[Pause]||1|50|Sleep|||||598|
+350|If Clipboard Text|"CAMRY"|1|0|If_Statement|||||599|
+351|[Pause]||1|300|Sleep|||||601|
+352|[Text]|97TOZCAMRY|1|300|Clipboard|||||602|
+353|[End If]|EndIf|1|0|If_Statement|||||607|
+354|[Pause]||1|50|Sleep|||||608|
+355|If Clipboard Text|"CAMRY HYBRID"|1|0|If_Statement|||||609|
+356|[Pause]||1|300|Sleep|||||611|
+357|[Text]|97TOZCAMRYHY|1|300|Clipboard|||||612|
+358|[End If]|EndIf|1|0|If_Statement|||||617|
+359|[Pause]||1|50|Sleep|||||618|
+360|If Clipboard Text|"C-HR"|1|0|If_Statement|||||619|
+361|[Pause]||1|300|Sleep|||||621|
+362|[Text]|97TOZCHR|1|300|Clipboard|||||622|
+363|[End If]|EndIf|1|0|If_Statement|||||627|
+364|[Pause]||1|50|Sleep|||||628|
+365|If Clipboard Text|"COROLLA"|1|0|If_Statement|||||629|
+366|[Pause]||1|300|Sleep|||||631|
+367|[Text]|97TOZCOROLLA|1|300|Clipboard|||||632|
+368|[End If]|EndIf|1|0|If_Statement|||||637|
+369|[Pause]||1|50|Sleep|||||638|
+370|If Clipboard Text|"HYB COROLLA CRO"|1|0|If_Statement|||||639|
+371|[Pause]||1|300|Sleep|||||641|
+372|[Text]|97TOZCORCROSSHV|1|300|Clipboard|||||642|
+373|[End If]|EndIf|1|0|If_Statement|||||647|
+374|[Pause]||1|50|Sleep|||||648|
+375|If Clipboard Text|"COROLLA CROSS"|1|0|If_Statement|||||649|
+376|[Pause]||1|300|Sleep|||||651|
+377|[Text]|97TOZCORCROSS|1|300|Clipboard|||||652|
+378|[End If]|EndIf|1|0|If_Statement|||||657|
+379|[Pause]||1|50|Sleep|||||658|
+380|If Clipboard Text|"COROLLA HB"|1|0|If_Statement|||||659|
+381|[Pause]||1|300|Sleep|||||661|
+382|[Text]|97TOZCOROLLAHB|1|300|Clipboard|||||662|
+383|[End If]|EndIf|1|0|If_Statement|||||667|
+384|[Pause]||1|50|Sleep|||||668|
+385|If Clipboard Text|"COROLLA HYBRID"|1|0|If_Statement|||||669|
+386|[Pause]||1|300|Sleep|||||671|
+387|[Text]|97TOZCOROLLAHV|1|300|Clipboard|||||672|
+388|[End If]|EndIf|1|0|If_Statement|||||677|
+389|[Pause]||1|50|Sleep|||||678|
+390|If Clipboard Text|"CROWN"|1|0|If_Statement|||||679|
+391|[Pause]||1|300|Sleep|||||681|
+392|[Text]|97TOZCROWN|1|300|Clipboard|||||682|
+393|[End If]|EndIf|1|0|If_Statement|||||687|
+394|[Pause]||1|50|Sleep|||||688|
+395|If Clipboard Text|"GR COROLLA"|1|0|If_Statement|||||689|
+396|[Pause]||1|300|Sleep|||||691|
+397|[Text]|97TOZGRCOROLLA|1|300|Clipboard|||||692|
+398|[End If]|EndIf|1|0|If_Statement|||||697|
+399|[Pause]||1|50|Sleep|||||698|
+400|If Clipboard Text|"GR86"|1|0|If_Statement|||||699|
+401|[Pause]||1|300|Sleep|||||701|
+402|[Text]|97TOZGR86|1|300|Clipboard|||||702|
+403|[End If]|EndIf|1|0|If_Statement|||||707|
+404|[Pause]||1|50|Sleep|||||708|
+405|If Clipboard Text|"GRAND HIGHLANDE"|1|0|If_Statement|||||709|
+406|[Pause]||1|300|Sleep|||||711|
+407|[Text]|97TOZGRLANDER|1|300|Clipboard|||||712|
+408|[End If]|EndIf|1|0|If_Statement|||||717|
+409|[Pause]||1|50|Sleep|||||718|
+410|If Clipboard Text|"GRAN HIGHLA HYB"|1|0|If_Statement|||||719|
+411|[Pause]||1|300|Sleep|||||721|
+412|[Text]|97TOZGRLANDERHV|1|300|Clipboard|||||722|
+413|[End If]|EndIf|1|0|If_Statement|||||727|
+414|[Pause]||1|50|Sleep|||||728|
+415|If Clipboard Text|"HIGHLANDER"|1|0|If_Statement|||||729|
+416|[Pause]||1|300|Sleep|||||731|
+417|[Text]|97TOZHIGHLANDER|1|300|Clipboard|||||732|
+418|[End If]|EndIf|1|0|If_Statement|||||737|
+419|[Pause]||1|50|Sleep|||||738|
+420|If Clipboard Text|"HIGHLANDER HYBR"|1|0|If_Statement|||||739|
+421|[Pause]||1|300|Sleep|||||741|
+422|[Text]|97TOZHIGHHYBRID|1|300|Clipboard|||||742|
+423|[End If]|EndIf|1|0|If_Statement|||||747|
+424|[Pause]||1|50|Sleep|||||748|
+425|If Clipboard Text|"LANDCRUISER"|1|0|If_Statement|||||749|
+426|[Pause]||1|300|Sleep|||||751|
+427|[Text]|97TOZLANDCRUISE|1|300|Clipboard|||||752|
+428|[End If]|EndIf|1|0|If_Statement|||||757|
+429|[Pause]||1|50|Sleep|||||758|
+430|If Clipboard Text|"PRIUS"|1|0|If_Statement|||||759|
+431|[Pause]||1|300|Sleep|||||761|
+432|[Text]|97TOZPRIUS|1|300|Clipboard|||||762|
+433|[End If]|EndIf|1|0|If_Statement|||||767|
+434|[Pause]||1|50|Sleep|||||768|
+435|If Clipboard Text|"PRIUS E"|1|0|If_Statement|||||769|
+436|[Pause]||1|300|Sleep|||||771|
+437|[Text]|97TOZPRIUS|1|300|Clipboard|||||772|
+438|[End If]|EndIf|1|0|If_Statement|||||777|
+439|[Pause]||1|50|Sleep|||||778|
+440|If Clipboard Text|"PRIUS PRIME"|1|0|If_Statement|||||779|
+441|[Pause]||1|300|Sleep|||||781|
+442|[Text]|97TOZPRIUSPRIME|1|300|Clipboard|||||782|
+443|[End If]|EndIf|1|0|If_Statement|||||787|
+444|[Pause]||1|50|Sleep|||||788|
+445|If Clipboard Text|"RAV4"|1|0|If_Statement|||||789|
+446|[Pause]||1|300|Sleep|||||791|
+447|[Text]|97TOZRAV4|1|300|Clipboard|||||792|
+448|[End If]|EndIf|1|0|If_Statement|||||797|
+449|[Pause]||1|50|Sleep|||||798|
+450|If Clipboard Text|"RAV4 HYBRID"|1|0|If_Statement|||||799|
+451|[Pause]||1|300|Sleep|||||801|
+452|[Text]|97TOZRAV4HV|1|300|Clipboard|||||802|
+453|[End If]|EndIf|1|0|If_Statement|||||807|
+454|[Pause]||1|50|Sleep|||||808|
+455|If Clipboard Text|"RAV4 PRIME"|1|0|If_Statement|||||809|
+456|[Pause]||1|300|Sleep|||||811|
+457|[Text]|97TOZRAV4HV|1|300|Clipboard|||||812|
+458|[End If]|EndIf|1|0|If_Statement|||||817|
+459|[Pause]||1|50|Sleep|||||818|
+460|If Clipboard Text|"SEQUOIA"|1|0|If_Statement|||||819|
+461|[Pause]||1|300|Sleep|||||821|
+462|[Text]|97TOZSEQUOIA|1|300|Clipboard|||||822|
+463|[End If]|EndIf|1|0|If_Statement|||||827|
+464|[Pause]||1|50|Sleep|||||828|
+465|If Clipboard Text|"SIENNA"|1|0|If_Statement|||||829|
+466|[Pause]||1|300|Sleep|||||831|
+467|[Text]|97TOZSIENNA|1|300|Clipboard|||||832|
+468|[End If]|EndIf|1|0|If_Statement|||||837|
+469|[Pause]||1|50|Sleep|||||838|
+470|If Clipboard Text|"SUPRA"|1|0|If_Statement|||||839|
+471|[Pause]||1|300|Sleep|||||841|
+472|[Text]|97TOZSUPRA|1|300|Clipboard|||||842|
+473|[End If]|EndIf|1|0|If_Statement|||||847|
+474|[Pause]||1|50|Sleep|||||848|
+475|If Clipboard Text|"TACOMA 4X2"|1|0|If_Statement|||||849|
+476|[Pause]||1|300|Sleep|||||851|
+477|[Text]|97TOZTACOMA|1|300|Clipboard|||||852|
+478|[End If]|EndIf|1|0|If_Statement|||||857|
+479|[Pause]||1|50|Sleep|||||858|
+480|If Clipboard Text|"TACOMA 4X4"|1|0|If_Statement|||||859|
+481|[Pause]||1|300|Sleep|||||861|
+482|[Text]|97TOZTACOMA|1|300|Clipboard|||||862|
+483|[End If]|EndIf|1|0|If_Statement|||||867|
+484|[Pause]||1|50|Sleep|||||868|
+485|If Clipboard Text|"TUNDRA 4X2"|1|0|If_Statement|||||869|
+486|[Pause]||1|300|Sleep|||||871|
+487|[Text]|97TOZTUNDRA|1|300|Clipboard|||||872|
+488|[End If]|EndIf|1|0|If_Statement|||||877|
+489|[Pause]||1|50|Sleep|||||878|
+490|If Clipboard Text|"TUNDRA 4X4"|1|0|If_Statement|||||879|
+491|[Pause]||1|300|Sleep|||||881|
+492|[Text]|97TOZTUNDRA|1|300|Clipboard|||||882|
+493|[End If]|EndIf|1|0|If_Statement|||||887|
+494|[Pause]||1|50|Sleep|||||888|
+495|If Clipboard Text|"VENZA"|1|0|If_Statement|||||889|
+496|[Pause]||1|300|Sleep|||||891|
+497|[Text]|97TOZVENZAHV|1|300|Clipboard|||||892|
+498|[End If]|EndIf|1|0|If_Statement|||||897|
+499|Enter|{Enter}|1|300|Send|||||898|
+500|[Pause]||1|3000|Sleep|||||900|
+501|If Window Active|SVCLOPS0 - 1011|1|0|If_Statement|||||901|
+502|Enter|{Enter}|1|300|Send|||||903|
+503|[End If]|EndIf|1|0|If_Statement|||||905|
+504|[Pause]||1|3000|Sleep|||||906|
+505|If Window Active|Edit Job|1|0|If_Statement|||||907|
+506|Escape|{Escape}|1|300|Send|||||909|
+507|[End If]|EndIf|1|0|If_Statement|||||911|
+508|[Pause]||1|3000|Sleep|||||912|
+509|[Text]|97TOZVEHSUPPLY|1|300|Clipboard|||||913|
+510|[Pause]||1|300|Sleep|||||918|
+511|Enter|{Enter}|1|300|Send|||||919|
+512|[Pause]||1|300|Sleep|||||921|
+513|[Pause]||1|3000|Sleep|||||922|
+514|If Window Active|SVCLOPS0 - 1011|1|0|If_Statement|||||923|
+515|Enter|{Enter}|1|300|Send|||||925|
+516|[End If]|EndIf|1|0|If_Statement|||||927|
+517|[Pause]||1|3000|Sleep|||||928|
+518|If Window Active|Edit Job|1|0|If_Statement|||||929|
+519|Escape|{Escape}|1|300|Send|||||931|
+520|[End If]|EndIf|1|0|If_Statement|||||933|
+521|[Pause]||1|3000|Sleep|||||934|
+522|F12|{F12}|1|200|Send|||||935|
+523|[Pause]||1|3000|Sleep|||||937|
+524|If Window Active|Manufacturer Inquiry|1|0|If_Statement|||||938|
+525|Escape|{Escape}|1|300|Send|||||940|
+526|F12|{F12}|1|200|Send|||||942|
+527|[End If]|EndIf|1|0|If_Statement|||||944|
+528|[Pause]||1|3000|Sleep|||||945|
+529|If Window Active|SVCXX001 - 1001|1|0|If_Statement|||||946|
+530|Enter|{Enter}|1|200|Send|||||948|
+531|[End If]|EndIf|1|0|If_Statement|||||950|
+532|[Pause]||1|300|Sleep|||||951|
+533|WinActivate||1|333|WinActivate||pdi.csv - LibreOffice Calc|||952|
+534|Enter|{Enter}|1|300|Send|||||954|
+535|[Pause]||1|500|Sleep|||||956|
+536|Control|{Control Down}|1|300|Send|||||957|
+537|Home|{Home}|1|300|Send|||||959|
+538|Control|{Control Up}|1|300|Send|||||961|
+539|[Pause]||1|500|Sleep|||||963|
+540|Shift|{Shift Down}|1|300|Send|||||964|
+541|Space|{Space}|1|300|Send|||||966|
+542|Shift|{Shift Up}|1|300|Send|||||968|
+543|[Pause]||1|300|Sleep|||||970|
+544|Control|{Control Down}|1|300|Send|||||971|
+545|-|{-}|1|300|Send|||||973|
+546|Control|{Control Up}|1|300|Send|||||975|
+547|[Pause]||1|1500|Sleep|||||977|
+548|Continue, Continue, FoundX, FoundY, 0|229, 98, 326, 130, C:\Users\ReynoldsPurge\Documents\Images\Stock Over.png|1|0|ImageSearch||Window|||978|
+549|If Image/Pixel Found||1|0|If_Statement|||||980|
+550|WinActivate||1|333|WinActivate||pdi.csv - LibreOffice Calc|||982|
+551|[Pause]||1|300|Sleep|||||984|
+552|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||985|
+553|If Window Active|Save Document?|1|0|If_Statement|||||987|
+554|[Pause]||1|300|Sleep|||||989|
+555|Enter|{Enter}|1|200|Send|||||990|
+556|[End If]|EndIf|1|0|If_Statement|||||992|
+557|[Pause]||1|300|Sleep|||||993|
+558|WinActivate||1|333|WinActivate||(SVC - No Appointment Read) - ERA-IGNITE|||994|
+559|[Pause]||1|300|Sleep|||||996|
+560|Alt|{Alt Down}|1|200|Send|||||997|
+561|F4|{F4}|1|200|Send|||||999|
+562|Alt|{Alt Up}|1|200|Send|||||1001|
+563|[Pause]||1|3000|Sleep|||||1003|
+564|FileDelete|R:\pdi.csv|1|0|FileDelete|||||1004|
+565|[Pause]||1|300|Sleep|||||1005|
+566|[Pause]||1|300|Sleep|||||1006|
+567|tohbot@toyotaofhackensack.com|Finished PDI=0:Finished PDI|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||1007|
+568|FileAppend|done, C:\engine\donepdi.txt|1|0|FileAppend|||||1010|
+569|ExitApp||1|0|ExitApp|||||1011|
+570|[End If]|EndIf|1|0|If_Statement|||||1012|
+571|[LoopEnd]|LoopEnd|1|0|Loop|||||1013|
+

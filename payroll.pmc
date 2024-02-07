@@ -1,0 +1,185 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|[Pause]||1|300|Sleep|||||1|
+2|tohbot@toyotaofhackensack.com|Started Payroll=0:Started Payroll|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||2|
+3|[Pause]||1|300|Sleep|||||5|
+4|Run|"C:\Program Files (x86)\Microsoft Office\Office12\MSACCESS.EXE" "C:\CT101\CT101.mde" /Runtime /nostartup /excl|1|0|Run|||||6|
+5|[Pause]||1|300|Sleep|||||7|
+6|Break, Continue, FoundX, FoundY, 0|-95, -77, 638, 433, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\Login.png|1|100|ImageSearch|UntilFound|Window|||8|
+7|[Pause]||1|750|Sleep|||||17|
+8|Continue, Continue, FoundX, FoundY, 0|-64, 220, 633, 311, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\Logged In.png|1|150|ImageSearch||Screen|||18|
+9|If Image/Pixel Found||1|0|If_Statement|||||21|
+10|Left Move & Click|483, 116 Left, 1|1|100|Click|||||23|
+11|[Pause]||1|300|Sleep|||||25|
+12|Continue, Continue, FoundX, FoundY, 0|-180, -135, 656, 341, C:\Users\ReynoldsPurge\Documents\Images\Payroll\Confirm logged in.png|1|100|ImageSearch|UntilFound|Window|||26|
+13|[Pause]||1|300|Sleep|||||33|
+14|Enter|{Enter}|1|250|Send|||||34|
+15|[Pause]||1|300|Sleep|||||36|
+16|[End If]|EndIf|1|0|If_Statement|||||37|
+17|Left Click|Left, 1,  NA|1|100|ControlClick|OKttbx1|Login|||38|
+18|[Pause]||1|300|Sleep|||||40|
+19|[Text]|computime101|1|0|SendRaw|||||41|
+20|[Pause]||1|300|Sleep|||||42|
+21|Enter|{Enter}|1|100|Send|||||43|
+22|[Pause]||1|300|Sleep|||||45|
+23|Continue, Continue, asd, 123, 0|2, 30, 460, 134, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\Success Login.png|1|100|ImageSearch|UntilFound|Screen|||46|
+24|If Image/Pixel Found||1|0|If_Statement|||||53|
+25|[Pause]||1|300|Sleep|||||55|
+26|Left Move & Click|385, 93 Left, 1|1|100|Click|||||56|
+27|[Pause]||1|1000|Sleep|||||58|
+28|Enter|{Enter}|1|100|Send|||||59|
+29|[Pause]||1|300|Sleep|||||61|
+30|[End If]|EndIf|1|0|If_Statement|||||62|
+31|Continue, Continue, FoundX, FoundY, 0|387, 112, 1721, 699, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\Finished Download.png|1|100|ImageSearch|UntilFound|Screen|||63|
+32|If Image/Pixel Found||1|0|If_Statement|||||70|
+33|[Pause]||1|800|Sleep|||||72|
+34|Left Move & Click|1443, 152 Left, 1|1|100|Click|||||73|
+35|[Pause]||1|300|Sleep|||||75|
+36|[End If]|EndIf|1|0|If_Statement|||||76|
+37|Left Move & Click|697, 94 Left, 1|1|100|Click|||||77|
+38|[Pause]||1|600|Sleep|||||79|
+39|Continue, Continue, FoundX, FoundY, 0|603, 231, 1405, 657, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\Select Report.png|1|100|ImageSearch|UntilFound|Screen|||80|
+40|If Image/Pixel Found||1|0|If_Statement|||||87|
+41|Left Move & Click|893, 333 Left, 1|1|100|Click|||||89|
+42|[Pause]||1|300|Sleep|||||91|
+43|[End If]|EndIf|1|0|If_Statement|||||92|
+44|Left Move & Click|1230, 523 Left, 1|1|100|Click|||||93|
+45|[Pause]||1|300|Sleep|||||95|
+46|Left Move & Click|1188, 555 Left, 1|1|100|Click|||||96|
+47|[Pause]||1|300|Sleep|||||98|
+48|Left Move & Click|1122, 498 Left, 1|1|100|Click|||||99|
+49|[Pause]||1|300|Sleep|||||101|
+50|Left Move & Click|1029, 499 Left, 1|1|100|Click|||||102|
+51|[Pause]||1|300|Sleep|||||104|
+52|Left Move & Click|113, 43 Left, 1|1|100|Click|||||105|
+53|[Pause]||1|300|Sleep|||||107|
+54|Left Move & Click|127, 67 Left, 1|1|100|Click|||||108|
+55|[Pause]||1|300|Sleep|||||110|
+56|Left Move & Click|20, 141 Left, 1|1|100|Click|||||111|
+57|[Pause]||1|300|Sleep|||||113|
+58|Left Move & Click|295, 15 Left, 1|1|100|Click|||||114|
+59|[Pause]||1|300|Sleep|||||116|
+60|Left Move & Click|1041, 386 Left, 1|1|100|Click|||||117|
+61|[Pause]||1|300|Sleep|||||119|
+62|Continue, Continue, print, pdf, 1|282, 41, 785, 949, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\p payroll.png|1|500|ImageSearch|UntilFound|Screen|||120|
+63|[Pause]||1|500|Sleep|||||128|
+64|Control|{Control Down}|1|200|Send|||||129|
+65|p|{p}|1|200|Send|||||131|
+66|Control|{Control Up}|1|200|Send|||||133|
+67|[Pause]||1|300|Sleep|||||135|
+68|Continue, Continue, FoundX, FoundY, 0|25, 789, 436, 1014, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\Print Ready.png|1|100|ImageSearch|UntilFound|Screen|||136|
+69|[Pause]||1|300|Sleep|||||143|
+70|Left Move & Click|320, 217 Left, 1|1|100|Click|||||144|
+71|[Pause]||1|300|Sleep|||||146|
+72|1|{1}|1|100|Send|||||147|
+73|[Pause]||1|300|Sleep|||||149|
+74|Enter|{Enter}|1|100|Send|||||150|
+75|[Pause]||1|500|Sleep|||||152|
+76|Left Move & Click|150, 934 Left, 1|1|100|Click|||||153|
+77|[Pause]||1|800|Sleep|||||155|
+78|Alt|{Alt Down}|1|100|Send|||||156|
+79|F4|{F4}|1|100|Send|||||158|
+80|Alt|{Alt Up}|1|100|Send|||||160|
+81|[Pause]||1|300|Sleep|||||162|
+82|Left Move & Click|1027, 359 Left, 1|1|100|Click|||||163|
+83|[Pause]||1|300|Sleep|||||165|
+84|Continue, Continue, print, pdf, 1|282, 41, 785, 949, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\p payroll.png|1|500|ImageSearch|UntilFound|Screen|||166|
+85|[Pause]||1|500|Sleep|||||174|
+86|Control|{Control Down}|1|200|Send|||||175|
+87|p|{p}|1|200|Send|||||177|
+88|Control|{Control Up}|1|200|Send|||||179|
+89|[Pause]||1|300|Sleep|||||181|
+90|Continue, Continue, FoundX, FoundY, 0|25, 789, 436, 1014, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\Print Ready.png|1|100|ImageSearch|UntilFound|Screen|||182|
+91|[Pause]||1|300|Sleep|||||189|
+92|Left Move & Click|320, 217 Left, 1|1|100|Click|||||190|
+93|[Pause]||1|300|Sleep|||||192|
+94|1|{1}|1|100|Send|||||193|
+95|[Pause]||1|300|Sleep|||||195|
+96|Enter|{Enter}|1|100|Send|||||196|
+97|[Pause]||1|500|Sleep|||||198|
+98|Left Move & Click|150, 934 Left, 1|1|100|Click|||||199|
+99|[Pause]||1|800|Sleep|||||201|
+100|Alt|{Alt Down}|1|100|Send|||||202|
+101|F4|{F4}|1|100|Send|||||204|
+102|Alt|{Alt Up}|1|100|Send|||||206|
+103|[Pause]||1|300|Sleep|||||208|
+104|Left Move & Click|1123, 497 Left, 1|1|100|Click|||||209|
+105|[Pause]||1|300|Sleep|||||211|
+106|Left Move & Click|1031, 498 Left, 1|1|100|Click|||||212|
+107|[Pause]||1|300|Sleep|||||214|
+108|Left Move & Click|114, 43 Left, 1|1|100|Click|||||215|
+109|[Pause]||1|300|Sleep|||||217|
+110|Left Move & Click|121, 69 Left, 1|1|100|Click|||||218|
+111|[Pause]||1|300|Sleep|||||220|
+112|Left Move & Click|20, 106 Left, 1|1|100|Click|||||221|
+113|[Pause]||1|300|Sleep|||||223|
+114|Left Move & Click|20, 178 Left, 1|1|100|Click|||||224|
+115|[Pause]||1|300|Sleep|||||226|
+116|Left Move & Click|20, 214 Left, 1|1|100|Click|||||227|
+117|[Pause]||1|300|Sleep|||||229|
+118|Left Move & Click|21, 232 Left, 1|1|100|Click|||||230|
+119|[Pause]||1|300|Sleep|||||232|
+120|Left Move & Click|20, 303 Left, 1|1|100|Click|||||233|
+121|[Pause]||1|300|Sleep|||||235|
+122|Left Move & Click|21, 322 Left, 1|1|100|Click|||||236|
+123|[Pause]||1|300|Sleep|||||238|
+124|Left Move & Click|20, 340 Left, 1|1|100|Click|||||239|
+125|[Pause]||1|300|Sleep|||||241|
+126|Left Move & Click|21, 448 Left, 1|1|100|Click|||||242|
+127|[Pause]||1|300|Sleep|||||244|
+128|Left Move & Click|296, 16 Left, 1|1|100|Click|||||245|
+129|[Pause]||1|300|Sleep|||||247|
+130|Left Move & Click|1041, 386 Left, 1|1|100|Click|||||248|
+131|[Pause]||1|300|Sleep|||||250|
+132|Continue, Continue, print, pdf, 1|282, 41, 785, 949, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\p payroll.png|1|500|ImageSearch|UntilFound|Screen|||251|
+133|[Pause]||1|500|Sleep|||||259|
+134|Control|{Control Down}|1|200|Send|||||260|
+135|p|{p}|1|200|Send|||||262|
+136|Control|{Control Up}|1|200|Send|||||264|
+137|[Pause]||1|300|Sleep|||||266|
+138|Continue, Continue, FoundX, FoundY, 0|25, 789, 436, 1014, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\Print Ready.png|1|100|ImageSearch|UntilFound|Screen|||267|
+139|[Pause]||1|300|Sleep|||||274|
+140|Left Move & Click|320, 217 Left, 1|1|100|Click|||||275|
+141|[Pause]||1|300|Sleep|||||277|
+142|1|{1}|1|100|Send|||||278|
+143|[Pause]||1|300|Sleep|||||280|
+144|Enter|{Enter}|1|100|Send|||||281|
+145|[Pause]||1|500|Sleep|||||283|
+146|Left Move & Click|150, 934 Left, 1|1|100|Click|||||284|
+147|[Pause]||1|800|Sleep|||||286|
+148|Alt|{Alt Down}|1|100|Send|||||287|
+149|F4|{F4}|1|100|Send|||||289|
+150|Alt|{Alt Up}|1|100|Send|||||291|
+151|[Pause]||1|300|Sleep|||||293|
+152|Left Move & Click|1027, 359 Left, 1|1|100|Click|||||294|
+153|[Pause]||1|300|Sleep|||||296|
+154|Continue, Continue, print, pdf, 1|282, 41, 785, 949, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\p payroll.png|1|500|ImageSearch|UntilFound|Screen|||297|
+155|[Pause]||1|500|Sleep|||||305|
+156|Control|{Control Down}|1|200|Send|||||306|
+157|p|{p}|1|200|Send|||||308|
+158|Control|{Control Up}|1|200|Send|||||310|
+159|[Pause]||1|300|Sleep|||||312|
+160|Continue, Continue, FoundX, FoundY, 0|25, 789, 436, 1014, *50 C:\Users\ReynoldsPurge\Documents\Images\Payroll\Print Ready.png|1|100|ImageSearch|UntilFound|Screen|||313|
+161|[Pause]||1|300|Sleep|||||320|
+162|Left Move & Click|320, 217 Left, 1|1|100|Click|||||321|
+163|[Pause]||1|300|Sleep|||||323|
+164|1|{1}|1|100|Send|||||324|
+165|[Pause]||1|300|Sleep|||||326|
+166|Enter|{Enter}|1|100|Send|||||327|
+167|[Pause]||1|500|Sleep|||||329|
+168|Left Move & Click|150, 934 Left, 1|1|100|Click|||||330|
+169|[Pause]||1|800|Sleep|||||332|
+170|Alt|{Alt Down}|1|100|Send|||||333|
+171|F4|{F4}|1|100|Send|||||335|
+172|Alt|{Alt Up}|1|100|Send|||||337|
+173|[Pause]||1|300|Sleep|||||339|
+174|Left Move & Click|320, 42 Left, 1|1|100|Click|||||340|
+175|[Pause]||1|1000|Sleep|||||342|
+176|tohbot@toyotaofhackensack.com|Finished Payroll=0:Finished Payroll|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||343|
+177|[Pause]||1|1000|Sleep|||||346|
+178|FileAppend|done, C:\engine\donepayroll.txt|1|0|FileAppend|||||347|
+179|[Pause]||1|1500|Sleep|||||348|
+180|ExitApp||1|0|ExitApp|||||349|
+

@@ -1,0 +1,906 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|[Pause]||1|1000|Sleep|||||1|
+2|tohbot@toyotaofhackensack.com|Started stock in vms=0:Started stock in vms|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||2|
+3|[Pause]||1|750|Sleep|||||5|
+4|FileDelete|r:\labels\new_label_keytag_temp.csv|1|0|FileDelete|||||6|
+5|[Pause]||1|300|Sleep|||||7|
+6|FileCopy|r:\stock_in.csv, r:\labels\new_label_keytag_temp.csv|1|0|FileCopy|||||8|
+7|[Pause]||1|300|Sleep|||||9|
+8|If Window Not Exist|(Home Page) - ERA-IGNITE|1|0|If_Statement|||||10|
+9|Run|C:\Users\ReynoldsPurge\Documents\live\reylogin.exe|1|0|Run|||||12|
+10|[Pause]||1|1000|Sleep|||||13|
+11|Continue, Continue, FoundX, FoundY, 0|7, 84, 141, 129, C:\Users\ReynoldsPurge\Documents\Images\Rey Home Page.png|1|1000|ImageSearch|UntilFound|Window|||14|
+12|[End If]|EndIf|1|0|If_Statement|||||21|
+13|[Pause]||1|300|Sleep|||||22|
+14|WinActivate||1|333|WinActivate||(Home Page) - ERA-IGNITE|||23|
+15|[Pause]||1|300|Sleep|||||25|
+16|Control|{Control Down}|1|300|Send|||||26|
+17|6|{6}|1|300|Send|||||28|
+18|Control|{Control Up}|1|300|Send|||||30|
+19|[Pause]||1|15000|Sleep|||||32|
+20|WinActivate||1|333|WinActivate||(VMS) - ERA-IGNITE|||33|
+21|[Pause]||1|300|Sleep|||||35|
+22|Shift|{Shift Down}|1|300|Send|||||36|
+23|Tab|{Tab}|1|300|Send|||||38|
+24|Shift|{Shift Up}|1|300|Send|||||40|
+25|[Pause]||1|300|Sleep|||||42|
+26|V|{V}|1|300|Send|||||43|
+27|[Pause]||1|300|Sleep|||||45|
+28|Run|R:\Stock DB\2024 Stock List.ods|1|0|Run|||||46|
+29|[Pause]||1|1500|Sleep|||||47|
+30|If Window Exist|Document in Use|1|0|If_Statement|||||48|
+31|Left Move & Click|377, 165 Left, 1|1|100|Click|||||50|
+32|tohbot@toyotaofhackensack.com|SHEET OPEN=0:SHEET OPEN|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||52|
+33|[End If]|EndIf|1|0|If_Statement|||||55|
+34|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||56|
+35|Left Move & Click|388, 396 Left, 1|1|10|Click|||||58|
+36|[Pause]||1|350|Sleep|||||60|
+37|Left Move & Click|309, 108 Left, 1|1|10|Click|||||61|
+38|[Pause]||1|350|Sleep|||||63|
+39|[End If]|EndIf|1|0|If_Statement|||||64|
+40|Run|R:\Stock DB\2023 Stock List.ods|1|0|Run|||||65|
+41|[Pause]||1|2000|Sleep|||||66|
+42|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||67|
+43|Left Move & Click|388, 396 Left, 1|1|10|Click|||||69|
+44|[Pause]||1|350|Sleep|||||71|
+45|Left Move & Click|309, 108 Left, 1|1|10|Click|||||72|
+46|[Pause]||1|350|Sleep|||||74|
+47|[End If]|EndIf|1|0|If_Statement|||||75|
+48|Run|R:\Model DB 2024.ods|1|0|Run|||||76|
+49|[Pause]||1|2000|Sleep|||||77|
+50|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||78|
+51|Left Move & Click|388, 396 Left, 1|1|10|Click|||||80|
+52|[Pause]||1|350|Sleep|||||82|
+53|Left Move & Click|309, 108 Left, 1|1|10|Click|||||83|
+54|[Pause]||1|350|Sleep|||||85|
+55|[End If]|EndIf|1|0|If_Statement|||||86|
+56|Run|R:\Model DB 2023.ods|1|0|Run|||||87|
+57|[Pause]||1|2000|Sleep|||||88|
+58|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||89|
+59|Left Move & Click|388, 396 Left, 1|1|10|Click|||||91|
+60|[Pause]||1|350|Sleep|||||93|
+61|Left Move & Click|309, 108 Left, 1|1|10|Click|||||94|
+62|[Pause]||1|350|Sleep|||||96|
+63|[End If]|EndIf|1|0|If_Statement|||||97|
+64|Run|r:\labels\new_label_keytag_temp.csv|1|0|Run|||||98|
+65|[Pause]||1|2000|Sleep|||||99|
+66|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||100|
+67|Left Move & Click|388, 396 Left, 1|1|10|Click|||||102|
+68|[Pause]||1|350|Sleep|||||104|
+69|Left Move & Click|309, 108 Left, 1|1|10|Click|||||105|
+70|[Pause]||1|350|Sleep|||||107|
+71|[End If]|EndIf|1|0|If_Statement|||||108|
+72|[Pause]||1|2000|Sleep|||||109|
+73|If Window Exist|Text Import - [new_label_keytag_temp.csv]|1|0|If_Statement|||||110|
+74|WinActivate||1|333|WinActivate||Text Import - [new_label_keytag_temp.csv]|||112|
+75|[Pause]||1|2000|Sleep|||||114|
+76|Continue, Continue, FoundX, FoundY, 0|37, 37, 405, 137, *50 C:\Users\ReynoldsPurge\Documents\Images\bad unicode.png|1|500|ImageSearch||Window|||115|
+77|If Image/Pixel Found||1|0|If_Statement|||||118|
+78|u|{u}|1|200|Send|||||120|
+79|[End If]|EndIf|1|0|If_Statement|||||122|
+80|[Pause]||1|300|Sleep|||||123|
+81|Left Move & Click|305, 555 Left, 1|1|300|Click|||||124|
+82|[Pause]||1|1500|Sleep|||||126|
+83|Down|{Down}|1|500|Send|||||127|
+84|[Pause]||1|400|Sleep|||||129|
+85|[End If]|EndIf|1|0|If_Statement|||||130|
+86|Run|R:\stock_in.csv|1|0|Run|||||131|
+87|[Pause]||1|2000|Sleep|||||132|
+88|If Window Exist|LibreOffice 6.4 Document Recovery|1|0|If_Statement|||||133|
+89|Left Move & Click|388, 396 Left, 1|1|10|Click|||||135|
+90|[Pause]||1|350|Sleep|||||137|
+91|Left Move & Click|309, 108 Left, 1|1|10|Click|||||138|
+92|[Pause]||1|350|Sleep|||||140|
+93|[End If]|EndIf|1|0|If_Statement|||||141|
+94|[Pause]||1|300|Sleep|||||142|
+95|If Window Exist|Text Import - [stock_in.csv]|1|0|If_Statement|||||143|
+96|WinActivate||1|333|WinActivate||Text Import - [stock_in.csv]|||145|
+97|[Pause]||1|300|Sleep|||||147|
+98|Continue, Continue, FoundX, FoundY, 0|37, 37, 405, 137, C:\Users\ReynoldsPurge\Documents\Images\bad unicode.png|1|500|ImageSearch||Window|||148|
+99|If Image/Pixel Found||1|0|If_Statement|||||151|
+100|u|{u}|1|200|Send|||||153|
+101|[End If]|EndIf|1|0|If_Statement|||||155|
+102|[Pause]||1|300|Sleep|||||156|
+103|Left Move & Click|305, 555 Left, 1|1|300|Click|||||157|
+104|[End If]|EndIf|1|0|If_Statement|||||159|
+105|[Pause]||1|3000|Sleep|||||160|
+106|WinActivate||1|333|WinActivate||stock_in.csv - LibreOffice Calc|||161|
+107|[Pause]||1|740|Sleep|||||163|
+108|Left Move & Click|52, 154 Left, 1|1|300|Click|||||164|
+109|[Pause]||1|300|Sleep|||||166|
+110|Down|{Down}|1|300|Send|||||167|
+111|[Pause]||1|300|Sleep|||||169|
+112|[LoopStart]|LoopStart|0|0|Loop|||||170|
+113|WinActivate||1|333|WinActivate||stock_in.csv - LibreOffice Calc|||172|
+114|[Pause]||1|740|Sleep|||||174|
+115|Left|{Left}|5|400|Send|||||175|
+116|[Pause]||1|300|Sleep|||||177|
+117|Continue, Continue, FoundX, FoundY, 0|229, 98, 326, 130, C:\Users\ReynoldsPurge\Documents\Images\Stock Over.png|1|0|ImageSearch||Window|||178|
+118|If Image/Pixel Found||1|0|If_Statement|||||180|
+119|WinActivate||1|333|WinActivate||stock_in.csv - LibreOffice Calc|||182|
+120|[Pause]||1|300|Sleep|||||184|
+121|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||185|
+122|[Pause]||1|700|Sleep|||||187|
+123|Enter|{Enter}|1|500|Send|||||188|
+124|WinActivate||1|333|WinActivate||2023 Stock List.ods - LibreOffice Calc|||190|
+125|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||192|
+126|[Pause]||1|700|Sleep|||||194|
+127|Enter|{Enter}|1|500|Send|||||195|
+128|[Pause]||1|700|Sleep|||||197|
+129|WinActivate||1|333|WinActivate||2024 Stock List.ods - LibreOffice Calc|||198|
+130|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||200|
+131|[Pause]||1|700|Sleep|||||202|
+132|Enter|{Enter}|1|500|Send|||||203|
+133|[Pause]||1|700|Sleep|||||205|
+134|WinActivate||1|333|WinActivate||Model DB 2023.ods - LibreOffice Calc|||206|
+135|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||208|
+136|[Pause]||1|700|Sleep|||||210|
+137|Enter|{Enter}|1|500|Send|||||211|
+138|[Pause]||1|700|Sleep|||||213|
+139|WinActivate||1|333|WinActivate||Model DB 2024.ods - LibreOffice Calc|||214|
+140|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||216|
+141|[Pause]||1|700|Sleep|||||218|
+142|Enter|{Enter}|1|500|Send|||||219|
+143|[Pause]||1|700|Sleep|||||221|
+144|WinActivate||1|333|WinActivate||(VMS) - ERA-IGNITE|||222|
+145|[Pause]||1|300|Sleep|||||224|
+146|Left Move & Click|508, 37 Left, 1|1|300|Click|||||225|
+147|[Pause]||1|300|Sleep|||||227|
+148|Left Move & Click|647, 255 Left, 1|1|300|Click|||||228|
+149|[Pause]||1|3000|Sleep|||||230|
+150|[Pause]||1|700|Sleep|||||231|
+151|FileDelete|R:\stock_in.csv|1|0|FileDelete|||||232|
+152|WinActivate||1|333|WinActivate||new_label_keytag_temp.csv - LibreOffice Calc|||233|
+153|[Pause]||1|300|Sleep|||||235|
+154|Right|{Right}|1|300|Send|||||236|
+155|[Pause]||1|300|Sleep|||||238|
+156|Continue, Continue, FoundX, FoundY, 0|22, 103, 124, 194, *30 C:\Users\ReynoldsPurge\Documents\Images\blank stock.png|1|300|ImageSearch||Window|||239|
+157|If Image/Pixel Found||1|0|If_Statement|||||242|
+158|[Pause]||1|300|Sleep|||||244|
+159|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||245|
+160|[Pause]||1|700|Sleep|||||247|
+161|Enter|{Enter}|1|500|Send|||||248|
+162|[Pause]||1|1500|Sleep|||||250|
+163|FileDelete|r:\labels\new_label_keytag_temp.csv|1|0|FileDelete|||||251|
+164|[Pause]||1|300|Sleep|||||252|
+165|tohbot@toyotaofhackensack.com|Finished stock in vms with only duplicates=0:Finished stock in vms with only duplicates|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||253|
+166|[Pause]||1|300|Sleep|||||256|
+167|FileAppend|done, C:\engine\donestockin.txt|1|0|FileAppend|||||257|
+168|[Pause]||1|50|Sleep|||||258|
+169|ExitApp||1|0|ExitApp|||||259|
+170|[End If]|EndIf|1|0|If_Statement|||||260|
+171|[Pause]||1|300|Sleep|||||261|
+172|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||262|
+173|[Pause]||1|700|Sleep|||||264|
+174|[Pause]||1|700|Sleep|||||265|
+175|FileMove|r:\labels\new_label_keytag_temp.csv, r:\labels\new_label_keytag.csv|1|0|FileMove|||||266|
+176|[Pause]||1|300|Sleep|||||267|
+177|tohbot@toyotaofhackensack.com|Finished stock in vms=0:Finished stock in vms|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||268|
+178|[Pause]||1|300|Sleep|||||271|
+179|FileAppend|pdi, C:\engine\gopdi.txt|1|0|FileAppend|||||272|
+180|[Pause]||1|300|Sleep|||||273|
+181|FileAppend|done, C:\engine\donestockin.txt|1|0|FileAppend|||||274|
+182|[Pause]||1|300|Sleep|||||275|
+183|ExitApp||1|0|ExitApp|||||276|
+184|[End If]|EndIf|1|0|If_Statement|||||277|
+185|[Pause]||1|300|Sleep|||||278|
+186|Continue, Continue, jump, cell, 1|9, 22, 500, 395, *50 C:\Users\ReynoldsPurge\Documents\Images\jump cell.png|1|500|ImageSearch|UntilFound|Window|||279|
+187|[Pause]||1|500|Sleep|||||287|
+188|Left Move & Click|%jump%, %cell% Left, 1|1|500|Click|||||288|
+189|[Pause]||1|500|Sleep|||||290|
+190|D|{D}|1|500|Send|||||291|
+191|2|{2}|1|500|Send|||||293|
+192|[Pause]||1|300|Sleep|||||295|
+193|Enter|{Enter}|1|500|Send|||||296|
+194|[Pause]||1|300|Sleep|||||298|
+195|Control|{Control Down}|1|250|Send|||||299|
+196|c|{c}|1|250|Send|||||301|
+197|Control|{Control Up}|1|250|Send|||||303|
+198|[Pause]||1|300|Sleep|||||305|
+199|WinActivate||1|333|WinActivate||(VMS) - ERA-IGNITE|||306|
+200|[Pause]||1|300|Sleep|||||308|
+201|Left Move & Click|575, 179 Left, 1|2|150|Click|||||309|
+202|[Pause]||1|300|Sleep|||||314|
+203|Control|{Control Down}|1|250|Send|||||315|
+204|v|{v}|1|300|Send|||||317|
+205|Control|{Control Up}|1|250|Send|||||319|
+206|[Pause]||1|300|Sleep|||||321|
+207|Enter|{Enter}|1|300|Send|||||322|
+208|[Pause]||1|1500|Sleep|||||324|
+209|Continue, Continue, FoundX, FoundY, 1|132, 90, 532, 357, *50 C:\Users\ReynoldsPurge\Documents\Images\duplicate vin.png|1|500|ImageSearch||Window|||325|
+210|If Image/Pixel Found||1|0|If_Statement|||||329|
+211|[Pause]||1|300|Sleep|||||331|
+212|tohbot@toyotaofhackensack.com|Duplicate VIN %Clipboard%=0:Duplicate VIN %Clipboard%|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=rcurci@toyotaofhackensack.com||||332|
+213|[Pause]||1|300|Sleep|||||335|
+214|Left Move & Click|688, 180 Left, 1|1|500|Click|||||336|
+215|[Pause]||1|300|Sleep|||||338|
+216|Backspace|{Backspace}|1|500|Send|||||339|
+217|[Pause]||1|300|Sleep|||||341|
+218|WinActivate||1|333|WinActivate||stock_in.csv - LibreOffice Calc|||342|
+219|[Pause]||1|1000|Sleep|||||344|
+220|Shift|{Shift Down}|1|500|Send|||||345|
+221|Space|{Space}|1|500|Send|||||347|
+222|Shift|{Shift Up}|1|500|Send|||||349|
+223|[Pause]||1|300|Sleep|||||351|
+224|Control|{Control Down}|1|500|Send|||||352|
+225|-|{-}|1|500|Send|||||354|
+226|Control|{Control Up}|1|500|Send|||||356|
+227|[Pause]||1|300|Sleep|||||358|
+228|Left|{Left}|1|500|Send|||||359|
+229|[Pause]||1|300|Sleep|||||361|
+230|WinActivate||1|333|WinActivate||new_label_keytag_temp.csv - LibreOffice Calc|||362|
+231|[Pause]||1|1000|Sleep|||||364|
+232|Shift|{Shift Down}|1|500|Send|||||365|
+233|Space|{Space}|1|500|Send|||||367|
+234|Shift|{Shift Up}|1|500|Send|||||369|
+235|[Pause]||1|300|Sleep|||||371|
+236|Control|{Control Down}|1|500|Send|||||372|
+237|-|{-}|1|500|Send|||||374|
+238|Control|{Control Up}|1|500|Send|||||376|
+239|[Pause]||1|300|Sleep|||||378|
+240|Left|{Left}|1|500|Send|||||379|
+241|[Pause]||1|1000|Sleep|||||381|
+242|Continue||1|0|Continue|||||382|
+243|[End If]|EndIf|1|0|If_Statement|||||383|
+244|[Pause]||1|300|Sleep|||||384|
+245|Continue, Continue, FoundX, FoundY, 0|426, 281, 821, 322, C:\Users\ReynoldsPurge\Documents\Images\Stock In Not Found.png|1|1000|ImageSearch||Window|||385|
+246|If Image/Pixel Found||1|0|If_Statement|||||388|
+247|WinActivate||1|333|WinActivate||stock in.csv - LibreOffice Calc|||390|
+248|[Pause]||1|300|Sleep|||||392|
+249|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||393|
+250|[Pause]||1|300|Sleep|||||395|
+251|WinActivate||1|333|WinActivate||2023 Stock List.ods - LibreOffice Calc|||396|
+252|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||398|
+253|[Pause]||1|300|Sleep|||||400|
+254|WinActivate||1|333|WinActivate||2024 Stock List.ods - LibreOffice Calc|||401|
+255|Left Move & Click|1901, 17 Left, 1|1|300|Click|||||403|
+256|[Pause]||1|300|Sleep|||||405|
+257|WinActivate||1|333|WinActivate||(VMS) - ERA-IGNITE|||406|
+258|[Pause]||1|300|Sleep|||||408|
+259|Left Move & Click|508, 37 Left, 1|1|300|Click|||||409|
+260|[Pause]||1|300|Sleep|||||411|
+261|Left Move & Click|647, 255 Left, 1|1|300|Click|||||412|
+262|[Pause]||1|300|Sleep|||||414|
+263|Run|C:\Users\ReynoldsPurge\Documents\live\stock in\new inven labels report export.exe|1|0|Run|||||415|
+264|[Pause]||1|3000|Sleep|||||416|
+265|FileAppend|done, C:\engine\donestockin.txt|1|0|FileAppend|||||417|
+266|[Pause]||1|50|Sleep|||||418|
+267|ExitApp||1|0|ExitApp|||||419|
+268|[End If]|EndIf|1|0|If_Statement|||||420|
+269|[Pause]||1|1000|Sleep|||||421|
+270|WinActivate||1|333|WinActivate||stock_in.csv - LibreOffice Calc|||422|
+271|[Pause]||1|1000|Sleep|||||424|
+272|Continue, Continue, jump, cell, 1|9, 22, 500, 395, *50 C:\Users\ReynoldsPurge\Documents\Images\jump cell.png|1|500|ImageSearch|UntilFound|Window|||425|
+273|[Pause]||1|500|Sleep|||||433|
+274|Left Move & Click|%jump%, %cell% Left, 1|1|500|Click|||||434|
+275|[Pause]||1|500|Sleep|||||436|
+276|B|{B}|1|500|Send|||||437|
+277|2|{2}|1|500|Send|||||439|
+278|[Pause]||1|300|Sleep|||||441|
+279|Enter|{Enter}|1|500|Send|||||442|
+280|[Pause]||1|1000|Sleep|||||444|
+281|Left Move & Click|247, 115 Left, 2|1|500|Click|||||445|
+282|[Pause]||1|1000|Sleep|||||447|
+283|Control|{Control Down}|1|250|Send|||||448|
+284|c|{c}|1|250|Send|||||450|
+285|Control|{Control Up}|1|250|Send|||||452|
+286|[Pause]||1|1000|Sleep|||||454|
+287|If Clipboard Text|2023|1|0|If_Statement|||||455|
+288|[Pause]||1|300|Sleep|||||457|
+289|WinActivate||1|333|WinActivate||2023 Stock List.ods - LibreOffice Calc|||458|
+290|[Pause]||1|300|Sleep|||||460|
+291|Control|{Control Down}|1|250|Send|||||461|
+292|c|{c}|1|250|Send|||||463|
+293|Control|{Control Up}|1|250|Send|||||465|
+294|[Pause]||1|300|Sleep|||||467|
+295|Shift|{Shift Down}|1|300|Send|||||468|
+296|Space|{Space}|1|300|Send|||||470|
+297|Shift|{Shift Up}|1|300|Send|||||472|
+298|[Pause]||1|300|Sleep|||||474|
+299|Control|{Control Down}|1|300|Send|||||475|
+300|-|{-}|1|300|Send|||||477|
+301|Control|{Control Up}|1|300|Send|||||479|
+302|[Pause]||1|300|Sleep|||||481|
+303|Control|{Control Down}|1|300|Send|||||482|
+304|s|{s}|1|300|Send|||||484|
+305|Control|{Control Up}|1|300|Send|||||486|
+306|[Pause]||1|300|Sleep|||||488|
+307|WinActivate||1|333|WinActivate||VMS|||489|
+308|[Pause]||1|800|Sleep|||||491|
+309|Left Move & Click|418, 147 Left, 1|1|500|Click|||||492|
+310|[Pause]||1|300|Sleep|||||494|
+311|Control|{Control Down}|1|250|Send|||||495|
+312|v|{v}|1|300|Send|||||497|
+313|Control|{Control Up}|1|250|Send|||||499|
+314|[Pause]||1|300|Sleep|||||501|
+315|Enter|{Enter}|1|300|Send|||||502|
+316|[Pause]||1|1500|Sleep|||||504|
+317|[LoopStart]|LoopStart|0|0|Loop|||||505|
+318|If Window Exist|VMSCKDBL - 2102|1|0|If_Statement|||||507|
+319|Left Click|Left, 1,  NA|1|500|ControlClick|Button1|VMSCKDBL - 2102|||509|
+320|[Pause]||1|500|Sleep|||||511|
+321|Left Move & Click|418, 149 Left, 2|1|300|Click|||||512|
+322|[Pause]||1|500|Sleep|||||514|
+323|Backspace|{Backspace}|1|500|Send|||||515|
+324|[Pause]||1|500|Sleep|||||517|
+325|WinActivate||1|333|WinActivate||2023 Stock List.ods - LibreOffice Calc|||518|
+326|[Pause]||1|300|Sleep|||||520|
+327|Control|{Control Down}|1|250|Send|||||521|
+328|c|{c}|1|250|Send|||||523|
+329|Control|{Control Up}|1|250|Send|||||525|
+330|[Pause]||1|300|Sleep|||||527|
+331|Shift|{Shift Down}|1|300|Send|||||528|
+332|Space|{Space}|1|300|Send|||||530|
+333|Shift|{Shift Up}|1|300|Send|||||532|
+334|[Pause]||1|300|Sleep|||||534|
+335|Control|{Control Down}|1|300|Send|||||535|
+336|-|{-}|1|300|Send|||||537|
+337|Control|{Control Up}|1|300|Send|||||539|
+338|[Pause]||1|300|Sleep|||||541|
+339|Control|{Control Down}|1|300|Send|||||542|
+340|s|{s}|1|300|Send|||||544|
+341|Control|{Control Up}|1|300|Send|||||546|
+342|[Pause]||1|300|Sleep|||||548|
+343|WinActivate||1|333|WinActivate||VMS|||549|
+344|[Pause]||1|800|Sleep|||||551|
+345|Left Move & Click|418, 147 Left, 1|1|500|Click|||||552|
+346|[Pause]||1|300|Sleep|||||554|
+347|Control|{Control Down}|1|250|Send|||||555|
+348|v|{v}|1|300|Send|||||557|
+349|Control|{Control Up}|1|250|Send|||||559|
+350|[Pause]||1|300|Sleep|||||561|
+351|Enter|{Enter}|1|300|Send|||||562|
+352|[Pause]||1|1500|Sleep|||||564|
+353|[Else]|Else|1|0|If_Statement|||||565|
+354|Break||1|0|Break|||||568|
+355|[End If]|EndIf|1|0|If_Statement|||||569|
+356|[LoopEnd]|LoopEnd|1|0|Loop|||||570|
+357|[Pause]||1|700|Sleep|||||571|
+358|WinActivate||1|333|WinActivate||new_label_keytag_temp.csv - LibreOffice Calc|||572|
+359|[Pause]||1|600|Sleep|||||574|
+360|Control|{Control Down}|1|300|Send|||||575|
+361|V|{V}|1|300|Send|||||577|
+362|Control|{Control Up}|1|300|Send|||||579|
+363|[Pause]||1|600|Sleep|||||581|
+364|Enter|{Enter}|1|300|Send|||||582|
+365|[Pause]||1|500|Sleep|||||584|
+366|Down|{Down}|1|350|Send|||||585|
+367|[Pause]||1|300|Sleep|||||587|
+368|Control|{Control Down}|1|300|Send|||||588|
+369|S|{S}|1|300|Send|||||590|
+370|Control|{Control Up}|1|300|Send|||||592|
+371|[Pause]||1|600|Sleep|||||594|
+372|If Window Exist|Save As|1|0|If_Statement|||||595|
+373|Enter|{Enter}|1|400|Send|||||597|
+374|Left|{Left}|1|400|Send|||||599|
+375|Enter|{Enter}|1|400|Send|||||601|
+376|[End If]|EndIf|1|0|If_Statement|||||603|
+377|[Pause]||1|300|Sleep|||||604|
+378|WinActivate||1|333|WinActivate||stock_in.csv - LibreOffice Calc|||605|
+379|[Pause]||1|700|Sleep|||||607|
+380|Right|{Right}|1|500|Send|||||608|
+381|[Pause]||1|300|Sleep|||||610|
+382|Left Move & Click|247, 115 Left, 2|1|500|Click|||||611|
+383|[Pause]||1|500|Sleep|||||613|
+384|Control|{Control Down}|1|250|Send|||||614|
+385|c|{c}|1|250|Send|||||616|
+386|Control|{Control Up}|1|250|Send|||||618|
+387|[Pause]||1|300|Sleep|||||620|
+388|WinActivate||1|333|WinActivate||Model DB 2023.ods - LibreOffice Calc|||621|
+389|[Pause]||1|1500|Sleep|||||623|
+390|Control|{Control Down}|1|400|Send|||||624|
+391|Home|{Home}|1|400|Send|||||626|
+392|Control|{Control Up}|1|400|Send|||||628|
+393|[Pause]||1|1000|Sleep|||||630|
+394|Left Move & Click|1788, 81 Left, 1|1|500|Click|||||631|
+395|[Pause]||1|1000|Sleep|||||633|
+396|Control|{Control Down}|1|250|Send|||||634|
+397|v|{v}|1|300|Send|||||636|
+398|Control|{Control Up}|1|250|Send|||||638|
+399|[Pause]||1|1000|Sleep|||||640|
+400|Enter|{Enter}|1|500|Send|||||641|
+401|[Pause]||1|1000|Sleep|||||643|
+402|Escape|{Escape}|1|700|Send|||||644|
+403|[Pause]||1|1000|Sleep|||||646|
+404|Down|{Down}|1|500|Send|||||647|
+405|[Pause]||1|1000|Sleep|||||649|
+406|Control|{Control Down}|1|250|Send|||||650|
+407|c|{c}|1|250|Send|||||652|
+408|Control|{Control Up}|1|250|Send|||||654|
+409|[Pause]||1|500|Sleep|||||656|
+410|WinActivate||1|333|WinActivate||VMS|||657|
+411|[Pause]||1|800|Sleep|||||659|
+412|Left Move & Click|344, 258 Left, 1|1|500|Click|||||660|
+413|[Pause]||1|800|Sleep|||||662|
+414|Control|{Control Down}|1|250|Send|||||663|
+415|v|{v}|1|300|Send|||||665|
+416|Control|{Control Up}|1|250|Send|||||667|
+417|[Pause]||1|300|Sleep|||||669|
+418|WinActivate||1|333|WinActivate||Model DB 2023.ods - LibreOffice Calc|||670|
+419|[Pause]||1|800|Sleep|||||672|
+420|Down|{Down}|1|500|Send|||||673|
+421|[Pause]||1|300|Sleep|||||675|
+422|Control|{Control Down}|1|250|Send|||||676|
+423|c|{c}|1|250|Send|||||678|
+424|Control|{Control Up}|1|250|Send|||||680|
+425|[Pause]||1|300|Sleep|||||682|
+426|WinActivate||1|333|WinActivate||VMS|||683|
+427|[Pause]||1|800|Sleep|||||685|
+428|Left Move & Click|610, 235 Left, 1|1|500|Click|||||686|
+429|[Pause]||1|800|Sleep|||||688|
+430|Control|{Control Down}|1|250|Send|||||689|
+431|v|{v}|1|300|Send|||||691|
+432|Control|{Control Up}|1|250|Send|||||693|
+433|[Pause]||1|300|Sleep|||||695|
+434|WinActivate||1|333|WinActivate||Model DB 2023.ods - LibreOffice Calc|||696|
+435|[Pause]||1|800|Sleep|||||698|
+436|Down|{Down}|1|500|Send|||||699|
+437|[Pause]||1|300|Sleep|||||701|
+438|Control|{Control Down}|1|250|Send|||||702|
+439|c|{c}|1|250|Send|||||704|
+440|Control|{Control Up}|1|250|Send|||||706|
+441|[Pause]||1|300|Sleep|||||708|
+442|WinActivate||1|333|WinActivate||VMS|||709|
+443|[Pause]||1|800|Sleep|||||711|
+444|Left Move & Click|910, 420 Left, 1|1|500|Click|||||712|
+445|[Pause]||1|800|Sleep|||||714|
+446|Control|{Control Down}|1|250|Send|||||715|
+447|v|{v}|1|300|Send|||||717|
+448|Control|{Control Up}|1|250|Send|||||719|
+449|[Pause]||1|300|Sleep|||||721|
+450|WinActivate||1|333|WinActivate||Model DB 2023.ods - LibreOffice Calc|||722|
+451|[Pause]||1|800|Sleep|||||724|
+452|Down|{Down}|1|500|Send|||||725|
+453|[Pause]||1|300|Sleep|||||727|
+454|Control|{Control Down}|1|250|Send|||||728|
+455|c|{c}|1|250|Send|||||730|
+456|Control|{Control Up}|1|250|Send|||||732|
+457|[Pause]||1|300|Sleep|||||734|
+458|WinActivate||1|333|WinActivate||VMS|||735|
+459|[Pause]||1|800|Sleep|||||737|
+460|Left Move & Click|960, 420 Left, 1|1|500|Click|||||738|
+461|[Pause]||1|800|Sleep|||||740|
+462|Control|{Control Down}|1|250|Send|||||741|
+463|v|{v}|1|300|Send|||||743|
+464|Control|{Control Up}|1|250|Send|||||745|
+465|[Pause]||1|300|Sleep|||||747|
+466|WinActivate||1|333|WinActivate||Model DB 2023.ods - LibreOffice Calc|||748|
+467|[Pause]||1|800|Sleep|||||750|
+468|Down|{Down}|1|500|Send|||||751|
+469|[Pause]||1|1000|Sleep|||||753|
+470|Left Move & Click|393, 115 Left, 1|1|500|Click|||||754|
+471|[Pause]||1|300|Sleep|||||756|
+472|Control|{Control Down}|1|400|Send|||||757|
+473|a|{a}|1|400|Send|||||759|
+474|Control|{Control Up}|1|400|Send|||||761|
+475|[Pause]||1|1000|Sleep|||||763|
+476|Control|{Control Down}|1|250|Send|||||764|
+477|c|{c}|1|250|Send|||||766|
+478|Control|{Control Up}|1|250|Send|||||768|
+479|[Pause]||1|300|Sleep|||||770|
+480|Enter|{Enter}|1|500|Send|||||771|
+481|[Pause]||1|300|Sleep|||||773|
+482|WinActivate||1|333|WinActivate||VMS|||774|
+483|[Pause]||1|1200|Sleep|||||776|
+484|Continue, Continue, drive, type, 1|251, 117, 992, 434, *100 C:\Users\ReynoldsPurge\Documents\Images\drive type.png|1|500|ImageSearch|UntilFound|Window|||777|
+485|[Pause]||1|800|Sleep|||||785|
+486|If Clipboard Text|"A"|1|0|If_Statement|||||786|
+487|Left Move & Click|%drive%, %type% Left, 1|1|500|Click|||||788|
+488|[Pause]||1|300|Sleep|||||790|
+489|A|{A}|1|100|Send|||||791|
+490|[Pause]||1|400|Sleep|||||793|
+491|Enter|{Enter}|1|500|Send|||||794|
+492|[End If]|EndIf|1|0|If_Statement|||||796|
+493|If Clipboard Text|"F"|1|0|If_Statement|||||797|
+494|Left Move & Click|%drive%, %type% Left, 1|1|500|Click|||||799|
+495|[Pause]||1|300|Sleep|||||801|
+496|F|{F}|1|100|Send|||||802|
+497|[Pause]||1|400|Sleep|||||804|
+498|Enter|{Enter}|1|500|Send|||||805|
+499|[End If]|EndIf|1|0|If_Statement|||||807|
+500|If Clipboard Text|"R"|1|0|If_Statement|||||808|
+501|Left Move & Click|%drive%, %type% Left, 1|1|500|Click|||||810|
+502|[Pause]||1|300|Sleep|||||812|
+503|R|{R}|1|100|Send|||||813|
+504|[Pause]||1|400|Sleep|||||815|
+505|Enter|{Enter}|1|500|Send|||||816|
+506|[End If]|EndIf|1|0|If_Statement|||||818|
+507|If Clipboard Text|"4"|1|0|If_Statement|||||819|
+508|Left Move & Click|%drive%, %type% Left, 1|1|500|Click|||||821|
+509|[Pause]||1|300|Sleep|||||823|
+510|4|{4}|1|100|Send|||||824|
+511|[Pause]||1|400|Sleep|||||826|
+512|Enter|{Enter}|1|500|Send|||||827|
+513|[End If]|EndIf|1|0|If_Statement|||||829|
+514|[Pause]||1|300|Sleep|||||830|
+515|WinActivate||1|333|WinActivate||Model DB 2023.ods - LibreOffice Calc|||831|
+516|[Pause]||1|800|Sleep|||||833|
+517|[Pause]||1|300|Sleep|||||834|
+518|Left Move & Click|393, 115 Left, 1|1|500|Click|||||835|
+519|[Pause]||1|300|Sleep|||||837|
+520|Control|{Control Down}|1|400|Send|||||838|
+521|a|{a}|1|400|Send|||||840|
+522|Control|{Control Up}|1|400|Send|||||842|
+523|[Pause]||1|300|Sleep|||||844|
+524|Control|{Control Down}|1|250|Send|||||845|
+525|c|{c}|1|250|Send|||||847|
+526|Control|{Control Up}|1|250|Send|||||849|
+527|[Pause]||1|300|Sleep|||||851|
+528|Enter|{Enter}|1|500|Send|||||852|
+529|[Pause]||1|300|Sleep|||||854|
+530|WinActivate||1|333|WinActivate||VMS|||855|
+531|[Pause]||1|800|Sleep|||||857|
+532|Continue, Continue, fuel, type, 1|250, 92, 854, 469, *100 C:\Users\ReynoldsPurge\Documents\Images\fuel type.png|1|500|ImageSearch|UntilFound|Window|||858|
+533|[Pause]||1|1200|Sleep|||||866|
+534|If Clipboard Text|"G"|1|0|If_Statement|||||867|
+535|Left Move & Click|%fuel%, %type% Left, 1|1|500|Click|||||869|
+536|[Pause]||1|300|Sleep|||||871|
+537|G|{G}|1|300|Send|||||872|
+538|[Pause]||1|300|Sleep|||||874|
+539|Enter|{Enter}|1|500|Send|||||875|
+540|[End If]|EndIf|1|0|If_Statement|||||877|
+541|If Clipboard Text|"H"|1|0|If_Statement|||||878|
+542|Left Move & Click|%fuel%, %type% Left, 1|1|500|Click|||||880|
+543|[Pause]||1|300|Sleep|||||882|
+544|Q|{Q}|1|100|Send|||||883|
+545|[Pause]||1|300|Sleep|||||885|
+546|Enter|{Enter}|1|500|Send|||||886|
+547|[End If]|EndIf|1|0|If_Statement|||||888|
+548|If Clipboard Text|"E"|1|0|If_Statement|||||889|
+549|Left Move & Click|%fuel%, %type% Left, 1|1|500|Click|||||891|
+550|[Pause]||1|300|Sleep|||||893|
+551|E|{E}|1|100|Send|||||894|
+552|[Pause]||1|300|Sleep|||||896|
+553|Enter|{Enter}|1|500|Send|||||897|
+554|[End If]|EndIf|1|0|If_Statement|||||899|
+555|[Pause]||1|700|Sleep|||||900|
+556|Left Move & Click|731, 147 Left, 1|1|100|Click|||||901|
+557|[Pause]||1|500|Sleep|||||903|
+558|Left Move & Click|698, 310 Left, 1|1|300|Click|||||904|
+559|[Pause]||1|500|Sleep|||||906|
+560|F12|{F12}|1|500|Send|||||907|
+561|[Pause]||1|3000|Sleep|||||909|
+562|If Window Exist|VEHICLE DESCRIPTION SELECTION|1|0|If_Statement|||||910|
+563|F6|{F6}|1|500|Send|||||912|
+564|[Pause]||1|2000|Sleep|||||914|
+565|[End If]|EndIf|1|0|If_Statement|||||915|
+566|Right Move & Click|369, 146 Right, 1|1|300|Click|||||916|
+567|[Pause]||1|800|Sleep|||||918|
+568|Left Move & Click|428, 232 Left, 1|1|500|Click|||||919|
+569|[Pause]||1|800|Sleep|||||921|
+570|Control|{Control Down}|1|250|Send|||||922|
+571|c|{c}|1|250|Send|||||924|
+572|Control|{Control Up}|1|250|Send|||||926|
+573|[Pause]||1|1000|Sleep|||||928|
+574|[Pause]||1|300|Sleep|||||929|
+575|tohbot@toyotaofhackensack.com|Stocked in %Clipboard%=0:Stocked in %Clipboard%|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=rcurci@toyotaofhackensack.com||||930|
+576|Escape|{Escape}|1|500|Send|||||933|
+577|[Pause]||1|3000|Sleep|||||935|
+578|WinActivate||1|333|WinActivate||stock_in.csv - LibreOffice Calc|||936|
+579|[Pause]||1|300|Sleep|||||938|
+580|Shift|{Shift Down}|1|300|Send|||||939|
+581|Space|{Space}|1|300|Send|||||941|
+582|Shift|{Shift Up}|1|300|Send|||||943|
+583|[Pause]||1|300|Sleep|||||945|
+584|Control|{Control Down}|1|300|Send|||||946|
+585|-|{-}|1|300|Send|||||948|
+586|Control|{Control Up}|1|300|Send|||||950|
+587|[Pause]||1|300|Sleep|||||952|
+588|Control|{Control Down}|1|300|Send|||||953|
+589|s|{s}|1|300|Send|||||955|
+590|Control|{Control Up}|1|300|Send|||||957|
+591|[Pause]||1|300|Sleep|||||959|
+592|[End If]|EndIf|1|0|If_Statement|||||960|
+593|[Pause]||1|300|Sleep|||||961|
+594|If Clipboard Text|2024|1|0|If_Statement|||||962|
+595|[Pause]||1|300|Sleep|||||964|
+596|WinActivate||1|333|WinActivate||2024 Stock List.ods - LibreOffice Calc|||965|
+597|[Pause]||1|300|Sleep|||||967|
+598|Control|{Control Down}|1|250|Send|||||968|
+599|c|{c}|1|250|Send|||||970|
+600|Control|{Control Up}|1|250|Send|||||972|
+601|[Pause]||1|300|Sleep|||||974|
+602|Shift|{Shift Down}|1|300|Send|||||975|
+603|Space|{Space}|1|300|Send|||||977|
+604|Shift|{Shift Up}|1|300|Send|||||979|
+605|[Pause]||1|300|Sleep|||||981|
+606|Control|{Control Down}|1|300|Send|||||982|
+607|-|{-}|1|300|Send|||||984|
+608|Control|{Control Up}|1|300|Send|||||986|
+609|[Pause]||1|300|Sleep|||||988|
+610|Control|{Control Down}|1|300|Send|||||989|
+611|s|{s}|1|300|Send|||||991|
+612|Control|{Control Up}|1|300|Send|||||993|
+613|[Pause]||1|300|Sleep|||||995|
+614|WinActivate||1|333|WinActivate||VMS|||996|
+615|[Pause]||1|800|Sleep|||||998|
+616|Left Move & Click|418, 147 Left, 1|1|500|Click|||||999|
+617|[Pause]||1|300|Sleep|||||1001|
+618|Control|{Control Down}|1|250|Send|||||1002|
+619|v|{v}|1|300|Send|||||1004|
+620|Control|{Control Up}|1|250|Send|||||1006|
+621|[Pause]||1|300|Sleep|||||1008|
+622|Enter|{Enter}|1|300|Send|||||1009|
+623|[Pause]||1|1500|Sleep|||||1011|
+624|[LoopStart]|LoopStart|0|0|Loop|||||1012|
+625|If Window Exist|VMSCKDBL - 2102|1|0|If_Statement|||||1014|
+626|Left Click|Left, 1,  NA|1|500|ControlClick|Button1|VMSCKDBL - 2102|||1016|
+627|[Pause]||1|500|Sleep|||||1018|
+628|Left Move & Click|418, 149 Left, 2|1|300|Click|||||1019|
+629|[Pause]||1|500|Sleep|||||1021|
+630|Backspace|{Backspace}|1|500|Send|||||1022|
+631|[Pause]||1|500|Sleep|||||1024|
+632|WinActivate||1|333|WinActivate||2024 Stock List.ods - LibreOffice Calc|||1025|
+633|[Pause]||1|300|Sleep|||||1027|
+634|Control|{Control Down}|1|250|Send|||||1028|
+635|c|{c}|1|250|Send|||||1030|
+636|Control|{Control Up}|1|250|Send|||||1032|
+637|[Pause]||1|300|Sleep|||||1034|
+638|Shift|{Shift Down}|1|300|Send|||||1035|
+639|Space|{Space}|1|300|Send|||||1037|
+640|Shift|{Shift Up}|1|300|Send|||||1039|
+641|[Pause]||1|300|Sleep|||||1041|
+642|Control|{Control Down}|1|300|Send|||||1042|
+643|-|{-}|1|300|Send|||||1044|
+644|Control|{Control Up}|1|300|Send|||||1046|
+645|[Pause]||1|300|Sleep|||||1048|
+646|Control|{Control Down}|1|300|Send|||||1049|
+647|s|{s}|1|300|Send|||||1051|
+648|Control|{Control Up}|1|300|Send|||||1053|
+649|[Pause]||1|300|Sleep|||||1055|
+650|WinActivate||1|333|WinActivate||VMS|||1056|
+651|[Pause]||1|800|Sleep|||||1058|
+652|Left Move & Click|418, 147 Left, 1|1|500|Click|||||1059|
+653|[Pause]||1|300|Sleep|||||1061|
+654|Control|{Control Down}|1|250|Send|||||1062|
+655|v|{v}|1|300|Send|||||1064|
+656|Control|{Control Up}|1|250|Send|||||1066|
+657|[Pause]||1|300|Sleep|||||1068|
+658|Enter|{Enter}|1|300|Send|||||1069|
+659|[Pause]||1|1500|Sleep|||||1071|
+660|[Else]|Else|1|0|If_Statement|||||1072|
+661|Break||1|0|Break|||||1075|
+662|[End If]|EndIf|1|0|If_Statement|||||1076|
+663|[LoopEnd]|LoopEnd|1|0|Loop|||||1077|
+664|[Pause]||1|700|Sleep|||||1078|
+665|WinActivate||1|333|WinActivate||new_label_keytag_temp.csv - LibreOffice Calc|||1079|
+666|[Pause]||1|600|Sleep|||||1081|
+667|Control|{Control Down}|1|300|Send|||||1082|
+668|V|{V}|1|300|Send|||||1084|
+669|Control|{Control Up}|1|300|Send|||||1086|
+670|[Pause]||1|600|Sleep|||||1088|
+671|Enter|{Enter}|1|300|Send|||||1089|
+672|[Pause]||1|500|Sleep|||||1091|
+673|Down|{Down}|1|350|Send|||||1092|
+674|[Pause]||1|300|Sleep|||||1094|
+675|Control|{Control Down}|1|300|Send|||||1095|
+676|S|{S}|1|300|Send|||||1097|
+677|Control|{Control Up}|1|300|Send|||||1099|
+678|[Pause]||1|600|Sleep|||||1101|
+679|If Window Exist|Save As|1|0|If_Statement|||||1102|
+680|Enter|{Enter}|1|400|Send|||||1104|
+681|Left|{Left}|1|400|Send|||||1106|
+682|Enter|{Enter}|1|400|Send|||||1108|
+683|[End If]|EndIf|1|0|If_Statement|||||1110|
+684|WinActivate||1|333|WinActivate||stock_in.csv - LibreOffice Calc|||1111|
+685|[Pause]||1|700|Sleep|||||1113|
+686|Right|{Right}|1|500|Send|||||1114|
+687|[Pause]||1|300|Sleep|||||1116|
+688|Left Move & Click|247, 115 Left, 2|1|500|Click|||||1117|
+689|[Pause]||1|300|Sleep|||||1119|
+690|[Pause]||1|300|Sleep|||||1120|
+691|Control|{Control Down}|1|250|Send|||||1121|
+692|c|{c}|1|250|Send|||||1123|
+693|Control|{Control Up}|1|250|Send|||||1125|
+694|[Pause]||1|300|Sleep|||||1127|
+695|WinActivate||1|333|WinActivate||Model DB 2024.ods - LibreOffice Calc|||1128|
+696|[Pause]||1|1500|Sleep|||||1130|
+697|Control|{Control Down}|1|400|Send|||||1131|
+698|Home|{Home}|1|400|Send|||||1133|
+699|Control|{Control Up}|1|400|Send|||||1135|
+700|[Pause]||1|1000|Sleep|||||1137|
+701|Left Move & Click|1788, 81 Left, 1|1|500|Click|||||1138|
+702|[Pause]||1|1000|Sleep|||||1140|
+703|Control|{Control Down}|1|250|Send|||||1141|
+704|v|{v}|1|300|Send|||||1143|
+705|Control|{Control Up}|1|250|Send|||||1145|
+706|[Pause]||1|1000|Sleep|||||1147|
+707|Enter|{Enter}|1|500|Send|||||1148|
+708|[Pause]||1|1000|Sleep|||||1150|
+709|Escape|{Escape}|1|700|Send|||||1151|
+710|[Pause]||1|1000|Sleep|||||1153|
+711|Down|{Down}|1|500|Send|||||1154|
+712|[Pause]||1|1000|Sleep|||||1156|
+713|Control|{Control Down}|1|250|Send|||||1157|
+714|c|{c}|1|250|Send|||||1159|
+715|Control|{Control Up}|1|250|Send|||||1161|
+716|[Pause]||1|300|Sleep|||||1163|
+717|[Pause]||1|300|Sleep|||||1164|
+718|WinActivate||1|333|WinActivate||VMS|||1165|
+719|[Pause]||1|800|Sleep|||||1167|
+720|Left Move & Click|344, 258 Left, 1|1|500|Click|||||1168|
+721|[Pause]||1|800|Sleep|||||1170|
+722|Control|{Control Down}|1|250|Send|||||1171|
+723|v|{v}|1|300|Send|||||1173|
+724|Control|{Control Up}|1|250|Send|||||1175|
+725|[Pause]||1|300|Sleep|||||1177|
+726|WinActivate||1|333|WinActivate||Model DB 2024.ods - LibreOffice Calc|||1178|
+727|[Pause]||1|800|Sleep|||||1180|
+728|Down|{Down}|1|500|Send|||||1181|
+729|[Pause]||1|300|Sleep|||||1183|
+730|Control|{Control Down}|1|250|Send|||||1184|
+731|c|{c}|1|250|Send|||||1186|
+732|Control|{Control Up}|1|250|Send|||||1188|
+733|[Pause]||1|300|Sleep|||||1190|
+734|WinActivate||1|333|WinActivate||VMS|||1191|
+735|[Pause]||1|800|Sleep|||||1193|
+736|Left Move & Click|610, 235 Left, 1|1|500|Click|||||1194|
+737|[Pause]||1|800|Sleep|||||1196|
+738|Control|{Control Down}|1|250|Send|||||1197|
+739|v|{v}|1|300|Send|||||1199|
+740|Control|{Control Up}|1|250|Send|||||1201|
+741|[Pause]||1|300|Sleep|||||1203|
+742|WinActivate||1|333|WinActivate||Model DB 2024.ods - LibreOffice Calc|||1204|
+743|[Pause]||1|800|Sleep|||||1206|
+744|Down|{Down}|1|500|Send|||||1207|
+745|[Pause]||1|300|Sleep|||||1209|
+746|Control|{Control Down}|1|250|Send|||||1210|
+747|c|{c}|1|250|Send|||||1212|
+748|Control|{Control Up}|1|250|Send|||||1214|
+749|[Pause]||1|300|Sleep|||||1216|
+750|WinActivate||1|333|WinActivate||VMS|||1217|
+751|[Pause]||1|800|Sleep|||||1219|
+752|Left Move & Click|910, 420 Left, 1|1|500|Click|||||1220|
+753|[Pause]||1|800|Sleep|||||1222|
+754|Control|{Control Down}|1|250|Send|||||1223|
+755|v|{v}|1|300|Send|||||1225|
+756|Control|{Control Up}|1|250|Send|||||1227|
+757|[Pause]||1|300|Sleep|||||1229|
+758|WinActivate||1|333|WinActivate||Model DB 2024.ods - LibreOffice Calc|||1230|
+759|[Pause]||1|800|Sleep|||||1232|
+760|Down|{Down}|1|500|Send|||||1233|
+761|[Pause]||1|300|Sleep|||||1235|
+762|Control|{Control Down}|1|250|Send|||||1236|
+763|c|{c}|1|250|Send|||||1238|
+764|Control|{Control Up}|1|250|Send|||||1240|
+765|[Pause]||1|300|Sleep|||||1242|
+766|WinActivate||1|333|WinActivate||VMS|||1243|
+767|[Pause]||1|800|Sleep|||||1245|
+768|Left Move & Click|960, 420 Left, 1|1|500|Click|||||1246|
+769|[Pause]||1|800|Sleep|||||1248|
+770|Control|{Control Down}|1|250|Send|||||1249|
+771|v|{v}|1|300|Send|||||1251|
+772|Control|{Control Up}|1|250|Send|||||1253|
+773|[Pause]||1|300|Sleep|||||1255|
+774|WinActivate||1|333|WinActivate||Model DB 2024.ods - LibreOffice Calc|||1256|
+775|[Pause]||1|800|Sleep|||||1258|
+776|Down|{Down}|1|500|Send|||||1259|
+777|[Pause]||1|1000|Sleep|||||1261|
+778|Left Move & Click|393, 115 Left, 1|1|500|Click|||||1262|
+779|[Pause]||1|300|Sleep|||||1264|
+780|Control|{Control Down}|1|400|Send|||||1265|
+781|a|{a}|1|400|Send|||||1267|
+782|Control|{Control Up}|1|400|Send|||||1269|
+783|[Pause]||1|1000|Sleep|||||1271|
+784|Control|{Control Down}|1|250|Send|||||1272|
+785|c|{c}|1|250|Send|||||1274|
+786|Control|{Control Up}|1|250|Send|||||1276|
+787|[Pause]||1|300|Sleep|||||1278|
+788|Enter|{Enter}|1|500|Send|||||1279|
+789|[Pause]||1|300|Sleep|||||1281|
+790|WinActivate||1|333|WinActivate||VMS|||1282|
+791|[Pause]||1|1200|Sleep|||||1284|
+792|Continue, Continue, drive, type, 1|251, 117, 992, 434, *100 C:\Users\ReynoldsPurge\Documents\Images\drive type.png|1|500|ImageSearch|UntilFound|Window|||1285|
+793|[Pause]||1|800|Sleep|||||1293|
+794|If Clipboard Text|"A"|1|0|If_Statement|||||1294|
+795|Left Move & Click|%drive%, %type% Left, 1|1|500|Click|||||1296|
+796|[Pause]||1|300|Sleep|||||1298|
+797|A|{A}|1|100|Send|||||1299|
+798|[Pause]||1|400|Sleep|||||1301|
+799|Enter|{Enter}|1|500|Send|||||1302|
+800|[End If]|EndIf|1|0|If_Statement|||||1304|
+801|If Clipboard Text|"F"|1|0|If_Statement|||||1305|
+802|Left Move & Click|%drive%, %type% Left, 1|1|500|Click|||||1307|
+803|[Pause]||1|300|Sleep|||||1309|
+804|F|{F}|1|100|Send|||||1310|
+805|[Pause]||1|400|Sleep|||||1312|
+806|Enter|{Enter}|1|500|Send|||||1313|
+807|[End If]|EndIf|1|0|If_Statement|||||1315|
+808|If Clipboard Text|"R"|1|0|If_Statement|||||1316|
+809|Left Move & Click|%drive%, %type% Left, 1|1|500|Click|||||1318|
+810|[Pause]||1|300|Sleep|||||1320|
+811|R|{R}|1|100|Send|||||1321|
+812|[Pause]||1|400|Sleep|||||1323|
+813|Enter|{Enter}|1|500|Send|||||1324|
+814|[End If]|EndIf|1|0|If_Statement|||||1326|
+815|If Clipboard Text|"4"|1|0|If_Statement|||||1327|
+816|Left Move & Click|%drive%, %type% Left, 1|1|500|Click|||||1329|
+817|[Pause]||1|300|Sleep|||||1331|
+818|4|{4}|1|100|Send|||||1332|
+819|[Pause]||1|400|Sleep|||||1334|
+820|Enter|{Enter}|1|500|Send|||||1335|
+821|[End If]|EndIf|1|0|If_Statement|||||1337|
+822|[Pause]||1|300|Sleep|||||1338|
+823|WinActivate||1|333|WinActivate||Model DB 2024.ods - LibreOffice Calc|||1339|
+824|[Pause]||1|800|Sleep|||||1341|
+825|[Pause]||1|300|Sleep|||||1342|
+826|Left Move & Click|393, 115 Left, 1|1|500|Click|||||1343|
+827|[Pause]||1|300|Sleep|||||1345|
+828|Control|{Control Down}|1|400|Send|||||1346|
+829|a|{a}|1|400|Send|||||1348|
+830|Control|{Control Up}|1|400|Send|||||1350|
+831|[Pause]||1|300|Sleep|||||1352|
+832|Control|{Control Down}|1|250|Send|||||1353|
+833|c|{c}|1|250|Send|||||1355|
+834|Control|{Control Up}|1|250|Send|||||1357|
+835|[Pause]||1|300|Sleep|||||1359|
+836|Enter|{Enter}|1|500|Send|||||1360|
+837|[Pause]||1|300|Sleep|||||1362|
+838|WinActivate||1|333|WinActivate||VMS|||1363|
+839|[Pause]||1|800|Sleep|||||1365|
+840|Continue, Continue, fuel, type, 1|250, 92, 854, 469, *100 C:\Users\ReynoldsPurge\Documents\Images\fuel type.png|1|500|ImageSearch|UntilFound|Window|||1366|
+841|[Pause]||1|1200|Sleep|||||1374|
+842|If Clipboard Text|"G"|1|0|If_Statement|||||1375|
+843|Left Move & Click|%fuel%, %type% Left, 1|1|500|Click|||||1377|
+844|[Pause]||1|300|Sleep|||||1379|
+845|G|{G}|1|300|Send|||||1380|
+846|[Pause]||1|300|Sleep|||||1382|
+847|Enter|{Enter}|1|500|Send|||||1383|
+848|[End If]|EndIf|1|0|If_Statement|||||1385|
+849|If Clipboard Text|"H"|1|0|If_Statement|||||1386|
+850|Left Move & Click|%fuel%, %type% Left, 1|1|500|Click|||||1388|
+851|[Pause]||1|300|Sleep|||||1390|
+852|Q|{Q}|1|100|Send|||||1391|
+853|[Pause]||1|300|Sleep|||||1393|
+854|Enter|{Enter}|1|500|Send|||||1394|
+855|[End If]|EndIf|1|0|If_Statement|||||1396|
+856|If Clipboard Text|"E"|1|0|If_Statement|||||1397|
+857|Left Move & Click|%fuel%, %type% Left, 1|1|500|Click|||||1399|
+858|[Pause]||1|300|Sleep|||||1401|
+859|E|{E}|1|100|Send|||||1402|
+860|[Pause]||1|300|Sleep|||||1404|
+861|Enter|{Enter}|1|500|Send|||||1405|
+862|[End If]|EndIf|1|0|If_Statement|||||1407|
+863|[Pause]||1|700|Sleep|||||1408|
+864|Left Move & Click|731, 147 Left, 1|1|100|Click|||||1409|
+865|[Pause]||1|500|Sleep|||||1411|
+866|Left Move & Click|698, 310 Left, 1|1|300|Click|||||1412|
+867|[Pause]||1|500|Sleep|||||1414|
+868|F12|{F12}|1|500|Send|||||1415|
+869|[Pause]||1|3000|Sleep|||||1417|
+870|If Window Exist|VEHICLE DESCRIPTION SELECTION|1|0|If_Statement|||||1418|
+871|F6|{F6}|1|500|Send|||||1420|
+872|[Pause]||1|2000|Sleep|||||1422|
+873|[End If]|EndIf|1|0|If_Statement|||||1423|
+874|Right Move & Click|369, 146 Right, 1|1|300|Click|||||1424|
+875|[Pause]||1|800|Sleep|||||1426|
+876|Left Move & Click|428, 232 Left, 1|1|500|Click|||||1427|
+877|[Pause]||1|800|Sleep|||||1429|
+878|Control|{Control Down}|1|250|Send|||||1430|
+879|c|{c}|1|250|Send|||||1432|
+880|Control|{Control Up}|1|250|Send|||||1434|
+881|[Pause]||1|1000|Sleep|||||1436|
+882|[Pause]||1|300|Sleep|||||1437|
+883|tohbot@toyotaofhackensack.com|Stocked in %Clipboard%=0:Stocked in %Clipboard%|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=rcurci@toyotaofhackensack.com||||1438|
+884|Escape|{Escape}|1|500|Send|||||1441|
+885|[Pause]||1|3000|Sleep|||||1443|
+886|WinActivate||1|333|WinActivate||stock_in.csv - LibreOffice Calc|||1444|
+887|[Pause]||1|300|Sleep|||||1446|
+888|Shift|{Shift Down}|1|300|Send|||||1447|
+889|Space|{Space}|1|300|Send|||||1449|
+890|Shift|{Shift Up}|1|300|Send|||||1451|
+891|[Pause]||1|300|Sleep|||||1453|
+892|Control|{Control Down}|1|300|Send|||||1454|
+893|-|{-}|1|300|Send|||||1456|
+894|Control|{Control Up}|1|300|Send|||||1458|
+895|[Pause]||1|300|Sleep|||||1460|
+896|Control|{Control Down}|1|300|Send|||||1461|
+897|s|{s}|1|300|Send|||||1463|
+898|Control|{Control Up}|1|300|Send|||||1465|
+899|[Pause]||1|300|Sleep|||||1467|
+900|[End If]|EndIf|1|0|If_Statement|||||1468|
+901|[LoopEnd]|LoopEnd|1|0|Loop|||||1469|
+

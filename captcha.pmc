@@ -1,0 +1,69 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|[Pause]||1|300|Sleep|||||1|
+2|WinActivate||1|333|WinActivate||Security Check|||2|
+3|[LoopStart]|LoopStart|0|0|Loop|||||4|
+4|[Pause]||1|300|Sleep|||||6|
+5|Alt + PrintScreen|{Alt Down}{PrintScreen}{Alt Up}|1|333|Send|||||7|
+6|[Pause]||1|750|Sleep|||||9|
+7|FileDelete|C:\engine\captcha.txt|1|0|FileDelete|||||10|
+8|[Pause]||1|300|Sleep|||||11|
+9|Run|C:\Users\ReynoldsPurge\Documents\live\captcha.pyw|1|0|Run|||||12|
+10|[Pause]||1|2000|Sleep|||||13|
+11|ClipWait||1|0|ClipWait|||||14|
+12|[Pause]||1|2000|Sleep|||||15|
+13|WinActivate||1|333|WinActivate||Security Check|||16|
+14|[Pause]||1|300|Sleep|||||18|
+15|Left Click|Left, 2,  NA|1|100|ControlClick|x222 y121|Security Check|||19|
+16|[Pause]||1|300|Sleep|||||21|
+17|Backspace|{Backspace}|4|200|Send|||||22|
+18|[Pause]||1|300|Sleep|||||24|
+19|Control|{Control Down}|1|150|Send|||||25|
+20|v|{v}|1|150|Send|||||27|
+21|Control|{Control Up}|1|150|Send|||||29|
+22|[Pause]||1|300|Sleep|||||31|
+23|Enter|{Enter}|1|200|Send|||||32|
+24|[Pause]||1|15000|Sleep|||||34|
+25|[LoopStart]|LoopStart|0|0|Loop|||||35|
+26|[Pause]||1|500|Sleep|||||37|
+27|If Window Active|Processing...|1|0|If_Statement|||||38|
+28|[Pause]||1|500|Sleep|||||40|
+29|[Else]|Else|1|0|If_Statement|||||41|
+30|Break||1|0|Break|||||44|
+31|[End If]|EndIf|1|0|If_Statement|||||45|
+32|[LoopEnd]|LoopEnd|1|0|Loop|||||46|
+33|If Window Exist|Reynolds and Reynolds|1|0|If_Statement|||||47|
+34|[Pause]||1|300|Sleep|||||49|
+35|Enter|{Enter}|1|250|Send|||||50|
+36|[Pause]||1|300|Sleep|||||52|
+37|Continue||1|0|Continue|||||53|
+38|[End If]|EndIf|1|0|If_Statement|||||54|
+39|[Pause]||1|500|Sleep|||||55|
+40|If Window Active|Export Complete|1|0|If_Statement|||||56|
+41|[Pause]||1|500|Sleep|||||58|
+42|Enter|{Enter}|1|250|Send|||||59|
+43|[Pause]||1|300|Sleep|||||61|
+44|Delete|{Delete}|1|500|Send|||||62|
+45|[Pause]||1|500|Sleep|||||64|
+46|Enter|{Enter}|1|250|Send|||||65|
+47|[Pause]||1|300|Sleep|||||67|
+48|[Goto]|bigfinish|1|0|Goto|||||68|
+49|[End If]|EndIf|1|0|If_Statement|||||69|
+50|[Pause]||1|500|Sleep|||||70|
+51|Continue, Continue, FoundX, FoundY, 0|572, 161, 1148, 306, C:\Users\ReynoldsPurge\Documents\Images\ReportExported.png|1|100|ImageSearch|UntilFound|Window|||71|
+52|[Pause]||1|500|Sleep|||||78|
+53|[Label]|bigfinish|1|0|Label|||||79|
+54|[Pause]||1|500|Sleep|||||80|
+55|Alt|{Alt Down}|1|300|Send|||||81|
+56|F4|{F4}|1|300|Send|||||83|
+57|Alt|{Alt Up}|1|300|Send|||||85|
+58|Break||1|0|Break|||||87|
+59|[Pause]||1|500|Sleep|||||88|
+60|[LoopEnd]|LoopEnd|1|0|Loop|||||89|
+61|[Pause]||1|2000|Sleep|||||90|
+62|FileAppend|done, C:\engine\captcha.txt|1|0|FileAppend|||||91|
+63|[Pause]||1|300|Sleep|||||92|
+64|ExitApp||1|0|ExitApp|||||93|
+

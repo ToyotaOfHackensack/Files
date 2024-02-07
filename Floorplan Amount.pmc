@@ -1,0 +1,235 @@
+﻿[PMC Globals]|None||
+[PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
+Context=None|
+Groups=Start:1
+1|[Pause]||1|1000|Sleep|||||1|
+2|tohbot@toyotaofhackensack.com|Started Floorplan Calc=0:Started Floorplan Calc|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||2|
+3|[Pause]||1|1500|Sleep|||||5|
+4|FileDelete|C:\Users\ReynoldsPurge\Downloads\Inventory Summary.csv|1|0|FileDelete|||||6|
+5|[Pause]||1|500|Sleep|||||7|
+6|Run|C:\Users\ReynoldsPurge\Documents\live\dd login.exe|1|0|Run|||||8|
+7|[Pause]||1|2000|Sleep|||||9|
+8|[LoopStart]|LoopStart|0|0|Loop|||||10|
+9|If File Exist|C:\engine\ddlogin.txt|1|0|If_Statement|||||12|
+10|[Pause]||1|300|Sleep|||||14|
+11|FileDelete|C:\engine\ddlogin.txt|1|0|FileDelete|||||15|
+12|[Pause]||1|300|Sleep|||||16|
+13|Break||1|0|Break|||||17|
+14|[End If]|EndIf|1|0|If_Statement|||||18|
+15|[LoopEnd]|LoopEnd|1|0|Loop|||||19|
+16|[Pause]||1|1500|Sleep|||||20|
+17|Left Move & Click|410, 56 Left, 1|1|500|Click|||||21|
+18|[Pause]||1|600|Sleep|||||23|
+19|[Text]|https://dealer.toyota.com/inventory/summary|1|100|SendRaw|||||24|
+20|[Pause]||1|2000|Sleep|||||26|
+21|Enter|{Enter}|1|200|Send|||||27|
+22|[Pause]||1|10000|Sleep|||||29|
+23|[LoopStart]|LoopStart|0|0|Loop|||||30|
+24|Break, Continue, FoundX, FoundY, 0|1482, 124, 1735, 307, *15 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\dd save loaded.png|1|100|ImageSearch||Window|||32|
+25|If Image/Pixel Not Found||1|0|If_Statement|||||37|
+26|[Pause]||1|300|Sleep|||||39|
+27|Left Move & Click|410, 56 Left, 1|1|500|Click|||||40|
+28|[Pause]||1|600|Sleep|||||42|
+29|[Text]|https://dealer.toyota.com/inventory/summary|1|100|SendRaw|||||43|
+30|[Pause]||1|2000|Sleep|||||45|
+31|Enter|{Enter}|1|200|Send|||||46|
+32|[Pause]||1|10000|Sleep|||||48|
+33|[End If]|EndIf|1|0|If_Statement|||||49|
+34|[LoopEnd]|LoopEnd|1|0|Loop|||||50|
+35|[Pause]||1|500|Sleep|||||51|
+36|WinActivate||1|333|WinActivate||Dealer Daily - Google Chrome|||52|
+37|[Pause]||1|1000|Sleep|||||54|
+38|Continue, Continue, dd, list, 1|1168, 94, 1919, 461, *50 C:\Users\ReynoldsPurge\Documents\Images\dd veh list.png|1|500|ImageSearch|UntilFound|Window|||55|
+39|[Pause]||1|500|Sleep|||||63|
+40|Left Move & Click|%dd%, %list% Left, 1|1|500|Click|||||64|
+41|[Pause]||1|500|Sleep|||||66|
+42|Continue, Continue, g, list, 1|1300, 113, 1914, 554, *50 C:\Users\ReynoldsPurge\Documents\Images\g list.png|1|500|ImageSearch|UntilFound|Window|||67|
+43|[Pause]||1|500|Sleep|||||75|
+44|Left Move & Click|%g%, %list% Left, 1|1|500|Click|||||76|
+45|[Pause]||1|2000|Sleep|||||78|
+46|Continue, Continue, dd, export, 1|1354, 104, 1921, 322, *50 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\download inventory.png|1|500|ImageSearch|UntilFound|Window|||79|
+47|[Pause]||1|500|Sleep|||||87|
+48|Left Move & Click|%dd%, %export% Left, 1|1|1000|Click|||||88|
+49|[Pause]||1|300|Sleep|||||90|
+50|Continue, Continue, dd, csv, 1|609, 294, 1343, 800, *50 C:\Users\ReynoldsPurge\Documents\Images\dd csv.png|1|500|ImageSearch|UntilFound|Window|||91|
+51|[Pause]||1|500|Sleep|||||99|
+52|Left Move & Click|%dd%, %csv% Left, 1|1|500|Click|||||100|
+53|[Pause]||1|1000|Sleep|||||102|
+54|Continue, Continue, list, export, 1|899, 566, 1187, 764, *50 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\export button.png|1|500|ImageSearch|UntilFound|Window|||103|
+55|[Pause]||1|500|Sleep|||||111|
+56|Left Move & Click|%list%, %export% Left, 1|1|500|Click|||||112|
+57|[Pause]||1|7500|Sleep|||||114|
+58|Run|C:\Users\ReynoldsPurge\Downloads\Inventory Summary.csv|1|0|Run|||||115|
+59|[Pause]||1|2000|Sleep|||||116|
+60|If Window Exist|Text Import -|1|0|If_Statement|||||117|
+61|WinActivate||1|333|WinActivate||Text Import -|||119|
+62|[Pause]||1|300|Sleep|||||121|
+63|Continue, Continue, FoundX, FoundY, 0|37, 37, 405, 137, C:\Users\ReynoldsPurge\Documents\Images\bad unicode.png|1|500|ImageSearch||Window|||122|
+64|If Image/Pixel Found||1|0|If_Statement|||||125|
+65|u|{u}|1|200|Send|||||127|
+66|[End If]|EndIf|1|0|If_Statement|||||129|
+67|[Pause]||1|300|Sleep|||||130|
+68|Left Move & Click|305, 555 Left, 1|1|300|Click|||||131|
+69|[Pause]||1|300|Sleep|||||133|
+70|[End If]|EndIf|1|0|If_Statement|||||134|
+71|[Pause]||1|5000|Sleep|||||135|
+72|Continue, Continue, d, col, 1|526, 117, 1289, 156, *50 C:\Users\ReynoldsPurge\Documents\Images\d col.png|1|500|ImageSearch|UntilFound|Window|||136|
+73|[Pause]||1|500|Sleep|||||144|
+74|Left Move & Click|%d%, %col% Left, 1|1|500|Click|||||145|
+75|[Pause]||1|1000|Sleep|||||147|
+76|Continue, Continue, format, box, 1|1134, 45, 1525, 123, *50 C:\Users\ReynoldsPurge\Documents\Images\format box.png|1|500|ImageSearch|UntilFound|Window|||148|
+77|[Pause]||1|500|Sleep|||||156|
+78|Left Move & Click|%format%, %box% Left, 1|1|500|Click|||||157|
+79|[Pause]||1|1000|Sleep|||||159|
+80|[Pause]||1|500|Sleep|||||160|
+81|c|{c}|1|500|Send|||||161|
+82|Enter|{Enter}|1|500|Send|||||163|
+83|[Pause]||1|500|Sleep|||||165|
+84|Left Move & Click|%d%, %col% Left, 1|1|500|Click|||||166|
+85|[Pause]||1|1000|Sleep|||||168|
+86|Control|{Control Down}|1|500|Send|||||169|
+87|Down|{Down}|1|500|Send|||||171|
+88|Control|{Control Up}|1|500|Send|||||173|
+89|[Pause]||1|1000|Sleep|||||175|
+90|Control|{Control Down}|1|500|Send|||||176|
+91|Down|{Down}|1|500|Send|||||178|
+92|Control|{Control Up}|1|500|Send|||||180|
+93|[Pause]||1|500|Sleep|||||182|
+94|Down|{Down}|1|500|Send|||||183|
+95|[Pause]||1|1000|Sleep|||||185|
+96|Continue, Continue, auto, sum, 1|17, 8, 397, 243, *50 C:\Users\ReynoldsPurge\Documents\Images\auto sum.png|1|500|ImageSearch|UntilFound|Window|||186|
+97|[Pause]||1|500|Sleep|||||194|
+98|Left Move & Click|%auto%, %sum% Left, 1|1|500|Click|||||195|
+99|[Pause]||1|1000|Sleep|||||197|
+100|s|{s}|1|500|Send|||||198|
+101|[Pause]||1|1000|Sleep|||||200|
+102|Enter|{Enter}|1|500|Send|||||201|
+103|[Pause]||1|2000|Sleep|||||203|
+104|Up|{Up}|1|500|Send|||||204|
+105|[Pause]||1|1000|Sleep|||||206|
+106|Control|{Control Down}|1|500|Send|||||207|
+107|c|{c}|1|500|Send|||||209|
+108|Control|{Control Up}|1|500|Send|||||211|
+109|[Pause]||1|500|Sleep|||||213|
+110|tohbot@toyotaofhackensack.com|G vehicles invoice total: %Clipboard%=0:G vehicles invoice total: %Clipboard%|1|500|SendEmail|To=mpuentes@toyotaofhackensack.com/CC=fradulic@gmail.com/BCC=rcurci@toyotaofhackensack.com||||214|
+111|[Pause]||1|1000|Sleep|||||217|
+112|Control|{Control Down}|1|500|Send|||||218|
+113|s|{s Down}|1|500|Send|||||220|
+114|Control|{Control Up}|1|500|Send|||||222|
+115|[Pause]||1|500|Sleep|||||224|
+116|Alt|{Alt Down}|1|500|Send|||||225|
+117|F4|{F4}|1|500|Send|||||227|
+118|Alt|{Alt Up}|1|500|Send|||||229|
+119|[Pause]||1|500|Sleep|||||231|
+120|If Window Exist|Save Document?|1|0|If_Statement|||||232|
+121|[Pause]||1|500|Sleep|||||234|
+122|Enter|{Enter}|1|500|Send|||||235|
+123|[Pause]||1|500|Sleep|||||237|
+124|[End If]|EndIf|1|0|If_Statement|||||238|
+125|[Pause]||1|2000|Sleep|||||239|
+126|FileDelete|C:\Users\ReynoldsPurge\Downloads\Inventory Summary.csv|1|0|FileDelete|||||240|
+127|[Pause]||1|2000|Sleep|||||241|
+128|WinActivate||1|333|WinActivate||Dealer Daily - Google Chrome|||242|
+129|[Pause]||1|1000|Sleep|||||244|
+130|Continue, Continue, dd, list, 1|1168, 94, 1919, 461, *50 C:\Users\ReynoldsPurge\Documents\Images\dd veh list.png|1|500|ImageSearch|UntilFound|Window|||245|
+131|[Pause]||1|500|Sleep|||||253|
+132|Left Move & Click|%dd%, %list% Left, 1|1|500|Click|||||254|
+133|[Pause]||1|500|Sleep|||||256|
+134|Continue, Continue, f, list, 1|1300, 113, 1914, 554, *50 C:\Users\ReynoldsPurge\Documents\Images\f list.png|1|500|ImageSearch|UntilFound|Window|||257|
+135|[Pause]||1|500|Sleep|||||265|
+136|Left Move & Click|%f%, %list% Left, 1|1|500|Click|||||266|
+137|[Pause]||1|2000|Sleep|||||268|
+138|Continue, Continue, dd, export, 1|1354, 104, 1921, 322, *50 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\download inventory.png|1|500|ImageSearch|UntilFound|Window|||269|
+139|[Pause]||1|500|Sleep|||||277|
+140|Left Move & Click|%dd%, %export% Left, 1|1|1000|Click|||||278|
+141|[Pause]||1|300|Sleep|||||280|
+142|Continue, Continue, dd, csv, 1|609, 294, 1343, 800, *50 C:\Users\ReynoldsPurge\Documents\Images\dd csv.png|1|500|ImageSearch|UntilFound|Window|||281|
+143|[Pause]||1|500|Sleep|||||289|
+144|Left Move & Click|%dd%, %csv% Left, 1|1|500|Click|||||290|
+145|[Pause]||1|1000|Sleep|||||292|
+146|Continue, Continue, list, export, 1|899, 566, 1187, 764, *50 C:\Users\ReynoldsPurge\Documents\Images\Vehicle Comments\export button.png|1|500|ImageSearch|UntilFound|Window|||293|
+147|[Pause]||1|500|Sleep|||||301|
+148|Left Move & Click|%list%, %export% Left, 1|1|500|Click|||||302|
+149|[Pause]||1|7500|Sleep|||||304|
+150|Run|C:\Users\ReynoldsPurge\Downloads\Inventory Summary.csv|1|0|Run|||||305|
+151|[Pause]||1|2000|Sleep|||||306|
+152|If Window Exist|Text Import -|1|0|If_Statement|||||307|
+153|WinActivate||1|333|WinActivate||Text Import -|||309|
+154|[Pause]||1|300|Sleep|||||311|
+155|Continue, Continue, FoundX, FoundY, 0|37, 37, 405, 137, C:\Users\ReynoldsPurge\Documents\Images\bad unicode.png|1|500|ImageSearch||Window|||312|
+156|If Image/Pixel Found||1|0|If_Statement|||||315|
+157|u|{u}|1|200|Send|||||317|
+158|[End If]|EndIf|1|0|If_Statement|||||319|
+159|[Pause]||1|300|Sleep|||||320|
+160|Left Move & Click|305, 555 Left, 1|1|300|Click|||||321|
+161|[Pause]||1|300|Sleep|||||323|
+162|[End If]|EndIf|1|0|If_Statement|||||324|
+163|[Pause]||1|5000|Sleep|||||325|
+164|Continue, Continue, d, col, 1|526, 117, 1289, 156, *50 C:\Users\ReynoldsPurge\Documents\Images\d col.png|1|500|ImageSearch|UntilFound|Window|||326|
+165|[Pause]||1|500|Sleep|||||334|
+166|Left Move & Click|%d%, %col% Left, 1|1|500|Click|||||335|
+167|[Pause]||1|1000|Sleep|||||337|
+168|Continue, Continue, format, box, 1|1134, 45, 1525, 123, *50 C:\Users\ReynoldsPurge\Documents\Images\format box.png|1|500|ImageSearch|UntilFound|Window|||338|
+169|[Pause]||1|500|Sleep|||||346|
+170|Left Move & Click|%format%, %box% Left, 1|1|500|Click|||||347|
+171|[Pause]||1|1000|Sleep|||||349|
+172|[Pause]||1|500|Sleep|||||350|
+173|c|{c}|1|500|Send|||||351|
+174|Enter|{Enter}|1|500|Send|||||353|
+175|[Pause]||1|500|Sleep|||||355|
+176|Left Move & Click|%d%, %col% Left, 1|1|500|Click|||||356|
+177|[Pause]||1|1000|Sleep|||||358|
+178|Control|{Control Down}|1|500|Send|||||359|
+179|Down|{Down}|1|500|Send|||||361|
+180|Control|{Control Up}|1|500|Send|||||363|
+181|[Pause]||1|1000|Sleep|||||365|
+182|Control|{Control Down}|1|500|Send|||||366|
+183|Down|{Down}|1|500|Send|||||368|
+184|Control|{Control Up}|1|500|Send|||||370|
+185|[Pause]||1|500|Sleep|||||372|
+186|Down|{Down}|1|500|Send|||||373|
+187|[Pause]||1|1000|Sleep|||||375|
+188|Continue, Continue, auto, sum, 1|17, 8, 397, 243, *50 C:\Users\ReynoldsPurge\Documents\Images\auto sum.png|1|500|ImageSearch|UntilFound|Window|||376|
+189|[Pause]||1|500|Sleep|||||384|
+190|Left Move & Click|%auto%, %sum% Left, 1|1|500|Click|||||385|
+191|[Pause]||1|1000|Sleep|||||387|
+192|s|{s}|1|500|Send|||||388|
+193|[Pause]||1|1000|Sleep|||||390|
+194|Enter|{Enter}|1|500|Send|||||391|
+195|[Pause]||1|2000|Sleep|||||393|
+196|Up|{Up}|1|500|Send|||||394|
+197|[Pause]||1|1000|Sleep|||||396|
+198|Control|{Control Down}|1|500|Send|||||397|
+199|c|{c}|1|500|Send|||||399|
+200|Control|{Control Up}|1|500|Send|||||401|
+201|[Pause]||1|500|Sleep|||||403|
+202|tohbot@toyotaofhackensack.com|F vehicles invoice total: %Clipboard%=0:F vehicles invoice total: %Clipboard%|1|500|SendEmail|To=mpuentes@toyotaofhackensack.com/CC=fradulic@gmail.com/BCC=rcurci@toyotaofhackensack.com||||404|
+203|[Pause]||1|1000|Sleep|||||407|
+204|Control|{Control Down}|1|500|Send|||||408|
+205|s|{s Down}|1|500|Send|||||410|
+206|Control|{Control Up}|1|500|Send|||||412|
+207|[Pause]||1|500|Sleep|||||414|
+208|Alt|{Alt Down}|1|500|Send|||||415|
+209|F4|{F4}|1|500|Send|||||417|
+210|Alt|{Alt Up}|1|500|Send|||||419|
+211|[Pause]||1|500|Sleep|||||421|
+212|If Window Exist|Save Document?|1|0|If_Statement|||||422|
+213|[Pause]||1|500|Sleep|||||424|
+214|Enter|{Enter}|1|500|Send|||||425|
+215|[Pause]||1|500|Sleep|||||427|
+216|[End If]|EndIf|1|0|If_Statement|||||428|
+217|[Pause]||1|2000|Sleep|||||429|
+218|FileDelete|C:\Users\ReynoldsPurge\Downloads\Inventory Summary.csv|1|0|FileDelete|||||430|
+219|[Pause]||1|2000|Sleep|||||431|
+220|WinActivate||1|333|WinActivate||Dealer Daily - Google Chrome|||432|
+221|[Pause]||1|500|Sleep|||||434|
+222|Alt|{Alt Down}|1|500|Send|||||435|
+223|F4|{F4}|1|500|Send|||||437|
+224|Alt|{Alt Up}|1|500|Send|||||439|
+225|[Pause]||1|500|Sleep|||||441|
+226|tohbot@toyotaofhackensack.com|Finished Floorplan Calc=0:Finished Floorplan Calc|1|500|SendEmail|To=rcurci@toyotaofhackensack.com/CC=/BCC=||||442|
+227|[Pause]||1|500|Sleep|||||445|
+228|FileAppend|done, C:\engine\doneinvoice.txt|1|0|FileAppend|||||446|
+229|[Pause]||1|500|Sleep|||||447|
+230|ExitApp||1|0|ExitApp|||||448|
+
